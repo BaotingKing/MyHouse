@@ -1,8 +1,8 @@
 import matplotlib.pyplot as plt
 import matplotlib.image as img
 import pandas as pd
-import cv2
-import tensorflow.contrib.image as tfimage
+# import cv2
+import tensorflow as tf
 # import cv2wrap as cv2
 import numpy as np
 
@@ -122,7 +122,8 @@ def read_img_file():
 
 
 def warp_image(image):
-    image=cv2.resize(image, tuple(IMAGE_SIZE))
+    # image=cv2.resize(image, tuple(IMAGE_SIZE))
+    image = tf.image.resize_images(image, tuple(IMAGE_SIZE))
     return image
 
 
