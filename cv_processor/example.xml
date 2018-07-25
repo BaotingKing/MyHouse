@@ -1,0 +1,32 @@
+<annotation>
+	<folder>VOC2007</folder>
+	<filename>example.jpg</filename>
+	<source>
+		<database>The VOC2007 Database</database>
+		<annotation>PASCAL VOC2007</annotation>
+		<image>image</image>
+		<flickrid>341012865</flickrid>
+	</source>
+	<owner>
+		<flickrid>WestWell Lab</flickrid>
+		<name>westwell</name>
+	</owner>
+	<size>
+		<width>xxxx</width>
+		<height>xxxx</height>
+		<depth>xxxx</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>word</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>xxxx</xmin>
+			<ymin>xxxx</ymin>
+			<xmax>xxxx</xmax>
+			<ymax>xxxx</ymax>
+		</bndbox>
+	</object>
+</annotation>
