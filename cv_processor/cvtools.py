@@ -4,7 +4,7 @@ Created on 2018-07-25 星期三 14：04
 @author: zhang baoting
 """
 import sys, cv2, os, time, sqlite3, collections, hashlib
-# import cpuid,pika
+# import cpuid, pika
 # import ConfigParser
 # from matplotlib import pyplot as plt
 from random import shuffle
@@ -32,8 +32,6 @@ def UpandDownPoint(Boxes):
     """将boxes的（左下，右上）转换为（左上， 右下）"""
     Boxes[:, [1, 3]] = Boxes[:, [3, 1]]
 
-
-
 def DownandUpPoint():
     pass
 
@@ -57,15 +55,22 @@ def ExtendBox(Boxes, dim, pixelthd = 36):
 
 def BoxOverlap(Region1, Region2):
     """
-        Note: RegionX is box, it is 1d ndarray;
+        Note: RegionX is box, it is 1d ndarray;（up point and down point）
         Func: Find the overlap area
     """
-    if Region1[0] > Region2[0]:
+    if (Region1[0] > Region2[2]) | (Region1[1] < Region2[3]):
         return 0
-    if Region1[1] > Region2[0]:
+    if (Region1[2] < Region2[0]) | (Region1[3] > Region2[1]):
         return 0
 
+    width = min(Region1[2], Region2[2])
+
+    return 1
+
 def MergeBoxes(Boxes, threshold = 0):
+    """
+        Func: Find the overlap area
+    """
     FinalBoxes = np.zeros((0, 5))
 
 
