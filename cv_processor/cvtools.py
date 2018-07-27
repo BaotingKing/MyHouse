@@ -74,6 +74,15 @@ def BoxOverlap(Region1, Region2):
     intersection_area = width * height
     region1_area = (Region1[1] - Region1[3]) * (Region1[2] - Region1[0])
     region2_area = (Region2[1] - Region2[3]) * (Region2[2] - Region2[0])
+    # another way:
+    # if (Region1[0] > Region2[2])|(Region1[1] > Region2[3])|
+    #     (Region1[2] < Region2[0])|(Region1[3] < Region2[1]):
+    #     return 0
+    # Width = min(Region1[2], Region2[2]) - max(Region1[0], Region2[0])
+    # Height = min(Region1[3], Region2[3]) - max(Region1[1], Region2[1])
+    # IntersectionArea = Width * Height
+    # Area1 = (Region1[3] - Region1[1]) * (Region1[2] - Region1[0])
+    # Area2 = (Region2[3] - Region2[1]) * (Region2[2] - Region2[0])
 
     if region1_area + region2_area - intersection_area == 0:
         return 1000
@@ -87,8 +96,8 @@ def MergeBoxes(boxes, threshold=0):
             and finalBoxes are completely independent of one another.
         Note: Up point and down point
     """
-    finalBoxes = np.zeros((0, 5))
-    mergedboxes = boxes[0, :].copy()
+    finalBoxes = np.zeros((0, 4))  # finalBoxes = np.zeros((0, 5))
+    mergedboxes = boxes[0:1, :].copy()
     leftboxes = boxes[1:, :].copy()
     while leftboxes.shape[0] > 0:
         IOU = np.zeros((leftboxes.shape[0], 1))
@@ -96,21 +105,22 @@ def MergeBoxes(boxes, threshold=0):
             IOU[i, 0] = BoxOverlap(mergedboxes[0, :], leftboxes[i, :])
         index = IOU[:, 0] >= threshold
 
-        if not IOU.any():
+        if not index.any():
             finalBoxes = np.concatenate((finalBoxes, mergedboxes), 0)  # add unIOU box
-            mergedboxes = leftboxes[0, :].copy()   # update
-            leftboxes = leftboxes[1, :].copy()  # update left boxes
+            mergedboxes = leftboxes[0:1, :].copy()   # update
+            leftboxes = leftboxes[1:, :].copy()  # update left boxes
         else:
             crossedboxes = np.concatenate((mergedboxes, leftboxes[index, :]), 0)
             mergedboxes = np.array(
                 [crossedboxes[:, 0].min(), crossedboxes[:, 1].max(),
                  crossedboxes[:, 2].max(), crossedboxes[:, 3].min()])
+            # another way:
             # mergedboxes = np.array(
             #     [CrossedBoxes[:, 0].min(), CrossedBoxes[:, 1].min(),
             #      CrossedBoxes[:, 2].max(), CrossedBoxes[:, 3].max(),
             #      CrossedBoxes[:, 4].max()])
             mergedboxes = mergedboxes.reshape((1, 4))
-            leftboxes = leftboxes[False == IOU, :].copy()  # update left boxes
+            leftboxes = leftboxes[False == index, :].copy()  # update left boxes
     finalBoxes = np.concatenate((finalBoxes, mergedboxes), 0)
     return finalBoxes
 
