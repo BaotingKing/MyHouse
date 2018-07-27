@@ -9,12 +9,13 @@ import cvtools as cvtl
 import os
 import numpy as np
 import fitools
+import cv2
 
-# a = np.arange(28).reshape(-1,4)
-# b = np.arange(7).reshape(7,-1)
+a = np.arange(28).reshape(-1,4)
+
+box = a
+print(a)
 # box = np.concatenate((b,a),-1)
-# box = a
-# print(a)
 # cvtl.ExtendBox(box, 0)
 # cvtl.ExtendBox(box, 1)
 
@@ -26,10 +27,14 @@ print("===============================")
 # print(box)
 print("===============================")
 
-# 定义Caffe根目录
-caffe_root = 'D:/home/zach/house/'
-dir_merge = "F:\myhouse\MyHouse\\nnProject"   # 按照不同categories文件夹存放的根目录
-print("1111111111111")
-fitools.creatLabelTxt(dir_merge, "train_label.txt")
-fitools.creatLabelTxt(dir_merge, "test_label.txt")
-print("2222222222222")
+
+print("===============================")
+
+Region1 = [2, 8, 5, 2]
+Region2 = [3, 6, 10, 2]
+
+are =cvtl.BoxOverlap(Region2, Region1)
+print(are)
+b = 8.0/38
+print(b)
+print("===============================")
