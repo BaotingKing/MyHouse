@@ -124,7 +124,10 @@ def MergeBoxes(boxes, threshold=0):
     finalBoxes = np.concatenate((finalBoxes, mergedboxes), 0)
     return finalBoxes
 
-def new():
+# ====================================================
+# ===============This is for Draw operation============
+# ===============This is for Draw operation============
+def DrawBoxes(boxes):
     pass
 
 

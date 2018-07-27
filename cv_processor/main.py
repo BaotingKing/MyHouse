@@ -8,6 +8,7 @@ for test function
 import cvtools as cvtl
 import os
 import numpy as np
+import matplotlib.pyplot as plt
 import fitools
 import cv2
 
@@ -47,6 +48,16 @@ arr = [[3, 56, 20, 12],
          [18, 40, 20, 8],
          [2, 12, 8, 3]]
 boxes = np.array(arr)
-merge_box = cvtl.MergeBoxes(boxes, 0.2)
-print("boxes is %s" % boxes)
-print("merge_box is %s" % merge_box)
+# merge_box = cvtl.MergeBoxes(boxes, 0.2)
+# print("boxes is %s" % boxes)
+# print("merge_box is %s" % merge_box)
+
+
+# ===========测试DrawBoxes函数=========
+
+for i in range(boxes.shape[0]):
+    points = boxes[i, :]
+    plt.vlines(points[0], points[1], points[3], colors=)
+    plt.vlines(points[2], points[1], points[3])
+    plt.hlines(points[1], points[0], points[2])
+    plt.hlines(points[3], points[0], points[2])
