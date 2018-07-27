@@ -26,3 +26,4 @@ def creatLabelTxt(path, data_set_name, sub_labels_flag=0):
                                     label_name = image_file + ' ' + str(i) + '\n'  # 文件路径+空格+标签编号+换行
                                     train_txt.writelines(label_name)
                 i += 1  # 类型编号加1
+    return 0
