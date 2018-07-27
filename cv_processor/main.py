@@ -11,28 +11,25 @@ import numpy as np
 import fitools
 import cv2
 
-a = np.arange(28).reshape(-1,4)
+boxes = np.arange(28).reshape(-1,4)
+print(boxes)
 
-box = a
-print(a)
-# box = np.concatenate((b,a),-1)
+# ===========测试ExtendBox函数=========
 # cvtl.ExtendBox(box, 0)
 # cvtl.ExtendBox(box, 1)
-
-
 print("===============================")
+
+
+# ===========UpandDownPoint===========
 # print(box)
-print("===============================")
 # cvtl.UpandDownPoint(box)
 # print(box)
 print("===============================")
 
 
-print("===============================")
-
+# ===========测试BoxOverlap函数=========
 Region1 = [2, 8, 5, 2]
 Region2 = [3, 6, 10, 2]
-
 are =cvtl.BoxOverlap(Region2, Region1)
 print(are)
 b = 8.0/38
