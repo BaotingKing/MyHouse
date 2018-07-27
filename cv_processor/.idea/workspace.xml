@@ -17,8 +17,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="73">
-              <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+            <state relative-caret-position="161">
+              <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
               <folding>
                 <element signature="e#106#128#0" expanded="true" />
               </folding>
@@ -29,8 +29,8 @@
       <file leaf-file-name="cvtools.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/cvtools.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="133">
-              <caret line="113" column="62" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+            <state relative-caret-position="91">
+              <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
               <folding>
                 <element signature="e#87#143#0" expanded="true" />
               </folding>
@@ -78,11 +78,11 @@
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="90" />
-    <option name="y" value="60" />
-    <option name="width" value="1689" />
-    <option name="height" value="996" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="568" />
+    <option name="y" value="1" />
+    <option name="width" value="1535" />
+    <option name="height" value="1010" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -251,22 +251,21 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="41" width="1125" height="663" extended-state="0" />
+    <frame x="379" y="1" width="1023" height="673" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298969" />
-      <window_info anchor="right" x="0" y="0" width="137" height="378" id="Documentation" order="5" sideWeight="0.16181818" side_tool="true" visible="true" weight="0.063006304" />
+      <window_info anchor="right" x="0" y="0" width="231" height="464" id="Documentation" order="5" sideWeight="0.16452442" side_tool="true" visible="true" weight="0.06937562" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.23277467" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3109091" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30535713" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.114311434" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12586719" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.4347079" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8381818" visible="true" weight="0.063006304" />
+      <window_info anchor="right" id="SciView" order="4" sideWeight="0.83547556" visible="true" weight="0.06937562" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.33676976" />
@@ -276,6 +275,7 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.4347079" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -293,12 +293,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>14</line>
+          <line>13</line>
           <option name="timeStamp" value="3" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/main.py</url>
-          <line>18</line>
+          <line>17</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
@@ -306,6 +306,26 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="756">
+          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+          <folding>
+            <element signature="e#106#128#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cvtools.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2184">
+          <caret line="113" column="62" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+          <folding>
+            <element signature="e#87#143#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -316,13 +336,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/17804_gyf/123.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/17804_gyf/123.py" />
     <entry file="file://D:/ProgramData/Anaconda3/envs/tensorflowai/Lib/site-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -371,9 +385,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/get_annotation.py" />
     <entry file="file://$PROJECT_DIR$/cv_utils.py" />
-    <entry file="file://$PROJECT_DIR$/example.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/example.xml" />
     <entry file="file://G:/2018-07-17 WellOcean/processing_sample/cv_utils.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-38">
@@ -381,13 +393,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/17804_gyf/templ.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="3" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/17804_gyf/templ.py" />
     <entry file="file://D:/ProgramData/Anaconda3/envs/tensorflowai/Lib/site-packages/numpy/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="84">
@@ -395,13 +401,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/17804_gyf/123.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/17804_gyf/123.py" />
     <entry file="file://D:/ProgramData/Anaconda3/envs/tensorflowai/Lib/_collections_abc.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="185">
@@ -446,8 +446,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="73">
-          <caret line="40" lean-forward="true" selection-start-line="40" selection-end-line="40" />
+        <state relative-caret-position="161">
+          <caret line="35" column="8" lean-forward="true" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="8" />
           <folding>
             <element signature="e#106#128#0" expanded="true" />
           </folding>
@@ -456,8 +456,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/cvtools.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="113" column="62" selection-start-line="113" selection-start-column="62" selection-end-line="113" selection-end-column="62" />
+        <state relative-caret-position="91">
+          <caret line="30" column="54" lean-forward="true" selection-start-line="30" selection-start-column="54" selection-end-line="30" selection-end-column="54" />
           <folding>
             <element signature="e#87#143#0" expanded="true" />
           </folding>

@@ -27,11 +27,10 @@ def CheckFolderExists(foldername):
     if os.path.exists(foldername):
         os.makedirs(foldername)
 
-"""
-This is for box operation
-"""
 
-
+# ====================================================
+# ===============This is for box operation============
+# ===============This is for box operation============
 def UpandDownPoint(Boxes):
     """将boxes的（左下，右上）转换为（左上， 右下）"""
     Boxes[:, [1, 3]] = Boxes[:, [3, 1]]
