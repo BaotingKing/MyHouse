@@ -47,17 +47,32 @@ arr = [[3, 56, 20, 12],
          [6, 40, 52, 16],
          [18, 40, 20, 8],
          [2, 12, 8, 3]]
-boxes = np.array(arr)
+# boxes = np.array(arr)
 # merge_box = cvtl.MergeBoxes(boxes, 0.2)
 # print("boxes is %s" % boxes)
 # print("merge_box is %s" % merge_box)
 
 
 # ===========测试DrawBoxes函数=========
+# cvtl.DrawBoxes(boxes)
+# print("hi, boxes are drawn")
+#
+# plt.hold()
+# cvtl.DrawBoxes(merge_box)
+# print("hi, merge_box are drawn")
 
-for i in range(boxes.shape[0]):
-    points = boxes[i, :]
-    plt.vlines(points[0], points[1], points[3], colors=)
-    plt.vlines(points[2], points[1], points[3])
-    plt.hlines(points[1], points[0], points[2])
-    plt.hlines(points[3], points[0], points[2])
+# ===========测试ShuffleFeature函数=========
+# trainfeature = np.random.randint(0, 100, 28).reshape(-1, 4)
+# trainlabel = np.arange(0, trainfeature.shape[0]).reshape(trainfeature.shape[0], -1)
+#
+# randomfreature, randomlabel = cvtl.ShuffleFeature(trainfeature, trainlabel)
+# print("hi, before Shuffle trainfeature = ")
+# print(trainfeature)
+# print("hi, before Shuffle trainlabel = ")
+# print(trainlabel)
+#
+# print("hi, after Shuffle randomfreature = ")
+# print(randomfreature)
+# print("hi, after Shuffle randomlabel = ")
+# print(randomlabel)
+

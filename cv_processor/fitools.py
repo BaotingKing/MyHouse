@@ -27,3 +27,25 @@ def creatLabelTxt(path, data_set_name, sub_labels_flag=0):
                                     train_txt.writelines(label_name)
                 i += 1  # 类型编号加1
     return 0
+
+
+def openTrainFile(filepath, categories):
+    categorytrainlist = []
+    for i in range(1, len(categories)):
+        categorytrainlist.append(open(filepath + categories[i] + '_train.txt', 'w'))
+        categorytrainlist.append(open(filepath + categories[i] + '_test.txt', 'w'))
+    return categorytrainlist
+
+
+def writeTrainFile(categorytrainlist, labels, categories, imname):
+    for i in range(len(categorytrainlist)):
+        singlelabel = i / 2 + 1
+        if (labels == singlelabel).any():
+            categorytrainlist[i].write(imname + ' ' + '1' + '\n')
+        else:
+            categorytrainlist[i].write(imname + ' ' + '-1' + '\n')
+
+
+def closeTrainFile(categorytrainlist):
+    for singlefile in categorytrainlist:
+        singlefile.close()
