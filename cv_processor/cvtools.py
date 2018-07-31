@@ -157,7 +157,7 @@ def GenerateImageList(ImageListFile):
 # ===============Some Little Toys=====================
 # ===============Some Little Toys=====================
 def ShuffleFeature(trainfeature, trainlabel):
-    """&随机化训练数据"""
+    """&&随机化训练数据"""
     randomfeature = np.zeros(trainfeature.shape)
     randomlabel = np.zeros(trainlabel.shape)
     randomorder = np.arange(0, trainfeature.shape[0])
@@ -181,7 +181,7 @@ def GenerateLabelForFeature(LabelNum, LabelDim, TrueDim):
 
 
 def ReadFeatureFromFile(FeatureFile, Label, LabelDim):  # label 0 means pedestuirain, 1 means background
-    """&feature与label抽取"""
+    """&& feature与label抽取&"""
     Feature = []
     Label = []
     for FeatureName in FeatureFile:
@@ -192,6 +192,7 @@ def ReadFeatureFromFile(FeatureFile, Label, LabelDim):  # label 0 means pedestui
     Feature = np.asarray(Feature)
     Label = np.asarray(Label)
     return Feature, Label
+
 
 
 

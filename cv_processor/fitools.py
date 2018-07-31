@@ -49,3 +49,8 @@ def writeTrainFile(categorytrainlist, labels, categories, imname):
 def closeTrainFile(categorytrainlist):
     for singlefile in categorytrainlist:
         singlefile.close()
+
+
+def CheckFolderExists(folder):
+    if not os.path.exists(folder):
+        os.makedirs(folder)
