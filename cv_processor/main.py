@@ -9,9 +9,11 @@ import cvtools as cvtl
 import os
 import numpy as np
 import matplotlib.pyplot as plt
+from Crypto.Cipher import AES
 import fitools
 import cv2
 import UI
+
 # boxes = np.arange(28).reshape(-1,4)
 # print(boxes)
 
@@ -113,3 +115,32 @@ arr = [[3, 56, 20, 12],
 #
 # paper = UI.drawUI(images, papers, result, 1,1,'1','1')
 # cv2.imshow('paper', paper)
+
+# ===========测试writeLog函数=========
+# mge = "Hello, this is a test for writelog()"
+# paths = "C:\\Users\\lenovo\\Desktop\\temp\\"
+# print(paths)
+# log = "logname"
+# fitools.writeLog(paths, log, message=mge)
+
+# ===========测试os.walk函数=========
+# import os
+# for root, dirs, files in os.walk("G:\\学习资料", topdown=True):
+#     for name in files:
+#         print(os.path.join(root, name))
+#     print("1111")
+#     for name in dirs:
+#         print(os.path.join(root, name))
+#     print("2222")
+
+
+# ===========测试Encryption && Decryption函数=========
+# obj = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
+# obj2 = AES.new('This is a key123', AES.MODE_CBC, 'This is an IV456')
+# message = "The answer is no"
+# ciphertext = obj.encrypt(message)
+# deciphertext = obj2.decrypt(ciphertext)
+# a = str(deciphertext)
+# print(message + '\n' + str(ciphertext) + '\n' + str(deciphertext))
+# print('\n' + a)
+
