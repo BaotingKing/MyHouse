@@ -8,8 +8,6 @@ import sys, cv2, os, time, sqlite3, collections, hashlib
 # import ConfigParser
 from matplotlib import pyplot as plt
 from random import shuffle
-# from Crypto.Cipher import AES
-# from Crypto import Random
 from hashlib import md5
 import xml.etree.ElementTree as ET
 import numpy as np
@@ -59,23 +57,17 @@ def BoxOverlap(Region1, Region2):
         Func: Find the overlap area
         Note: RegionX is box, it is 1d ndarray;（up point and down point）
     """
+    """
     if (Region1[0] > Region2[2]) | (Region1[1] < Region2[3]):
         return 0
     if (Region1[2] < Region2[0]) | (Region1[3] > Region2[1]):
         return 0
-
+    """
     width  = min(Region1[2], Region2[2]) - max(Region1[0], Region2[0])
     height = min(Region1[1], Region2[1]) - max(Region1[3], Region2[3])
     intersection_area = width * height
-    region1_area = abs((Region1[1] - Region1[3])) * (Region1[2] - Region1[0])
-    region2_area = abs((Region2[1] - Region2[3])) * (Region2[2] - Region2[0])
-    # another way:
-    # if (Region1[0] > Region2[2])|(Region1[1] > Region2[3])|
-    #     (Region1[2] < Region2[0])|(Region1[3] < Region2[1]):
-    #     return 0
-    # Width = min(Region1[2], Region2[2]) - max(Region1[0], Region2[0])
-    # Height = min(Region1[3], Region2[3]) - max(Region1[1], Region2[1])
-    # IntersectionArea = Width * Height
+    region1_area = abs((Region1[1] - Region1[3])) * abs((Region1[2] - Region1[0]))
+    region2_area = abs((Region2[1] - Region2[3])) * abs((Region2[2] - Region2[0]))
 
     if region1_area + region2_area - intersection_area == 0:
         return 1000
