@@ -20,3 +20,37 @@ data = {"info":[]}
 # html_report1 = htmlreport.HtmlReport(gm)
 
 # 测试用例(组)类
+class TestInterfaceCase(unittest.TestCase):
+    pass
+
+
+# 获取测试套件
+def get_test_suite(index):
+    pass
+
+
+# 运行测试用例函数
+def run_case(runner):
+    pass
+
+
+# 运行测试套件
+if __name__ == '__main__':
+    pass
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
