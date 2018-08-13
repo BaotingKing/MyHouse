@@ -18,8 +18,8 @@
       <file leaf-file-name="main.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="795">
-              <caret line="133" column="19" lean-forward="true" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
+            <state relative-caret-position="2646">
+              <caret line="133" column="19" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
               <folding>
                 <element signature="e#106#128#0" expanded="true" />
               </folding>
@@ -109,8 +109,8 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="535" />
-    <option name="y" value="40" />
+    <option name="x" value="534" />
+    <option name="y" value="39" />
     <option name="width" value="1668" />
     <option name="height" value="1106" />
   </component>
@@ -304,20 +304,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="357" y="27" width="1112" height="737" extended-state="0" />
+    <frame x="356" y="26" width="1112" height="737" extended-state="0" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298969" />
-      <window_info anchor="right" x="0" y="0" width="209" height="538" id="Documentation" order="5" sideWeight="0.17307693" side_tool="true" visible="true" weight="0.06284153" />
+      <window_info anchor="right" x="0" y="0" width="228" height="537" id="Documentation" order="5" sideWeight="0.17470881" side_tool="true" visible="true" weight="0.0626186" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="7" weight="0.23277467" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.31891027" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12568305" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1280835" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="right" id="SciView" order="4" sideWeight="0.8269231" visible="true" weight="0.06284153" />
+      <window_info active="true" anchor="right" id="SciView" order="4" sideWeight="0.82529116" visible="true" weight="0.0626186" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.42307693" />
@@ -413,9 +413,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1155">
           <caret line="55" column="27" selection-start-line="55" selection-start-column="27" selection-end-line="55" selection-end-column="27" />
-          <folding>
-            <element signature="e#90#105#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -701,9 +698,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
           <caret line="83" column="17" selection-start-line="83" selection-start-column="17" selection-end-line="83" selection-end-column="17" />
-          <folding>
-            <element signature="e#90#105#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -723,21 +717,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="795">
-          <caret line="133" column="19" lean-forward="true" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
+        <state relative-caret-position="2646">
+          <caret line="133" column="19" selection-start-line="133" selection-start-column="19" selection-end-line="133" selection-end-column="19" />
           <folding>
             <element signature="e#106#128#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/download_model_binary.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="53" column="32" selection-start-line="53" selection-start-column="25" selection-end-line="53" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/download_model_binary.py" />
     <entry file="file://$PROJECT_DIR$/caffetools.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
