@@ -11,7 +11,10 @@ import time
 # import BaseExcelReport as be
 import xlsxwriter
 # import sendMail as sd
-
+from model.HTMLTestRunner_py2 import HTMLTestRunner
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
 # gm = con_api_xml.ret_xml() # 读取xml
 # hb = con_api_xml.ret_http_base(gm) #读取http参数
 

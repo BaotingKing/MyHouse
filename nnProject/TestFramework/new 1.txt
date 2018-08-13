@@ -1,0 +1,10 @@
+["/WellOcean/container_subimage/channel_04_front_letter",
+"/WellOcean/container_subimage/channel_04_back_letter"]
+
+"/WellOcean/container_subimage/channel_04_front_digit",
+"/WellOcean/container_subimage/channel_04_back_digit"],
+
+"/WellOcean/container_subimage/channel_04_front_type",
+"/WellOcean/container_subimage/channel_04_back_type"
+
+"/WellOcean/plate_subimage/channel_04_plate_plate"
