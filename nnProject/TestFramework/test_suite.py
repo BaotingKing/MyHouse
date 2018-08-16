@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 # Time: 2018/8/7
-import unittest
-import re
-from test_case.test_mathfunc import TestMathFunc
-from model.HTMLTestRunner_py2 import HTMLTestRunner
+# import unittest
+# import re
+# from test_case.test_mathfunc import TestMathFunc
+# from model.HTMLTestRunner_py2 import HTMLTestRunner
 from model.launchfile import Launchfile
 import itertools
 import tools
 import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 # if __name__ == '__main__':
 
@@ -39,12 +39,17 @@ print("11111111111111111111")
 # a = tools.unfold_list(a)
 b = 'abc'
 c = 'abc'
-d = ["/WellOcean/roi_trigger/channel_04_front", "/WellOcean/roi_trigger/channel_04_bak"]
+d = [['lalla', ['abc', 'wdc'], 'were'],"/WellOcean/roi_trigger/channel_04_front", "/WellOcean/roi_trigger/channel_04_bak"]
 e = ["/WellOcean/roi_trigger/channel_04_front", "/WellOcean/roi_trigger/channel_04_bak"]
 
-bo = tools.check_adaptive(d,e)
+# # bo = tools.check_adaptive(d,e)
+# idx_para = "/WellOcean/container_subimage/channel_04_front_letter"
+# tail_word = idx_para.replace("subimage", "result")
+# print(tail_word)
 
-print(bo)
+
+
+# print '-'.join('G20-杭州峰会-放假时间-放假安排'.split('-')[])
 print("33333333333333333333")
 if False:
     suite = unittest.TestSuite()
