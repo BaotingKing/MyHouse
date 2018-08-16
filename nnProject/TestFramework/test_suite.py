@@ -2,9 +2,12 @@
 # -*- coding: utf-8 -*-
 # Time: 2018/8/7
 import unittest
+import re
 from test_case.test_mathfunc import TestMathFunc
 from model.HTMLTestRunner_py2 import HTMLTestRunner
 from model.launchfile import Launchfile
+import itertools
+import tools
 import sys
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -12,12 +15,13 @@ sys.setdefaultencoding('utf8')
 # if __name__ == '__main__':
 
 path = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\tianjin.conf"
+path = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\dongsen.conf"
 testa = Launchfile()
 # testa.cheakoutCfg()
 testb = testa.load_launchfile(path)
 print("================")
 # print(testb['module_0'])
-# print("****************")
+# # print("****************")
 # print("cfg keys are\n", testb.keys())
 # print("@@@@@@@@@@@@@@@@")
 # # for key in testb.iterkeys():
@@ -30,9 +34,18 @@ print("================")
 # param = module.get("run_param")
 # print(param.keys())
 
-ten = {}
-print(type(ten))
+print("11111111111111111111")
+# a = ['lalla', ['abc', 'wdc'], 'were']
+# a = tools.unfold_list(a)
+b = 'abc'
+c = 'abc'
+d = ["/WellOcean/roi_trigger/channel_04_front", "/WellOcean/roi_trigger/channel_04_bak"]
+e = ["/WellOcean/roi_trigger/channel_04_front", "/WellOcean/roi_trigger/channel_04_bak"]
 
+bo = tools.check_adaptive(d,e)
+
+print(bo)
+print("33333333333333333333")
 if False:
     suite = unittest.TestSuite()
     if False:
