@@ -1,10 +1,13 @@
-["/WellOcean/container_subimage/channel_04_front_letter",
-"/WellOcean/container_subimage/channel_04_back_letter"]
+"trigger_topic": "/WellOcean/roi_trigger/channel_04",
+"container_trigger_topic": ["/WellOcean/roi_trigger/channel_04_front",
+                            "/WellOcean/roi_trigger/channel_04_back"],
+"plate_trigger_topic": ["/WellOcean/roi_trigger/channel_04_plate"],
 
-"/WellOcean/container_subimage/channel_04_front_digit",
-"/WellOcean/container_subimage/channel_04_back_digit"],
-
-"/WellOcean/container_subimage/channel_04_front_type",
-"/WellOcean/container_subimage/channel_04_back_type"
-
-"/WellOcean/plate_subimage/channel_04_plate_plate"
+"plate_roi_topic": "/WellOcean/roi_trigger/channel_04_plate",
+		
+		
+		
+		
+"trigger_topic":"output_topic",
+"container_trigger_topic":"container_cam_trigger",
+"plate_trigger_topic":"plate_cam_trigger",		
