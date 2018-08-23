@@ -5,6 +5,7 @@
 import os
 import json
 import tools
+from report.Logger import logger_running
 # 读取校验配置
 class Launchfile:
     def __init__(self):
@@ -36,16 +37,19 @@ class Launchfile:
         target_mdl = "read_config"
         if target_mdl in name_list:
             print('%s module is checking.....' % target_mdl)
+            logger_running.info(target_mdl + ' module is checking.....')
             idx = name_list.index(target_mdl)
             target_module = self.cfgcontent[module_list[idx]]
             file_name = target_module["run_param"]["file_name"]
             if not os.path.isfile(file_name):
                 print('     Error item configuration: %s' % file_name)
+                logger_running.warn('     Error item configuration: ' + file_name)
 
 
         target_mdl = "video_processing"
         if target_mdl in name_list:
             print('%s module is checking.....' % target_mdl)
+            logger_running.info(target_mdl + ' module is checking.....')
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             for idx in idxes:
                 pass
@@ -54,6 +58,7 @@ class Launchfile:
         target_mdl = "image_processing"
         if target_mdl in name_list:
             print('%s module is checking.....' % target_mdl)
+            logger_running.info(target_mdl + ' module is checking.....')
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             for idx in idxes:
                 pass
@@ -61,6 +66,7 @@ class Launchfile:
 
         target_mdl = "osk2_master_shell"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "roi_recog"]
@@ -70,6 +76,7 @@ class Launchfile:
 
         target_mdl = "object_roi"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             for idx in idxes:
@@ -92,6 +99,7 @@ class Launchfile:
 
         target_mdl = "roi_recog"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "object_roi"]
@@ -140,6 +148,7 @@ class Launchfile:
 
         target_mdl = "roi_trigger"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "roi_recog"]
@@ -149,6 +158,7 @@ class Launchfile:
 
         target_mdl = "result_transfer"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "roi_recog"]
@@ -168,9 +178,7 @@ class Launchfile:
 
                     x_topic = tools.type2topic(cmp_module['run_param']['detect_type'])
                     types_topic = target_module['run_param'][x_topic]
-                    if type(types_topic) == str:   # this is he_he, avoid the unknown problem
-                        target_infor.append(types_topic)
-                    elif type(types_topic) == list:
+                    if type(types_topic) == list:   # this is he_he, avoid the unknown problem
                         for i in types_topic:
                             target_infor.append(i)
                     else:     # cfg has illegality write
@@ -184,6 +192,7 @@ class Launchfile:
 
         target_mdl = "result_send"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idx = name_list.index("result_send")
             idx_cmp = name_list.index("roi_trigger")
@@ -210,6 +219,7 @@ class Launchfile:
 
         target_mdl = "ui"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idx = name_list.index(target_mdl)
             target_module = self.cfgcontent[module_list[idx]]
@@ -247,6 +257,7 @@ class Launchfile:
 
         target_mdl = "object_catorgery"
         if target_mdl in name_list:
+            logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "roi_recog"]
