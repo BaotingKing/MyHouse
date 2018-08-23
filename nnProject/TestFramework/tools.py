@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 # @author: Zhang.Baoting
 # Time: 2018/8/14
+import logging
+import os
 
 
 def unfold_list(mult_list):
@@ -74,3 +76,13 @@ def check_adaptive(target, compare, para_name='TestTopic'):   # adaptive str and
             return False
 
 
+def logging_run(filename=os.path.join(os.getcwd(), 'log.txt'),
+                level=logging.WARN,
+                filemode='w',
+                format='%(asctime)s - %(levelname)s: %(message)s'):
+    # pass
+    logging.basicConfig(filename=filename, level=level, filemode=filemode, format=format)
+    logging.debug('debug')  # 被忽略
+    logging.info('info')  # 被忽略
+    logging.warning('warn')
+    logging.error('error')
