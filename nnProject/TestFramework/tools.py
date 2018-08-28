@@ -4,6 +4,7 @@
 # Time: 2018/8/14
 import logging
 import os
+import string, random
 
 
 def unfold_list(mult_list):
@@ -20,7 +21,7 @@ def check_param_topic():
     pass
 
 
-def type2topic(detect_type):   # I am hehe, It's a little tricky to name
+def type2topic(detect_type):  # I am hehe, It's a little tricky to name
     set_topic = ['trigger_topic',
                  'letters_topic',
                  'digits_topic',
@@ -35,7 +36,7 @@ def type2topic(detect_type):   # I am hehe, It's a little tricky to name
         type_topic = set_topic[2]
     elif detect_type == 'type':
         type_topic = set_topic[3]
-    elif detect_type == 'char':       # he_he
+    elif detect_type == 'char':  # he_he
         type_topic = set_topic[4]
 
     return type_topic
@@ -53,7 +54,7 @@ def check_item_ref_resultsend(topic_name):
     return comparison_relationship[topic_name]
 
 
-def check_adaptive(target, compare, para_name='TestTopic'):   # adaptive str and list compare
+def check_adaptive(target, compare, para_name='TestTopic'):  # adaptive str and list compare
     if type(target) == type(compare):
         if target == compare:
             return True
@@ -86,3 +87,9 @@ def logging_run(filename=os.path.join(os.getcwd(), 'log.txt'),
     logging.info('info')  # 被忽略
     logging.warning('warn')
     logging.error('error')
+
+
+def randomGenContent(minlength=0, maxlength=25):
+    length = random.randint(minlength, maxlength)
+    letters = string.ascii_letters + string.digits
+    return ''.join([random.choice(letters) for _ in range(length)])

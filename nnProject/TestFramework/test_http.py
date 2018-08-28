@@ -8,6 +8,7 @@ import urllib
 import json
 from controller import config
 from model.launchfile import Launchfile
+from model import interface
 # try:
 #
 #     httpClient = httplib.HTTPConnection('127.0.0.1',5000,30)
@@ -71,13 +72,14 @@ httpconnet = config.ConfigHttp(host=web_server_ip,port=port_id)
 
 
 # test = httpconnet.get(url=url_content, params='')
-post_way = httpconnet.post(url=url_content)
-# post_way = httpconnet.post(url=url_content, data=config.http_json)
-# print test
+# post_way = httpconnet.post(url=url_content)
+content_http = interface.innerInterface("Gate")
+post_way = httpconnet.post(url=url_content, data=content_http.content)
+print post_way
 print "#############********************"
-# print post_way
-a =json.dumps(config.http_json)
-print type(a)
+# a = config.http_json
+# print type(a)
+# print type(content_http.content)
 
 
 
