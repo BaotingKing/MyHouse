@@ -4,17 +4,17 @@
 # Time: 2018/8/13
 import unittest
 from test_case.test_mathfunc import TestMathFunc
-from model.HTMLTestRunner_py2 import HTMLTestRunner
+from model.HTMLTestRunner_py3 import HTMLTestRunner
 from model.launchfile import Launchfile
-import sys
-reload(sys)
-sys.setdefaultencoding('utf8')
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('utf8')
 
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    if False:
-        tests = [TestMathFunc("test_add"), TestMathFunc("test_minus"), TestMathFunc("test_divide")]
+    if True:
+        tests = [TestMathFunc("test_OSK_Interface")]
         suite.addTests(tests)
     else:
         # loadTestsFromTestCase()，传入TestCase

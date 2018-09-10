@@ -7,6 +7,11 @@ from model import interface
 from model import db
 from controller import config
 
+def atest():
+    print('--------------------')
+    print("this is a test print")
+    print('--------------------')
+    return True
 
 if __name__ == '__main__':
     iterations = 10000
@@ -37,4 +42,4 @@ if __name__ == '__main__':
     else:
         print(post_feedback)
 
-    print "haha"
+    print("haha")
