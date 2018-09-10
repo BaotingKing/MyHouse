@@ -68,11 +68,6 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 """
 
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
-
-__author__ = "Wai Yip Tung"
-__version__ = "0.8.2"
-
-
 """
 Change History
 
@@ -113,7 +108,7 @@ from xml.sax import saxutils
 # e.g.
 #   >>> logging.basicConfig(stream=HTMLTestRunner.stdout_redirector)
 #   >>>
-
+__version__ = "!.?.$"
 class OutputRedirector(object):
     """ Wrapper to redirect stdout or stderr """
     def __init__(self, fp):
@@ -541,7 +536,7 @@ class _TestResult(TestResult):
     def startTest(self, test):
         TestResult.startTest(self, test)
         # just one buffer for both stdout and stderr
-        self.outputBuffer = io.BytesIO()     ### for python 2.x StringIO.StringIO()
+        self.outputBuffer = io.StringIO()    ### for python 2.x StringIO.StringIO()
         stdout_redirector.fp = self.outputBuffer
         stderr_redirector.fp = self.outputBuffer
         self.stdout0 = sys.stdout
@@ -633,7 +628,8 @@ class HTMLTestRunner(Template_mixin):
         test(result)
         self.stopTime = datetime.datetime.now()
         self.generateReport(test, result)
-        print >>sys.stderr, '\nTime Elapsed: %s' % (self.stopTime-self.startTime)
+        # print >>sys.stderr, '\nTime Elapsed: %s' % (self.stopTime-self.startTime)
+        print(sys.stderr, '\nTimeElapsed: % s' % (self.stopTime - self.startTime))
         return result
 
 
@@ -689,7 +685,8 @@ class HTMLTestRunner(Template_mixin):
             report = report,
             ending = ending,
         )
-        self.stream.write(output.encode('utf-8'))
+        # self.stream.write(output.encode('utf-8'))
+        self.stream.write(output)
 
 
     def _generate_stylesheet(self):
@@ -768,7 +765,7 @@ class HTMLTestRunner(Template_mixin):
         if isinstance(o,str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
             # uo = unicode(o.encode('string_escape'))
-            uo = o   # for python2.x  o.decode('latin-1')
+            uo = e   # for python2.x  o.decode('latin-1')
         else:
             # uo = o.decode('utf-8')
             uo = o
@@ -782,7 +779,7 @@ class HTMLTestRunner(Template_mixin):
 
         script = self.REPORT_TEST_OUTPUT_TMPL % dict(
             id = tid,
-            output = saxutils.escape(uo+ue),
+            output = saxutils.escape(str(uo) + str(ue)),    # python2:output = saxutils.escape(uo+ue)
         )
 
         row = tmpl % dict(
