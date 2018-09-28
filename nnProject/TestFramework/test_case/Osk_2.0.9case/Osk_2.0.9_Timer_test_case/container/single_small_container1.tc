@@ -1,0 +1,13 @@
+5, 4, 4
+DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1,DetectResultCam1/result_check: True, DetectResultCam2/number:OL123456, DetectResultCam2/style:22G1,DetectResultCam2/result_check: False, token:1
+GateInfo/final_result1:OLDD 0000000 22G1 False, GateInfo/final_result2:OL 0000000 0000 False,token:1
+GateInfo/final_result1:OLDD 1234567 22G1 True,  GateInfo/final_result2:OLDD 123456 22G False
+GateInfo/final_result1:OLDD 2000000 22G1 False, GateInfo/final_result2:OL 0000000 0000 False
+GateInfo/final_result1:OLDD 2000000 22G1 False, GateInfo/final_result2:OL 123456 0000 False
+
+'''
+#Pre
+Mode:Timer
+#Desc
+单小箱(22G1)，前箱有正确结果，后箱有相似的错误结果,  目前会判断为双箱，取两条结果
+'''

@@ -1,0 +1,13 @@
+5, 3, 3
+DetectResultCam1/number:CCCC1111111, DetectResultCam1/style:0000,DetectResultCam1/result_check:False,DetectResultCam2/number:BBBB2222222, DetectResultCam2/style:0000,DetectResultCam2/result_check:False, token:1
+GateInfo/final_result1:OLDD 0000000 0000 False,GateInfo/final_result2:BMO 4 2 False,token:1
+GateInfo/final_result1:OLDD 1234567 0000 False,GateInfo/final_result2:BMO 490 2 False
+GateInfo/final_result1:CCCC 1111111 0000 False,GateInfo/final_result2:BBBB 2222222 0000 False
+
+
+'''
+#Pre
+Mode: Passive
+#Desc
+
+'''  

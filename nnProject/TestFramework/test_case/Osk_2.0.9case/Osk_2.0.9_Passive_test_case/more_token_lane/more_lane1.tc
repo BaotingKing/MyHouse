@@ -1,0 +1,18 @@
+5, 6, 6, 6, 6
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:2, AdditionalInfo/lane:1
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:2, AdditionalInfo/lane:2
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:1, AdditionalInfo/lane:3
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G False, GateInfo/final_result2:BMOU 4995440 22G1 True, token:1, AdditionalInfo/lane:1
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G False, GateInfo/final_result2:BMOU 4995440 22G1 True, token:1, AdditionalInfo/lane:2
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 4995440 22G1 True, token:1, AdditionalInfo/lane:3
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 4995440 22G1 True, token:2, AdditionalInfo/lane:1
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 4995440 22G1 True, token:2, AdditionalInfo/lane:2
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G False, GateInfo/final_result2:BMOU 4995440 22G1 True, token:1, AdditionalInfo/lane:3
+
+
+'''
+#Pre
+Mode: Passive
+#Desc
+多个车道每个车道多辆车的数据到达，车道间独立工作
+'''

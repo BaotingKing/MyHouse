@@ -1,0 +1,3710 @@
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_lane1.tc : Test Case has 6 requests send in 5 seconds
+GetOne will be send and check on 6,6,6
+------------------------------------------
+2018-08-30 12:06:17.929390
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977929",
+        "token": "153560197793101"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:18.814467
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "2",
+        "lane_in_out": "in",
+        "timestamp": "1535601977930",
+        "token": "153560197793101"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:19.695186
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "3",
+        "lane_in_out": "in",
+        "timestamp": "1535601977931",
+        "token": "153560197793101"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:20.574829
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977932",
+        "token": "153560197793201"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:21.458186
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "2",
+        "lane_in_out": "in",
+        "timestamp": "1535601977933",
+        "token": "153560197793201"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:22.337113
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "3",
+        "lane_in_out": "in",
+        "timestamp": "1535601977934",
+        "token": "153560197793201"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:23.330411
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    },
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    }
+}
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560197793201", "timestamp": "1535601977932", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 2
+        : Check Start, Key = AdditionalInfo/lane Value = 1
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:06:23.732357
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "lane": "2",
+        "timestamp": "146868630098"
+    },
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    }
+}
+Response: 200 OK {"AdditionalInfo": {"lane": "2 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "2", "lane_mode": "in", "dangerous_goods": "false", "token": "153560197793201", "timestamp": "1535601977933", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 2
+        : Check Start, Key = AdditionalInfo/lane Value = 2
+
+
+Check 1 Pass
+------------------------------------------
+2018-08-30 12:06:24.130275
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "lane": "3",
+        "timestamp": "146868630098"
+    },
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    }
+}
+Response: 200 OK {"AdditionalInfo": {"lane": "3 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "3", "lane_mode": "in", "dangerous_goods": "false", "token": "153560197793201", "timestamp": "1535601977934", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 2
+        : Check Start, Key = AdditionalInfo/lane Value = 3
+
+
+Check 2 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_lane1.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_lane.tc : Test Case has 6 requests send in 5 seconds
+GetOne will be send and check on 6,6,6
+------------------------------------------
+2018-08-30 12:06:24.244651
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977935",
+        "token": "153560198424571"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:25.131768
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "2",
+        "lane_in_out": "in",
+        "timestamp": "1535601977936",
+        "token": "153560198424571"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:26.010229
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "3",
+        "lane_in_out": "in",
+        "timestamp": "1535601977937",
+        "token": "153560198424571"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:26.887227
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977938",
+        "token": "153560198424571"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:27.766575
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "2",
+        "lane_in_out": "in",
+        "timestamp": "1535601977939",
+        "token": "153560198424571"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:28.647202
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "3",
+        "lane_in_out": "in",
+        "timestamp": "1535601977940",
+        "token": "153560198424571"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:29.651513
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "lane": "2",
+        "timestamp": "146868630098"
+    },
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    }
+}
+Response: 200 OK {"AdditionalInfo": {"lane": "2 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "2", "lane_mode": "in", "dangerous_goods": "false", "token": "153560198424571", "timestamp": "1535601977939", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+        : Check Start, Key = AdditionalInfo/lane Value = 2
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:06:30.054420
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    },
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    }
+}
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560198424571", "timestamp": "1535601977938", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+        : Check Start, Key = AdditionalInfo/lane Value = 1
+
+
+Check 1 Pass
+------------------------------------------
+2018-08-30 12:06:30.455398
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "lane": "3",
+        "timestamp": "146868630098"
+    },
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    }
+}
+Response: 200 OK {"AdditionalInfo": {"lane": "3 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "3", "lane_mode": "in", "dangerous_goods": "false", "token": "153560198424571", "timestamp": "1535601977940", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+        : Check Start, Key = AdditionalInfo/lane Value = 3
+
+
+Check 2 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_lane.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_store.tc : Test Case has 33 requests send in 5 seconds
+GetOne will be send and check on 33
+------------------------------------------
+2018-08-30 12:06:30.560535
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977941",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 1 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:30.706682
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977942",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 2 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:30.846344
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977943",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 3 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:30.982888
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977944",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 4 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.111551
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977945",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 5 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.255253
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977946",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 6 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.391846
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977947",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 7 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.526485
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977948",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 8 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.666159
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977949",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 9 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.795723
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977950",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 10 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:31.933407
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977951",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 11 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.079037
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977952",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 12 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.207691
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977953",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 13 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.348500
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977954",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 14 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.488935
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977955",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 15 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.619570
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977956",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 16 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.764210
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977957",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 17 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:32.900830
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977958",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 18 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.034472
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977959",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 19 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.166162
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977960",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 20 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.310685
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977961",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 21 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.444380
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977962",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 22 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.580942
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977963",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 23 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.723138
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977964",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 24 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.856693
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977965",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 25 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:33.989880
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977966",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 26 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.131746
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977967",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 27 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.271527
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977968",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 28 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.406868
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977969",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 29 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.540781
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977970",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 30 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.672234
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977971",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 31 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.819060
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977972",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 32 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:34.979608
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977973",
+        "token": "153560199055741"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "METU 33 22G1 False",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:35.952014
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560199055741", "timestamp": "1535601977973", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "METU33", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "False"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = METU33
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = False
+        : Check Start, Key = DetectResultCam2/number Value = 
+        : Check Start, Key = DetectResultCam2/style Value = 
+        : Check Start, Key = DetectResultCam2/result_check Value = 
+        : Check Start, Key = token Value = 1
+
+
+Check 0 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_store.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token1.tc : Test Case has 4 requests send in 5 seconds
+GetOne will be send and check on 4
+------------------------------------------
+2018-08-30 12:06:36.126494
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977974",
+        "token": "153560199612751"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 0000000 22G1 False",
+        "final_result2": "BMO 4 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:37.594318
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977975",
+        "token": "153560199612851"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMO 490 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:39.063388
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977976",
+        "token": "153560199612951"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "TJ_P1HB743",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:40.533730
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977977",
+        "token": "153560199612751"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "TJ_*HB743",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:41.525080
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560199612751", "timestamp": "1535601977977", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "津港HB743"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = 津港HB743
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+
+
+Check 0 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token1.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token2.tc : Test Case has 3 requests send in 3 seconds
+GetOne will be send and check on 1,2,3
+------------------------------------------
+2018-08-30 12:06:41.793046
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977978",
+        "token": "153560200179401"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "AAAA 0000000 0000 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:42.402497
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200179401", "timestamp": "1535601977978", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": ""}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = 
+        : Check Start, Key = DetectResultCam1/style Value = 
+        : Check Start, Key = DetectResultCam1/result_check Value = 
+        : Check Start, Key = token Value = 1
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:06:43.003164
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977979",
+        "token": "153560200179501"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "NEWC 3275294 22G1 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:43.593585
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200179501", "timestamp": "1535601977979", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "NEWC3275294", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = NEWC3275294
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = token Value = 2
+
+
+Check 1 Pass
+------------------------------------------
+2018-08-30 12:06:44.203893
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977980",
+        "token": "153560200179501"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "NEWD 3111111 22G1 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:45.200276
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200179501", "timestamp": "1535601977980", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "NEWD3111111", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = NEWD3111111
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = token Value = 2
+
+
+Check 2 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token2.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token3.tc : Test Case has 3 requests send in 3 seconds
+GetOne will be send and check on 3,3
+------------------------------------------
+2018-08-30 12:06:45.415053
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977981",
+        "token": "153560200541621"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "AAAA 0000000 0000 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:46.619462
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977982",
+        "token": "153560200541721"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "NEWC 3275294 22G1 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:47.824261
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977983",
+        "token": "153560200541721"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "NEWD 3111111 22G1 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:48.816580
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200541721", "timestamp": "1535601977983", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "NEWD3111111", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = NEWD3111111
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = token Value = 2
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:06:49.222220
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200541721", "timestamp": "1535601977983", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "NEWD3111111", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = NEWD3111111
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = token Value = 2
+
+
+Check 1 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token3.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token4.tc : Test Case has 7 requests send in 5 seconds
+GetOne will be send and check on 2,4,5
+------------------------------------------
+2018-08-30 12:06:49.285003
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977984",
+        "token": "153560200928451"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMO 4 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:50.024357
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977985",
+        "token": "153560200928451"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:50.387150
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200928451", "timestamp": "1535601977985", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:06:50.756381
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977986",
+        "token": "153560200928551"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMO 4901 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:51.491489
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977987",
+        "token": "153560200928551"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 499544 22G1 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:51.854475
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200928551", "timestamp": "1535601977987", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU499544", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "False"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU499544
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = False
+        : Check Start, Key = token Value = 2
+
+
+Check 1 Pass
+------------------------------------------
+2018-08-30 12:06:52.218517
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977988",
+        "token": "153560200928551"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:52.590618
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560200928551", "timestamp": "1535601977988", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 2
+
+
+Check 2 Pass
+------------------------------------------
+2018-08-30 12:06:53.001385
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977989",
+        "token": "153560200928651"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:53.689581
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977990",
+        "token": "153560200928651"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token4.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token5_getone.tc : Test Case has 6 requests send in 5 seconds
+GetOne will be send and check on 1,2,3,4,5,6
+------------------------------------------
+2018-08-30 12:06:54.283810
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977991",
+        "token": "153560201428411"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:54.729824
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201428411", "timestamp": "1535601977991", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:06:55.174362
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977992",
+        "token": "153560201428411"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 499544 22G1 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:55.607333
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201428411", "timestamp": "1535601977992", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 1
+
+
+Check 1 Pass
+------------------------------------------
+2018-08-30 12:06:56.054248
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977993",
+        "token": "153560201428511"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMO 499 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:56.488771
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201428511", "timestamp": "1535601977993", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMO499", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "False"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMO499
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = False
+        : Check Start, Key = token Value = 2
+
+
+Check 2 Pass
+------------------------------------------
+2018-08-30 12:06:56.925902
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977994",
+        "token": "153560201428511"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 499544 22G1 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:57.371695
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201428511", "timestamp": "1535601977994", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU499544", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "False"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU499544
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = False
+        : Check Start, Key = token Value = 2
+
+
+Check 3 Pass
+------------------------------------------
+2018-08-30 12:06:57.804560
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977995",
+        "token": "153560201428611"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 499544 22G1 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:58.266373
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201428611", "timestamp": "1535601977995", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU499544", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "False"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU499544
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = False
+        : Check Start, Key = token Value = 3
+
+
+Check 4 Pass
+------------------------------------------
+2018-08-30 12:06:58.692950
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977996",
+        "token": "153560201428611"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:06:59.693479
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201428611", "timestamp": "1535601977996", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "P"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = P
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 3
+
+
+Check 5 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token5_getone.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token6_hp.tc : Test Case has 3 requests send in 3 seconds
+GetOne will be send and check on 1,2,3
+------------------------------------------
+2018-08-30 12:06:59.790678
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977997",
+        "token": "153560201979171"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "AAAA 0000000 0000 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:00.395365
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201979171", "timestamp": "1535601977997", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": ""}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = 
+        : Check Start, Key = DetectResultCam1/style Value = 
+        : Check Start, Key = DetectResultCam1/result_check Value = 
+        : Check Start, Key = token Value = 1
+
+
+Check 0 Pass
+------------------------------------------
+2018-08-30 12:07:00.991898
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977998",
+        "token": "153560201979171"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "NEWC 3275294 22G1 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:01.597629
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201979171", "timestamp": "1535601977998", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "NEWC3275294", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = NEWC3275294
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = token Value = 1
+
+
+Check 1 Pass
+------------------------------------------
+2018-08-30 12:07:02.200843
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601977999",
+        "token": "153560201979171"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "NEWD 3111111 22G1 True",
+        "final_result2": "",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "SD_AB1234",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:03.199177
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560201979171", "timestamp": "1535601977999", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "NEWD3111111", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "鲁AB1234"}, "DetectResultCam2": {"style": "", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "", "detect_face": "none", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": ""}}
+
+
+        : Check Start, Key = DetectResultCam1/number Value = NEWD3111111
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = token Value = 1
+
+
+Check 2 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token6_hp.tc : SUCCESS
+
+
+===========================================================
+../Osk2.1.1_test/Passive/more_token_lane/more_token.tc : Test Case has 4 requests send in 5 seconds
+GetOne will be send and check on 4
+------------------------------------------
+2018-08-30 12:07:03.407793
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601978000",
+        "token": "153560202340811"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 0000000 22G1 False",
+        "final_result2": "BMO 4 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:04.875632
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601978001",
+        "token": "153560202340811"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "TJ_P1HB743",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:06.342459
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601978002",
+        "token": "153560202340911"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G False",
+        "final_result2": "BMO 490 2 False",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "J_P",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:07.815781
+[STEP]: A new request will be send like:
+{
+    "AdditionalInfo": {
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "lane": "1",
+        "lane_in_out": "in",
+        "timestamp": "1535601978003",
+        "token": "153560202341011"
+    },
+    "ExamineInfo": {
+        "examine_img_back": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+        "examine_img_top": ""
+    },
+    "GateInfo": {
+        "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+        "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+        "container_position1": "",
+        "dangerous_goods1": "false",
+        "dangerous_goods2": "false",
+        "detect_face1": "front",
+        "detect_face2": "back",
+        "final_result1": "OLDD 1234567 22G1 True",
+        "final_result2": "BMOU 4995440 22G1 True",
+        "lead_sealing1": "true",
+        "lead_sealing2": "true",
+        "plate_impath": "/cv/wellocean/imagesave/\u9c81AB1234.jpg",
+        "plate_result": "TJ_*HB743",
+        "remark": "detect",
+        "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+        "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg"
+    }
+}
+Response: 200 OK DATA STORE SUCCESSFULLY ...
+------------------------------------------
+2018-08-30 12:07:08.816828
+[STEP]: A new request will be send like:
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+
+
+Response: 200 OK {"AdditionalInfo": {"lane": "1 ...
+[RETGetOne]: {"AdditionalInfo": {"lane": "1", "lane_mode": "in", "dangerous_goods": "false", "token": "153560202341011", "timestamp": "1535601978003", "empty_full_status": "empty", "high_low_board": "true"}, "ExamineInfo": {"examine_img_back": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "examine_img_left": null, "examine_img_front": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "examine_img_top": "ftp://192.168.101.121/", "examine_img_right": null}, "DetectResultCam1": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/1.jpg|ftp://192.168.101.121/imagesave/side_impath/2.jpg", "number": "OLDD1234567", "detect_face": "front", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/a.jpg", "result_check": "True"}, "LorryInfo": {"fullimg_path": "ftp://192.168.101.121/imagesave/鲁AB1234.jpg", "car_plate": "津港HB743"}, "DetectResultCam2": {"style": "22G1", "side_fullimg_path": "ftp://192.168.101.121/imagesave/side_impath/3.jpg|ftp://192.168.101.121/imagesave/side_impath/4.jpg", "number": "BMOU4995440", "detect_face": "back", "fullimg_path": "ftp://192.168.101.121/imagesave/defect_check/b.jpg", "result_check": "True"}}
+
+
+        : Check Start, Key = LorryInfo/car_plate Value = 津港HB743
+        : Check Start, Key = DetectResultCam1/number Value = OLDD1234567
+        : Check Start, Key = DetectResultCam1/style Value = 22G1
+        : Check Start, Key = DetectResultCam1/result_check Value = True
+        : Check Start, Key = DetectResultCam2/number Value = BMOU4995440
+        : Check Start, Key = DetectResultCam2/style Value = 22G1
+        : Check Start, Key = DetectResultCam2/result_check Value = True
+        : Check Start, Key = token Value = 3
+
+
+Check 0 Pass
+
+[Finished]: Test Case:  ../Osk2.1.1_test/Passive/more_token_lane/more_token.tc : SUCCESS
+

@@ -1,0 +1,13 @@
+3, 3, 3, 3
+DetectResultCam1/number:NEWD3111111,DetectResultCam1/style:22G1,DetectResultCam1/result_check:True,token:2
+DetectResultCam1/number:NEWD3111111,DetectResultCam1/style:22G1,DetectResultCam1/result_check:True,token:2
+GateInfo/final_result1: AAAA 0000000 0000 True, GateInfo/final_result2,token:1
+GateInfo/final_result1: NEWC 3275294 22G1 True, token:2
+GateInfo/final_result1: NEWD 3111111 22G1 True
+
+'''
+#Pre
+Mode: Passive
+#Desc
+第一辆车为空车，第二辆车有两条识别结果，客户在第二辆车第两条结果时取数据会将此结果标记成最终结果，
+''' 

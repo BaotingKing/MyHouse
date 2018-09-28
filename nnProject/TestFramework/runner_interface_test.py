@@ -7,12 +7,6 @@ from model import interface
 from model import db
 from controller import config
 
-def atest():
-    print('--------------------')
-    print("this is a test print")
-    print('--------------------')
-    return True
-
 if __name__ == '__main__':
     iterations = 10000
     path = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\tianjin.conf"

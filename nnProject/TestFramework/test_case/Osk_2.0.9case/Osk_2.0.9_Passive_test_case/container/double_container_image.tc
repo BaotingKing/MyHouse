@@ -1,0 +1,14 @@
+5, 3, 3
+DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1,DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1,DetectResultCam2/result_check:True, DetectResultCam1/fullimg_path:ftp://192.168.106.122//home/fj/Desktop/153251001268700000 front AMFU 3104321 0000 True.jpg, DetectResultCam2/fullimg_path:ftp://192.168.106.122//home/fj/Desktop/153251001268700000 back AAAA 0000000 0000 False.jpg, token:1
+GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 4995440 22G1 True, GateInfo/container_impath1:/home/fj/Desktop/153251001268700000 front AMFU 3104321 0000 True.jpg, GateInfo/container_impath2:/home/fj/Desktop/153251001268700000 back AAAA 0000000 0000 False.jpg, token:1
+GateInfo/final_result1:OLDD 0000000 22G1 False,GateInfo/final_result2:BMO 4 2 False, GateInfo/container_impath1:/home/fj/Desktop/153251001268700000 front AMFU 3104321 0000 True.jpg, GateInfo/container_impath2:/home/fj/Desktop/153251001268700000 back AAAA 0000000 0000 False.jpg
+GateInfo/final_result1:OLDD 1234567 22G False,GateInfo/final_result2:BMO 490 2 False, GateInfo/container_impath1:/home/fj/Desktop/153251001268700000 front AMFU 3104321 0000 True.jpg, GateInfo/container_impath2:/home/fj/Desktop/153251001268700000 back AAAA 0000000 0000 False.jpg
+
+
+
+'''
+#Pre
+Mode: Passive
+#Desc
+测试加载前后箱图片路径
+'''

@@ -139,6 +139,22 @@ interface_infor = {
     }
 }
 
+interface_db = {
+    'DetectResultCam1': {
+        'number': 'FinalResult1',
+        'style': 'FinalResult1',
+        'result_check': 'FinalResult1Check',
+    },
+    'DetectResultCam2': {
+        'number': 'FinalResult2',
+        'style': 'FinalResult2',
+        'result_check': 'FinalResult2Check',
+    },
+    'LorryInfo': {
+        'car_plate': 'PlateResult',
+    }
+}
+
 if __name__ == '__main__':
     content_http = innerInterface("Gate")
     content_http.set_random_content()

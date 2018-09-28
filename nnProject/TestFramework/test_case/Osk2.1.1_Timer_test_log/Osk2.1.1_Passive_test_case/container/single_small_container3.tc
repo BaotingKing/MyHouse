@@ -1,0 +1,13 @@
+5, 4, 4
+DetectResultCam1/number:, DetectResultCam1/style:,DetectResultCam1/result_check:,DetectResultCam2/number:OLDD1234567, DetectResultCam2/style:22G1,DetectResultCam2/result_check: True,token:1
+GateInfo/final_result1:AAAA 0000000 0000 False, GateInfo/final_result2:OL 0000000 0000 False,token:1
+GateInfo/final_result1:AAAA 0000000 0000 False,  GateInfo/final_result2:OLDD 1234567 22G1 True
+GateInfo/final_result1:AAAA 0000000 0000 False, GateInfo/final_result2:OL 0000000 0000 False
+GateInfo/final_result1:AAAA 0000000 0000 False, GateInfo/final_result2:OL 123456 0000 False
+
+'''
+#Pre
+Mode:Timer
+#Desc
+单小箱(22G1)，前箱为空，后箱有正确结果，输出一条后箱结果
+'''

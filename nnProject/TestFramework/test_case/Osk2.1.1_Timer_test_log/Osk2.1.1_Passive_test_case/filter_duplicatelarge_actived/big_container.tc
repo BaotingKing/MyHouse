@@ -1,0 +1,13 @@
+5, 4, 4
+DetectResultCam1/number:OLDD1234568, DetectResultCam1/style:45G1,DetectResultCam1/result_check: True,token:1
+GateInfo/final_result1:AAAA 0000000 0000 True, GateInfo/final_result2:AAAA 0000000 0000 True,token:1
+GateInfo/final_result1:AAAA 0000000 0000 True,  GateInfo/final_result2:AAAA 0000000 0000 True
+GateInfo/final_result1:AAAA 0000000 0000 True, GateInfo/final_result2:AAAA 0000000 0000 True
+GateInfo/final_result1:OLDD 1234568 45G1 True, GateInfo/final_result2:AAAA 0000000 0000 True
+
+'''
+#Pre
+Mode: Passive
+#Desc
+大箱(45G1)，前箱有正确结果，后箱为空箱,会取到箱号正确结果
+'''

@@ -1,0 +1,14 @@
+5, 3, 3
+LorryInfo/car_plate:3,token:1
+GateInfo/plate_result:_3,token:1
+GateInfo/plate_result:_3
+GateInfo/plate_result:_3
+
+
+
+'''
+#Pre
+Mode: Timer
+#Desc
+测试普通车车牌
+'''

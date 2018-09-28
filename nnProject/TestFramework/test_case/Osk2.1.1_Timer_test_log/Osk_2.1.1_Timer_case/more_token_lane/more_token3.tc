@@ -1,0 +1,13 @@
+5, 3, 3, 3
+DetectResultCam1/number:, DetectResultCam1/style:, DetectResultCam1/result_check:,token:1
+DetectResultCam1/number:, DetectResultCam1/style:, DetectResultCam1/result_check:,token:1
+GateInfo/final_result1: AAAA 0000000 0000 True, GateInfo/final_result2,token:1
+GateInfo/final_result1: NEWC 3275294 22G1 True, token:2
+GateInfo/final_result1: NEWD 3111111 22G1 True
+
+'''
+#Pre
+Mode: Timer
+#Desc
+第一辆车为空车，第二辆车有2条识别结果，最后1条识别结果getone两次；取到第一辆车空车的结果，第二辆车的结果5s后会取到
+''' 
