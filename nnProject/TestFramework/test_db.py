@@ -13,14 +13,19 @@ from model import db
 #     host="127.0.0.1",  port=3306, user="root",
 #     passwd="admin", db="db0821",charset="utf8"
 # )
+check_con = {}
+db = db.processDB(check_list=check_con,
+                  check_num=6,
+                  host="localhost",
+                  username="root",
+                  passwd="admin",
+                  dbname="db0821",
+                  tabname='table_001',
+                  charset="utf8")
 
-# db = db.get_connect(
-#     host="localhost", user="root",
-#     passwd="admin", db="db0821", charset="utf8")
-
-db = db.get_connect(
-    host="localhost", user="root",
-    passwd="admin", db="db0821", charset="utf8")
+# db = db.checkout_DB(
+#     host='192.168.101.234', username="root",
+#     passwd="westwell", dbname="GateRawData", tabname="Gate_gateinfo", charset="utf8")
 
 # cur = db.cursor()
 # search_method = "select sex from table_001"
@@ -40,4 +45,4 @@ db = db.get_connect(
 # # 关闭游标
 # cur.close()
 # # 关闭连接
-# cur.close()
+# db.close()

@@ -1,0 +1,14 @@
+5, 3, 3
+DetectResultCam1/number:OLDD123456, DetectResultCam1/style:45G1,DetectResultCam1/result_check:False,token:1
+GateInfo/final_result1:, GateInfo/final_result2:,token:1
+GateInfo/final_result1:OLDD 0000000 45G1 False
+GateInfo/final_result1:OLDD 123456 45G1 False
+
+
+'''
+#Pre
+Mode: Timer
+
+#Desc
+False=kong
+'''

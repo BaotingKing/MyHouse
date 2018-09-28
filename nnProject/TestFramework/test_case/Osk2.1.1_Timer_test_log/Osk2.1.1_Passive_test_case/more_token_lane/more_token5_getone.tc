@@ -1,0 +1,20 @@
+5, 6, 1, 2, 3, 4, 5, 6
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:1
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:1
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMO499, DetectResultCam2/style:22G1, DetectResultCam2/result_check:False, token:2
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU499544, DetectResultCam2/style:22G1, DetectResultCam2/result_check:False, token:2
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU499544, DetectResultCam2/style:22G1, DetectResultCam2/result_check:False, token:3
+LorryInfo/car_plate:P, DetectResultCam1/number:OLDD1234567, DetectResultCam1/style:22G1, DetectResultCam1/result_check:True, DetectResultCam2/number:BMOU4995440, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:3
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 4995440 22G1 True, token:1
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 499544 22G1 False, token:1
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMO 499 2 False, token:2
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 499544 22G1 False, token:2
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 499544 22G1 False, token:3
+GateInfo/plate_result:J_P, GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:BMOU 4995440 22G1 True, token:3
+
+'''
+#Pre
+Mode: Passive
+#Desc
+3辆车6条识别结果，每次识别结果后getone
+'''

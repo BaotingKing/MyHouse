@@ -1,0 +1,13 @@
+5, 3, 3
+DetectResultCam1/number:IRHU1374410, DetectResultCam1/style:22G1,DetectResultCam1/result_check:True,DetectResultCam2/number:TRHU1374410, DetectResultCam2/style:22G1,DetectResultCam2/result_check:True,token:1
+GateInfo/final_result1:I 0000000 22G1 False,GateInfo/final_result2:TR 0000000 22G1 False,token:1
+GateInfo/final_result1:IRHU 137 22G False,GateInfo/final_result2:TR 137 22G False
+GateInfo/final_result1:IRHU 1374410 22G1 True,GateInfo/final_result2:TRHU 1374410 22G1 True
+
+
+'''
+#Pre
+Mode: Timer
+#Desc
+单小箱(22G1)，前箱输出一个通过箱号验算法的箱号为True，后箱输出一个未通过箱号演算法则的箱号False,目前会判断为双箱，取两条结果
+'''

@@ -1,0 +1,12 @@
+5, 2, 2
+DetectResultCam1/number:BMOU5841959, DetectResultCam1/style:45G,DetectResultCam1/result_check: False,DetectResultCam2/number:, DetectResultCam2/style:,DetectResultCam2/result_check:,token:1
+GateInfo/final_result1:BMOU 5841959 45 False,GateInfo/final_result2:,token:1
+GateInfo/final_result1:BMOU 5841959 45G False
+
+
+'''
+#Pre
+Mode: Timer
+#Desc
+同一辆车多个识别结果，箱号箱型的选择优先级：较晚的错误箱型 > 较早的错误箱型
+'''

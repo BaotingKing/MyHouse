@@ -1,0 +1,14 @@
+5, 4, 4
+DetectResultCam1/number:RTMI1234567, DetectResultCam1/style:45G1,DetectResultCam1/result_check: True,token:1
+GateInfo/final_result1:OLDD 0000000 0000 False, GateInfo/final_result2:AAAA 0000000 0000 True,token:1
+GateInfo/final_result1:OLDD 1234567 45G1 True, GateInfo/final_result2:AAAA 0000000 0000 True
+GateInfo/final_result1:OLDD 2000000 0000 False, GateInfo/final_result2:AAAA 0000000 0000 True
+GateInfo/final_result1:OLDD 2000000 0000 False, GateInfo/final_result2:RTMI 1234567 0000 True
+
+
+'''
+#Pre
+Mode: Passive
+#Desc
+大箱(45G1)，后箱有正确结果，前箱有正确结果,前箱有type,后箱无type,取得结果应补齐type
+'''

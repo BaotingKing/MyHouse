@@ -1,0 +1,11 @@
+5, 2, 2
+DetectResultCam1/number:BBBB1234567, DetectResultCam1/style:45G1,DetectResultCam1/result_check: False,token:1
+GateInfo/final_result1:OLDD 0000000 0000 False, GateInfo/final_result2:AAAA 0000000 0000 False,token:1
+GateInfo/final_result1:AAAA 1234567 0000 False, GateInfo/final_result2:BBBB 1234567 45G1 False
+
+'''
+#Pre
+Mode: Timer
+#Desc
+大箱选择箱号的逻辑， result1 result2 箱号的 result_check 相同时，优先选择 result2 
+'''

@@ -1,0 +1,17 @@
+5, 1, 1
+AdditionalInfo/dangerous_goods:true, AdditionalInfo/high_low_board:true, AdditionalInfo/empty_full_status:full, DetectResultCam1/detect_face:front, DetectResultCam2/detect_face:none, DetectResultCam1/result_check:False, DetectResultCam2/result_check:, DetectResultCam1/side_fullimg_path:ftp://192.168.101.121//home/fj/Desktop/153251001268700000 front AMFU 3104321 0000 True.jpg|ftp://192.168.101.121//home/fj/Desktop/153251001268700000 back AAAA 0000000 0000 False.jpg, DetectResultCam2/side_fullimg_path:, token:1
+GateInfo/dangerous_goods1:true,GateInfo/dangerous_goods2:true, AdditionalInfo/high_low_board:true, AdditionalInfo/empty_full_status:full, GateInfo/detect_face1:front, GateInfo/detect_face2:back, GateInfo/detect_face1:front, GateInfo/detect_face2:back, GateInfo/side_imgpath1:/home/fj/Desktop/153251001268700000 front AMFU 3104321 0000 True.jpg|/home/fj/Desktop/153251001268700000 back AAAA 0000000 0000 False.jpg, GateInfo/side_imgpath2:, token:1
+
+'''
+#Pre
+Mode: Passive
+RESULT_CHECK_ACTIVATED = 'true'
+DETECT_FACE_ACTIVATED = 'true'
+DANGEROUS_GOODS_ACTIVATED = 'true'
+HIGH_LOW_BOARD_ACTIVATED = 'true'
+EMPTY_FULL_ACTIVATED = 'true'
+SEALING_ACTIVATED = 'true'
+SIDE_IMAGE_ACTIVATED = 'true'
+
+#Desc
+'''  

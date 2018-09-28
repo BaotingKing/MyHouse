@@ -1,0 +1,15 @@
+3, 3, 1, 2, 3
+DetectResultCam1/number:,DetectResultCam1/style:,DetectResultCam1/result_check:,token:1
+DetectResultCam1/number:NEWC3275294,DetectResultCam1/style:22G1,DetectResultCam1/result_check:True,token:1
+DetectResultCam1/number:NEWD3111111,DetectResultCam1/style:22G1,DetectResultCam1/result_check:True,token:1
+GateInfo/final_result1: AAAA 0000000 0000 True, GateInfo/final_result2:,token:1
+GateInfo/final_result1: NEWC 3275294 22G1 True
+GateInfo/final_result1: NEWD 3111111 22G1 True
+
+'''
+#Pre
+Mode: Passive
+#Desc
+   刚开始识别为空车，之后有箱号，每一次识别结果getone
+
+''' 

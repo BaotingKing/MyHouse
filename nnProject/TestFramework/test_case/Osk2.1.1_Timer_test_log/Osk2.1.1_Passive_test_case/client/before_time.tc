@@ -1,0 +1,13 @@
+3, 2, 1
+DetectResultCam1/number:OLDD0000000, DetectResultCam1/style:45G1,DetectResultCam1/result_check: False,DetectResultCam2/number:,DetectResultCam2/style:,DetectResultCam2/result_check:,token:1
+GateInfo/final_result1:OLDD 0000000 45G1 False,GateInfo/final_result2:,token:1
+GateInfo/final_result1:OLDD 2000000 45G1 False
+
+
+
+'''
+#Pre
+Mode: Passive
+#Desc
+设置正常取值时间为3s请求数据，会把当前车的识别结果发送给客户
+'''

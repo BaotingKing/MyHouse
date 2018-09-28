@@ -1,0 +1,14 @@
+5, 3, 3
+DetectResultCam1/number:, DetectResultCam1/style:,DetectResultCam1/result_check:, DetectResultCam2/number:, DetectResultCam2/style:,DetectResultCam2/result_check:, token:1
+GateInfo/final_result1:OLDD 0000000 22G1 False,GateInfo/final_result2:OLDD 0000000 22G1 False,token:1
+GateInfo/final_result1:OLDD 123456 22G1 False,GateInfo/final_result2:OLDD 123456 22G1 False
+GateInfo/final_result1:, GateInfo/final_result2:
+
+
+'''
+#Pre
+Mode: Passive
+
+#Desc
+kong=False
+'''

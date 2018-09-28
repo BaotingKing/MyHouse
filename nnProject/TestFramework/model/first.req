@@ -1,0 +1,40 @@
+{
+    "GateInfo": {
+       "remark": "detect",
+       "plate_result": "SD_AB1234",
+       "plate_impath": "/cv/wellocean/imagesave/鲁AB1234.jpg",
+       "final_result1": "ORIG 7654321 NAL1 False",
+       "final_result2": "AAAA 0000000 0000 False",
+       "detect_face1": "front",
+       "detect_face2": "back",
+       "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
+       "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
+       "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
+       "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg",
+       "dangerous_goods1": "false",
+       "dangerous_goods2": "false",
+       "lead_sealing1": "true",
+       "lead_sealing2": "true",
+       "container_position1": ""
+    },
+
+   "ExamineInfo": {
+   	   "dangerous_goods_class": "true",
+       "sealing": "lead sealing eg: yes/no",
+       "examine_img_top": "",
+       "examine_img_left": "/cv/wellocean/imagesave/defect_check",
+       "examine_img_right": "/cv/wellocean/imagesave/defect_check",
+       "examine_img_front": "/cv/wellocean/imagesave/defect_check",
+       "examine_img_back": "/cv/wellocean/imagesave/defect_check"
+    },
+
+   "AdditionalInfo": {
+        "lane": "1",
+        "lane_in_out":"in",
+        "token": "1524558723034330",
+        "empty_full_status": "empty",
+        "high_low_board": "true",
+        "timestamp": "1524558726000"
+    }
+}
+

@@ -1,0 +1,10 @@
+{
+    "WellGateAct": {
+        "container_detection_sys": "container_info"
+    },
+    "AdditionalInfo": {
+        "lane": "1",
+        "timestamp": "146868630098"
+    }
+}
+

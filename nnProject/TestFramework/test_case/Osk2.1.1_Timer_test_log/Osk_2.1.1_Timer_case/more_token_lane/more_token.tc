@@ -1,0 +1,13 @@
+5, 4, 4
+LorryInfo/car_plate:P,DetectResultCam1/number:OLDD1234567,DetectResultCam1/style:22G,DetectResultCam1/result_check:False,DetectResultCam2/number:BMO490, DetectResultCam2/style:2, DetectResultCam2/result_check:False, token:2
+GateInfo/plate_result:J_,GateInfo/final_result1:OLDD 0000000 22G1 False,GateInfo/final_result2:BMO 4 2 False,token:1
+GateInfo/plate_result:TJ_P1HB743,GateInfo/final_result1:OLDD 1234567 22G1 True,GateInfo/final_result2:BMOU 4995440 22G1 True,token:1
+GateInfo/plate_result:J_P,GateInfo/final_result1:OLDD 1234567 22G False,GateInfo/final_result2:BMO 490 2 False,token:2
+GateInfo/plate_result:TJ_*HB743,GateInfo/final_result1:OLDD 1234567 22G1 True,GateInfo/final_result2:BMOU 4995440 22G1 True,token:3
+
+'''
+#Pre
+Mode: Timer
+#Desc
+第一辆车2条结果，第二辆车1条结果，第三辆车1条结果，第4条结果getone；取到识别结果（第二辆车），第三辆车5s之后会得到（写入数据库）
+'''

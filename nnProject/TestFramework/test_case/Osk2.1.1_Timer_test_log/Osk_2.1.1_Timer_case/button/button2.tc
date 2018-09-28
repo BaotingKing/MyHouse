@@ -1,0 +1,17 @@
+5, 1, 1
+DetectResultCam1/side_fullimg_path:, DetectResultCam2/side_fullimg_path:, token:1
+GateInfo/side_imgpath1:, GateInfo/side_imgpath2:, token:1
+
+'''
+#Pre
+Mode: Timer
+RESULT_CHECK_ACTIVATED = 'true'
+DETECT_FACE_ACTIVATED = 'true'
+DANGEROUS_GOODS_ACTIVATED = 'true'
+HIGH_LOW_BOARD_ACTIVATED = 'true'
+EMPTY_FULL_ACTIVATED = 'true'
+SEALING_ACTIVATED = 'true'
+SIDE_IMAGE_ACTIVATED = 'true'
+
+#Desc
+'''  
