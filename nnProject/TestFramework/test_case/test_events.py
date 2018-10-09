@@ -4,6 +4,7 @@
 # Time: 2018/8/7
 from __future__ import print_function
 from __future__ import division
+import os
 import unittest
 import runcase
 from model import launchfile
@@ -58,9 +59,37 @@ class TestEventB(unittest.TestCase):
         print
         "do something after test.Clean up."
 
-    def test_OSK(self):
+    def test_OSK(self, case_a='this is debug'):
         """Test R-OSK-DB"""
-        self.assertEqual(True, True)
+        global g_case_path
+        case_path = search(g_case_path, self.testMethodDoc)
+        run_temp(case_path)
+
+        self.assertEqual(search(g_case_path, self.testMethodDoc), True)
+        # self.assertEqual(run_temp(case_a), True)
+
+
+def run_temp(casename):
+    print(casename)
+    global g_num
+    if g_num % 2 == 0:
+        g_num = g_num + 1
+        return False
+    else:
+        g_num = g_num + 1
+        return True
+
+
+def search(path, name):
+    for root, dirs, files in os.walk(path):  # path 为根目录
+        if name in dirs or name in files:
+            flag = 1  # 判断是否找到文件
+            root = str(root)
+            dirs = str(dirs)
+            # return os.path.join(root, dirs)
+            return True
+    return False
+    # return -1
 
 
 if __name__ == '__main__':
