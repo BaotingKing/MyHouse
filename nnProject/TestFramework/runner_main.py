@@ -2,33 +2,38 @@
 # -*- coding: utf-8 -*-
 # @author: wwl
 # Time: 2018/8/13
+import os
+import sys
 import unittest
-from test_case.test_events import TestEvents
+
+import test_case.test_events
 from model.HTMLTestRunner_py3 import HTMLTestRunner
-
-# import sys
-# reload(sys)
-# sys.setdefaultencoding('utf8')
-
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    if False:
-        tests = [TestEvents("test_OSK_Interface")]
-        suite.addTests(tests)
+
+    if len(sys.argv) > 1:
+        for file_name in sys.argv[1:]:
+            for root, dirs_labels, file_names in os.walk(file_name):
+                print("===========================")
+                for case_name in file_names:
+                    if case_name[-2:] == "tc":
+                        current_path = os.path.join(root, case_name)
+                        tests = [test_case.test_events.TestEvents(case_name)]
+                        suite.addTests(tests)
     else:
-        # loadTestsFromTestCase()，传入TestCase
-        suite.addTests(unittest.TestLoader().loadTestsFromTestCase(TestEvents))
-        # discover = unittest.defaultTestLoader.discover("F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\", pattern='mathfunc.py')
-        # suite.addTests(discover)
-    # # 方法三：直接用addTest方法添加单个TestCase
-    # suite.addTest(TestEvents("test_multi"))
-    #
-    # # 方法四：用addTests + TestLoader
-    # # loadTestsFromName()，传入'模块名.TestCase名'
-    # suite.addTests(unittest.TestLoader().loadTestsFromName('test_mathfunc.TestEvents'))
-    # suite.addTests(
-    #     unittest.TestLoader().loadTestsFromNames(['test_mathfunc.TestEvents']))  # loadTestsFromNames()，类似，传入列表
+        cnt = 0
+        dir_merge = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\test_case\\Osk_2.0.9case"
+
+        for root, dirs_labels, file_names in os.walk(dir_merge):  # Iterate label files
+            for case_name in file_names:
+                if case_name[-2:] == "tc":
+                    current_path = os.path.join(root, case_name)
+                    tests = [test_case.test_events.TestEventB('test_OSK')]
+                    tests[0]._testMethodDoc = case_name
+                    suite.addTests(tests)
+
+
 
     with open('UnittestTextReport.html', 'w') as f:  # 将结果保存到文件中
         runner = HTMLTestRunner(stream=f,

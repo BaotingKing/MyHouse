@@ -1,0 +1,5 @@
+5,2,2
+DetectResultCam1/number:MNBV2222222, DetectResultCam1/style:22G1, DetectResultCam1/result_check:False, DetectResultCam2/number:OLDD1234567, DetectResultCam2/style:22G1, DetectResultCam2/result_check:True, token:1
+GateInfo/final_result1:OLDD 1234567 22G1 True, GateInfo/final_result2:, token:1
+GateInfo/final_result1:MNBV 2222222 0000 False, GateInfo/final_result2:OLDD 1234567 22G1 True
+

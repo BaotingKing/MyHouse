@@ -268,16 +268,16 @@ def runCase(filename, host, port):
             req_list.append(areq.rstrip('\n'))
 
         # Use test case to process it and check
-        # if processCase(T, req_list, check_list, check_point):
-        #     print("\n[Finished]: Test Case: ", filename, ": SUCCESS\n")
-        # else:
-        #     print("\n[Finished]: Test Case: ", filename, ": FAILED\n")
+        if processCase(T, req_list, check_list, check_point):
+            print("\n[Finished]: Test Case: ", filename, ": SUCCESS\n")
+        else:
+            print("\n[Finished]: Test Case: ", filename, ": FAILED\n")
 
-        processDB(check_list=check_list,
-                  check_num=len(check_point),
-                  host='127.0.0.1',
-                  port=server.local_bind_port
-                  )
+        # processDB(check_list=check_list,
+        #           check_num=len(check_point),
+        #           host='127.0.0.1',
+        #           port=server.local_bind_port
+        #           )
 
     except:
         print("Error: Can't parse test case")
