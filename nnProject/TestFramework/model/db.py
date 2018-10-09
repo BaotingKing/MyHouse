@@ -54,6 +54,7 @@ def processDB(check_list,
 
 def checkDB(check, records, tokenValue):
     matching = True
+    print('this is debug0')
     try:
         check_list = check.split(',')     # to find token
         value = ""
@@ -67,7 +68,7 @@ def checkDB(check, records, tokenValue):
         if value == "":
             print("checkResp Exception:")
             return False
-
+        print('this is debug1')
         token_value = tokenValue[int(value)]
         for arecord in records:
             if arecord['Token'] == token_value:
@@ -81,6 +82,7 @@ def checkDB(check, records, tokenValue):
                             matching = False
                             print('I am so sorry:', db_key, check_pair[-1], arecord[db_key], arecord_value)
                             # return matching
+        print('this is debug2', matching)
         return matching
     except:
         print('---------------I am here1---------------')

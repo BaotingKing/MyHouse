@@ -22,14 +22,14 @@ class TestEvents(unittest.TestCase):
 
     def test_wellocean(self):
         """Test method for wellocean internal-interface"""
-        self.assertEqual(True, True)
-        self.assertNotEqual(False, True)
+        self.assertEqual(True, True, "this is 1")
+        self.assertNotEqual(False, True, msg="this is 2")
 
     def test_launchfile(self):
         """Test method for check the launcfile"""
         self.assertEqual(True, True)
         self.assertNotEqual(False, True)
-
+        print('this is a flag')
 
     # @unittest.skip("I don't want to run this case.")
     def test_UI(self):
@@ -37,10 +37,30 @@ class TestEvents(unittest.TestCase):
         self.assertEqual(True, True)
 
     def test_OSK_Interface(self):
-        """Test method for OSK Interface"""
+        """notes notes notes notes notes """
         self.assertEqual(True, True)
         # self.assertEqual(True, runcase.runCase())
 
+    def test_OSK(self):
+        """Test recong-OSK-DB"""
+        for i in range(5):
+            print(i)
+
+
+class TestEventB(unittest.TestCase):
+    """HERO: W-->O-->W"""
+
+    def setUp(self):
+        print
+        "do something before test.Prepare environment."
+
+    def tearDown(self):
+        print
+        "do something after test.Clean up."
+
+    def test_OSK(self):
+        """Test R-OSK-DB"""
+        self.assertEqual(True, True)
 
 
 if __name__ == '__main__':
