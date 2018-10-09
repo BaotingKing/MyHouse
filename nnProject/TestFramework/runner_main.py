@@ -22,7 +22,6 @@ if __name__ == '__main__':
                         tests = [test_case.test_events.TestEventB('test_OSK')]
                         suite.addTests(tests)
     else:
-        cnt = 0
         dir_merge = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\test_case\\Osk_2.0.9case"
 
         for root, dirs_labels, file_names in os.walk(dir_merge):  # Iterate label files
