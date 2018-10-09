@@ -19,7 +19,7 @@ if __name__ == '__main__':
                 for case_name in file_names:
                     if case_name[-2:] == "tc":
                         current_path = os.path.join(root, case_name)
-                        tests = [test_case.test_events.TestEvents(case_name)]
+                        tests = [test_case.test_events.TestEventB('test_OSK')]
                         suite.addTests(tests)
     else:
         cnt = 0
