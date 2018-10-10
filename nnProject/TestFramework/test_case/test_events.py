@@ -6,7 +6,9 @@ from __future__ import print_function
 from __future__ import division
 import os
 import unittest
-import runcase
+from runcase import runCase
+from os import path
+from pathlib import Path
 from model import launchfile
 
 
@@ -59,37 +61,33 @@ class TestEventB(unittest.TestCase):
         print
         "do something after test.Clean up."
 
-    def test_OSK(self, case_a='this is debug'):
+    def test_OSK(self):
         """Test R-OSK-DB"""
-        global g_case_path
-        case_path = search(g_case_path, self.testMethodDoc)
-        run_temp(case_path)
+        curpath = Path(path.dirname(path.abspath(__file__)))
+        case_path = search(curpath, self.testMethodDoc)
 
-        self.assertEqual(search(g_case_path, self.testMethodDoc), True)
-        # self.assertEqual(run_temp(case_a), True)
+        case_name = str(self.testMethodDoc)
+        if ('failed' in case_name) or ('Failed' in case_name):
+            self.assertEqual(runCase(case_path), False)
+        else:
+            self.assertEqual(runCase(case_path), True)
 
 
 def run_temp(casename):
-    print(casename)
-    global g_num
-    if g_num % 2 == 0:
-        g_num = g_num + 1
+    if ('failed' in casename) or ('Failed' in casename):
         return False
     else:
-        g_num = g_num + 1
         return True
 
 
 def search(path, name):
-    for root, dirs, files in os.walk(path):  # path 为根目录
+    for root, dirs, files in os.walk(path):  # path is root direction
         if name in dirs or name in files:
-            flag = 1  # 判断是否找到文件
             root = str(root)
             dirs = str(dirs)
-            # return os.path.join(root, dirs)
-            return True
+            parent_dir = os.path.join(root, dirs)
+            return os.path.join(root, name)
     return False
-    # return -1
 
 
 if __name__ == '__main__':

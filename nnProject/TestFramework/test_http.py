@@ -3,7 +3,6 @@
 # @author: wwl-ZK
 # Time: 2018/8/22
 
-import httplib
 import urllib
 import json
 from controller import config
@@ -86,8 +85,4 @@ import requests
 # r = requests.get('https://api.github.com/events')
 # print r.text
 
-content_http = interface.innerInterface("Gate")
-content_http.set_random_content()
-print content_http.content
-print "#############********************end"
 

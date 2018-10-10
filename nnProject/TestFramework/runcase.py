@@ -245,7 +245,7 @@ def sendGetOne(getone, check, sleep_time, index):
         return False
 
 
-def runCase(filename, host, port):
+def runCase(filename, host='127.0.0.1', port=3309):
     print("\n===========================================================")
     filepath = str(curpath / filename)
     check_list = []
@@ -270,19 +270,19 @@ def runCase(filename, host, port):
         # Use test case to process it and check
         if processCase(T, req_list, check_list, check_point):
             print("\n[Finished]: Test Case: ", filename, ": SUCCESS\n")
+            result_temp0 = True
         else:
             print("\n[Finished]: Test Case: ", filename, ": FAILED\n")
+            result_temp0 = False
 
-        # processDB(check_list=check_list,
-        #           check_num=len(check_point),
-        #           host='127.0.0.1',
-        #           port=server.local_bind_port
-        #           )
-
+        result_temp1 = processDB(check_list=check_list,
+                                 check_num=len(check_point))
+        return result_temp0 and result_temp1
     except:
         print("Error: Can't parse test case")
         einfo = sys.exc_info()
         print("runCase Exception:",einfo[0], "msg:", str(einfo[1]), "\ntraceback:", traceback.format_tb(einfo[2], 5))
+        return False
 
 
 if __name__ == '__main__':
