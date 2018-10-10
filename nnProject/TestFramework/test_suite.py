@@ -77,3 +77,16 @@ afile = open(filepath)
 print("hello, this is a new world")
 temp = afile.readline()
 case = afile.readline().rstrip('\n').replace(' ', '')
+
+one_case = 'before_time_failed.tc'
+result1 = one_case.find('Failed')
+result2 = one_case.find('Failed')
+
+result1 = 'failed' in one_case
+result2 = 'Failed' in one_case
+
+if ('Failed' in one_case) or ('Failed' in one_case):
+    print(result1, result2)
+else:
+    print('====')
+
