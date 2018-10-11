@@ -9,7 +9,6 @@ import unittest
 from runcase import runCase
 from os import path
 from pathlib import Path
-from model import launchfile
 
 
 class TestEvents(unittest.TestCase):
@@ -63,10 +62,10 @@ class TestEventB(unittest.TestCase):
 
     def test_OSK(self):
         """Test R-OSK-DB"""
-        curpath = Path(path.dirname(path.abspath(__file__)))
-        case_path = search(curpath, self.testMethodDoc)
+        curpath = path.dirname(path.abspath(__file__))
+        case_name = str(self._testMethodDoc)
+        case_path = search(curpath, case_name)
 
-        case_name = str(self.testMethodDoc)
         if ('failed' in case_name) or ('Failed' in case_name):
             self.assertEqual(runCase(case_path), False)
         else:
@@ -74,7 +73,8 @@ class TestEventB(unittest.TestCase):
 
 
 def run_temp(casename):
-    if ('failed' in casename) or ('Failed' in casename):
+
+    if 'failed' in str(casename):
         return False
     else:
         return True

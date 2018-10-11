@@ -11,10 +11,7 @@ from model.HTMLTestRunner_py3 import HTMLTestRunner
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
-    # stdout_backup = sys.stdout
-    # log_file = open("messageOSK.log", "w")
-    # logger = logging.getLogger("AppName")
-    # sys.stdout = log_file
+
     if len(sys.argv) > 1:
         for file_name in sys.argv[1:]:
             for root, dirs_labels, file_names in os.walk(file_name):
@@ -27,6 +24,7 @@ if __name__ == '__main__':
                         suite.addTests(tests)
     else:
         dir_merge = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\test_case\\Osk2.1.1_Timer_test_log"
+        # dir_merge = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\model"
         for root, dirs_labels, file_names in os.walk(dir_merge):  # Iterate label files
             for case_name in file_names:
                 if case_name[-2:] == "tc":
