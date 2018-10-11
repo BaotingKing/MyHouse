@@ -144,15 +144,26 @@ interface_db = {
         'number': 'FinalResult1',
         'style': 'FinalResult1',
         'result_check': 'FinalResult1Check',
+        'detect_face': 'DetectFace1',
+        'side_fullimg_path': 'SideImpath1',
+
     },
     'DetectResultCam2': {
         'number': 'FinalResult2',
         'style': 'FinalResult2',
         'result_check': 'FinalResult2Check',
+        'detect_face': 'DetectFace2',
+        'side_fullimg_path': 'SideImpath2',
     },
     'LorryInfo': {
         'car_plate': 'PlateResult',
-    }
+    },
+    'AdditionalInfo': {
+        'dangerous_goods': 'DangerousGoods1',
+        'high_low_board': 'HighLowBoard',
+        'empty_full_status': 'EmptyFullStatus',
+    },
+
 }
 
 if __name__ == '__main__':
