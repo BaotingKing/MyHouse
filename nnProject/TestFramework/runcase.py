@@ -168,7 +168,7 @@ def generateGetOne(check_str):
     return g_getone
 
     
-def processCase(wholetime, req_list, check_list, check_point):
+def processCase(wholetime, req_list, check_list, check_point, case_name):
     success = True
 
     # every test case should use orig req at first
@@ -226,8 +226,16 @@ def processCase(wholetime, req_list, check_list, check_point):
         sleep_index += 1
         check_index += 1
 
-    if not processDB(check_list=check_list, check_num=len(check_point), token_list=g_tokenlist):
-        success = False
+
+
+
+    print("-------00000000000---------")
+    print('case_name = %s' % case_name)
+    print('success = %s' % success)
+    print("-------11111111111---------")
+    if ('failed' not in case_name) and ('Failed' not in case_name):   # 对于fail的用例，不需要检查数据库
+        if not processDB(check_list=check_list, check_num=len(check_point), token_list=g_tokenlist):
+            success = False
 
     return success
 
@@ -268,12 +276,16 @@ def runCase(filename, host='127.0.0.1', port=3309):
             req_list.append(areq.rstrip('\n'))
 
         # # Use test case to process it and check
-        if processCase(T, req_list, check_list, check_point):
+        if processCase(T, req_list, check_list, check_point, filename):
             print("\n[Finished]: Test Case: ", filename, ": SUCCESS\n")
             result_temp0 = True
         else:
             print("\n[Finished]: Test Case: ", filename, ": FAILED\n")
             result_temp0 = False
+
+        print("-------2222222222---------")
+        print('result_temp0 = %s' % result_temp0)
+        print("-------3333333333---------")
 
         return result_temp0
     except:
@@ -336,7 +348,7 @@ if __name__ == '__main__':
                         current_path = os.path.join(root, case_name)
                         runCase(current_path)
     else:
-        runCase('first.tc')
+        runCase('one_request_failed.tc')  # button.tc   first
 
 
 

@@ -10,6 +10,7 @@ import re
 import traceback
 from model import interface
 
+
 def processDB(check_list,
               check_num,
               token_list,
@@ -23,9 +24,9 @@ def processDB(check_list,
     try:
         check_result = False
         print("-------0---------")
-        print('check_list = %s'  %check_list)
+        # print('check_list = %s' % check_list)
         print("-------1---------")
-        print('token_list = %s'  %token_list)
+        # print('token_list = %s' % token_list)
         print("-------2---------")
         db = pymysql.connect(host=host,
                              port=port,
@@ -66,10 +67,10 @@ def checkDB(check, records, tokenValue):
 
     print('check = %s' % check)
     print("-------5---------")
-    print('records = %s' % records)
+    # print('records = %s' % records)
     print("-------5---------")
     try:
-        check_list = check.split(',')     # to find token
+        check_list = check.split(',')  # to find token
         value = ""
         for acheck in check_list:
             check_pair = acheck.strip().split(':', 1)
@@ -90,9 +91,9 @@ def checkDB(check, records, tokenValue):
                 for acheck in check_list:
                     print('this is debug12')
                     print('=====================')
-                    print('acheck is =%s' % acheck)
-                    print('*******')
-                    print('check_list is =%s' % check_list)
+                    # print('acheck is =%s' % acheck)
+                    # print('*******')
+                    # print('check_list is =%s' % check_list)
                     print('=====================')
                     print('this is debug13')
                     check_pair = re.split(':|/', acheck.strip())
@@ -106,21 +107,29 @@ def checkDB(check, records, tokenValue):
                         print('this is debug16')
                         db_key = interface_info[check_pair[1]]
                         print('this is debug17')
-                        arecord_value = arecord[db_key].replace(' ', '')   # To fit the format
+                        arecord_value = arecord[db_key].replace(' ', '')  # To fit the format
                         print('=====================')
                         print('check_pair[-1] is =%s' % check_pair[-1])
                         print('arecord_value is =%s' % arecord_value)
                         print('=====================')
-                        if not check_pair[-1].strip() in arecord_value:
-                            matching = False
-                            print('I am so sorry:', db_key, check_pair[-1], arecord[db_key], arecord_value)
-                            # return matching
+
+                        if db_key == 'PlateResult':    # License plates have Chinese characters
+                            plate_result_num = arecord_value.split('_')[-1]
+                            if plate_result_num not in check_pair[-1]:    # Less rigorous
+                                matching = False
+                                print('I am so sorry0:', db_key, check_pair[-1], plate_result_num)
+                                return matching
+                        else:
+                            if not check_pair[-1].strip() in arecord_value:
+                                matching = False
+                                print('I am so sorry1:', db_key, check_pair[-1], arecord[db_key], arecord_value)
+                                return matching
         print('this is debug2', matching)
         return matching
     except:
         print('---------------I am here1---------------')
         einfo = sys.exc_info()
-        print("checkResp Exception:",einfo[0], "msg:", str(einfo[1]), "\ntraceback:", traceback.format_tb(einfo[2], 1))
+        print("checkResp Exception:", einfo[0], "msg:", str(einfo[1]), "\ntraceback:", traceback.format_tb(einfo[2], 1))
         return False
 
 

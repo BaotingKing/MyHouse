@@ -1,40 +1,40 @@
 {
     "GateInfo": {
-       "remark": "detect",
-       "plate_result": "SD_AB1234",
-       "plate_impath": "/cv/wellocean/imagesave/鲁AB1234.jpg",
-       "final_result1": "ORIG 7654321 NAL1 False",
-       "final_result2": "AAAA 0000000 0000 False",
-       "detect_face1": "front",
-       "detect_face2": "back",
-       "container_impath1": "/cv/wellocean/imagesave/defect_check/a.jpg",
-       "container_impath2": "/cv/wellocean/imagesave/defect_check/b.jpg",
-       "side_imgpath1": "/cv/wellocean/imagesave/side_impath/1.jpg|/cv/wellocean/imagesave/side_impath/2.jpg",
-       "side_imgpath2": "/cv/wellocean/imagesave/side_impath/3.jpg|/cv/wellocean/imagesave/side_impath/4.jpg",
-       "dangerous_goods1": "false",
-       "dangerous_goods2": "false",
-       "lead_sealing1": "true",
-       "lead_sealing2": "true",
+       "remark": "",
+       "plate_result": "",
+       "plate_impath": "",
+       "final_result1": "",
+       "final_result2": "",
+       "detect_face1": "",
+       "detect_face2": "",
+       "container_impath1": "",
+       "container_impath2": "",
+       "side_imgpath1": "",
+       "side_imgpath2": "",
+       "dangerous_goods1": "",
+       "dangerous_goods2": "",
+       "lead_sealing1": "",
+       "lead_sealing2": "",
        "container_position1": ""
     },
 
    "ExamineInfo": {
-   	   "dangerous_goods_class": "true",
-       "sealing": "lead sealing eg: yes/no",
+   	   "dangerous_goods_class": "",
+       "sealing": "",
        "examine_img_top": "",
-       "examine_img_left": "/cv/wellocean/imagesave/defect_check",
-       "examine_img_right": "/cv/wellocean/imagesave/defect_check",
-       "examine_img_front": "/cv/wellocean/imagesave/defect_check",
-       "examine_img_back": "/cv/wellocean/imagesave/defect_check"
+       "examine_img_left": "",
+       "examine_img_right": "",
+       "examine_img_front": "",
+       "examine_img_back": "",
     },
 
    "AdditionalInfo": {
-        "lane": "1",
-        "lane_in_out":"in",
-        "token": "1524558723034330",
-        "empty_full_status": "empty",
-        "high_low_board": "true",
-        "timestamp": "1524558726000"
+        "lane": "",
+        "lane_in_out": "",
+        "token": "",
+        "empty_full_status": "",
+        "high_low_board": "",
+        "timestamp": "",
     }
 }
 
