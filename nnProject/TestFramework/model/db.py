@@ -119,6 +119,9 @@ def checkDB(check, records, tokenValue):
                                 matching = False
                                 print('I am so sorry0:', db_key, check_pair[-1], plate_result_num)
                                 return matching
+                        elif db_key == 'SideImpath1' or db_key == 'SideImpath2':
+                            print('hell, this is test')
+                            pass
                         else:
                             if not check_pair[-1].strip() in arecord_value:
                                 matching = False
