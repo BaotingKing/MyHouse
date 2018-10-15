@@ -19,7 +19,6 @@ import logging
 import sshtunnel as ssh
 from model.db import processDB
 import copy
-
 from model.sendfile import curpath, sendrequest, getresponse, UTC_timestamp
 g_req = None
 g_getone = None
@@ -169,7 +168,7 @@ def generateGetOne(check_str):
     return g_getone
 
     
-def processCase(wholetime, req_list, check_list, check_point):
+def processCase(wholetime, req_list, check_list, check_point, case_name):
     success = True
 
     # every test case should use orig req at first
@@ -227,9 +226,20 @@ def processCase(wholetime, req_list, check_list, check_point):
         sleep_index += 1
         check_index += 1
 
-    if not processDB(check_list=check_list, check_num=len(check_point)):
-        success = False
 
+
+
+    print("-------00000000000---------")
+    print('case_name = %s' % case_name)
+    print('success = %s' % success)
+    print("-------11111111111---------")
+    if ('failed' not in case_name) and ('Failed' not in case_name):   # 对于fail的用例，不需要检查数据库
+        if not processDB(check_list=check_list, check_num=len(check_point), token_list=g_tokenlist):
+            success = False
+
+    print("-------2222222222---------")
+    print('success = %s' % success)
+    print("-------2222222222---------")
     return success
 
 
@@ -247,6 +257,7 @@ def sendGetOne(getone, check, sleep_time, index):
 
 def runCase(filename, host='127.0.0.1', port=3309):
     print("\n===========================================================")
+    # temp, filename = os.path.split(filepath)
     filepath = str(curpath / filename)
     check_list = []
     req_list = []
@@ -267,17 +278,19 @@ def runCase(filename, host='127.0.0.1', port=3309):
             areq = afile.readline()
             req_list.append(areq.rstrip('\n'))
 
-        # Use test case to process it and check
-        if processCase(T, req_list, check_list, check_point):
+        # # Use test case to process it and check
+        if processCase(T, req_list, check_list, check_point, filename):
             print("\n[Finished]: Test Case: ", filename, ": SUCCESS\n")
             result_temp0 = True
         else:
             print("\n[Finished]: Test Case: ", filename, ": FAILED\n")
             result_temp0 = False
 
-        result_temp1 = processDB(check_list=check_list,
-                                 check_num=len(check_point))
-        return result_temp0 and result_temp1
+        print("-------2222222222---------")
+        print('result_temp0 = %s' % result_temp0)
+        print("-------3333333333---------")
+
+        return result_temp0
     except:
         print("Error: Can't parse test case")
         einfo = sys.exc_info()
@@ -289,8 +302,47 @@ if __name__ == '__main__':
     # stdout_backup = sys.stdout
     # log_file = open("messageOSK.log", "w")
     # logger = logging.getLogger("AppName")
+    # if len(sys.argv) > 1:
+    #     # sys.stdout = log_file
+    #     for file_name in sys.argv[1:]:
+    #         for root, dirs_labels, file_names in os.walk(file_name):
+    #             print("===========================")
+    #             for case_name in file_names:
+    #                 if case_name[-2:] == "tc":
+    #                     current_path = os.path.join(root, case_name)
+    #                     runCase(current_path)
+    # else:
+    #     # sys.stdout = log_file
+    #     cnt = 0
+    #     dir_merge = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\test_case\\Osk_2.0.9case"
+    #
+    #     with ssh.SSHTunnelForwarder(
+    #             ('192.168.101.234', 22),
+    #             ssh_username="westwell",
+    #             ssh_password='1',
+    #             remote_bind_address=('127.0.0.1', 3306)
+    #     ) as server:
+    #         runCase("first2.tc",
+    #                 host='127.0.0.1',
+    #                 port=server.local_bind_port
+    #                 )
+    #         server.start()
+    #
+    #     for root, dirs_labels, file_names in os.walk(dir_merge):  # 遍历各种label文件夹
+    #         # print("===========================", cnt)
+    #         # logger.debug('this is debug info', cnt)
+    #         # logger.warn('this is warning message')
+    #         # logger.error('this is error message')
+    #         cnt = cnt + 1
+    #         for case_name in file_names:
+    #             if case_name[-2:] == "tc":
+    #                 current_path = os.path.join(root, case_name)
+    #                 # runCase(current_path)
+    #
+    # server.close()
+    # print("runcase.py is over")
+
     if len(sys.argv) > 1:
-        # sys.stdout = log_file
         for file_name in sys.argv[1:]:
             for root, dirs_labels, file_names in os.walk(file_name):
                 print("===========================")
@@ -299,34 +351,7 @@ if __name__ == '__main__':
                         current_path = os.path.join(root, case_name)
                         runCase(current_path)
     else:
-        # sys.stdout = log_file
-        cnt = 0
-        dir_merge = "F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\test_case\\Osk_2.0.9case"
+        runCase('one_request_failed.tc')  # button.tc   first
 
-        with ssh.SSHTunnelForwarder(
-                ('192.168.101.234', 22),
-                ssh_username="westwell",
-                ssh_password='1',
-                remote_bind_address=('127.0.0.1', 3306)
-        ) as server:
-            runCase("first2.tc",
-                    host='127.0.0.1',
-                    port=server.local_bind_port
-                    )
-            server.start()
-
-        for root, dirs_labels, file_names in os.walk(dir_merge):  # 遍历各种label文件夹
-            # print("===========================", cnt)
-            # logger.debug('this is debug info', cnt)
-            # logger.warn('this is warning message')
-            # logger.error('this is error message')
-            cnt = cnt + 1
-            for case_name in file_names:
-                if case_name[-2:] == "tc":
-                    current_path = os.path.join(root, case_name)
-                    # runCase(current_path)
-
-    server.close()
-    print("runcase.py is over")
 
 
