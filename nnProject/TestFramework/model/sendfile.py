@@ -11,7 +11,6 @@ import http.client
 import datetime
 import traceback
 
-# serverip = "192.168.101.196"
 serverip = "192.168.101.234"
 serverport = 18100
 servertimeout = 15
