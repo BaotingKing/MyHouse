@@ -121,11 +121,12 @@ def checkDB(check, records, tokenValue):
                             for frag in image_infoes:
                                 if frag not in arecord_value:
                                     matching = False
+                                    print('I am so sorry1:', db_key, image_infoes, arecord_value)
                                     return matching
                         else:
                             if not check_pair[-1].strip() in arecord_value:
                                 matching = False
-                                print('I am so sorry1:', db_key, check_pair[-1], arecord[db_key], arecord_value)
+                                print('I am so sorry2:', db_key, check_pair[-1], arecord[db_key], arecord_value)
                                 return matching
         print('this is debug2', matching)
         return matching
