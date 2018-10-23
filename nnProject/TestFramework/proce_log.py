@@ -1,11 +1,11 @@
-#!/usr/bin/env python
+#!/usr/bin/python
 # -*- coding: utf-8 -*-
 # @author: wwl-ZK
 # Time: 2018/10/22
-import os
-import re
+from __future__ import print_function
 import sys
 import time
+import logging
 
 
 def analyze_one_log(file_name, log_file):
@@ -37,25 +37,13 @@ def analyze_one_log(file_name, log_file):
 if __name__ == '__main__':
     stdout_backup = sys.stdout
     if len(sys.argv) > 1:
-        print("=============0=============")
         for file_name in sys.argv[1:]:
             print(file_name)
             if file_name[-3:] == "log":
-                print("=============1=============")
-                with open(file_name, 'r') as log_handle:
-                    print("=============2=============")
-                    for line_num in range(len(log_handle.readlines())):
-                        print("=============3=============")
-                        print(len(log_handle.readlines()))
-                        one_line = log_handle.readline()
-                        if '*********************' in one_line:
-                            print(one_line)
-
-                    print(len(log_handle.readlines()))
-
+                log_file = open(file_name + '.log', "w")
+                analyze_one_log(file_name, log_file)
     else:
         print("###############################")
-        print('I am here')
         file_names = ['detection_result_process_9.log','double_container_detection_result_process_13.log']
         for file_name in file_names:
             if file_name[-3:] == "log":
