@@ -427,6 +427,7 @@ a.popup_link:hover {
 </colgroup>
 <tr id='header_row'>
     <td>Test Group/Test case</td>
+    <td>Casedescription</td>
     <td>Count</td>
     <td>Pass</td>
     <td>Fail</td>
@@ -436,6 +437,7 @@ a.popup_link:hover {
 %(test_list)s
 <tr id='total_row'>
     <td>Total</td>
+    <td>%(count)s</td>
     <td>%(count)s</td>
     <td>%(Pass)s</td>
     <td>%(fail)s</td>
@@ -751,7 +753,7 @@ class HTMLTestRunner(Template_mixin):
         if isinstance(o, str):
             # TODO: some problem with 'string_escape': it escape \n and mess up formating
             # uo = unicode(o.encode('string_escape'))
-            uo = e  # for python2.x  o.decode('latin-1')
+            uo = o  # for python2.x  o.decode('latin-1')
         else:
             # uo = o.decode('utf-8')
             uo = o
@@ -782,6 +784,10 @@ class HTMLTestRunner(Template_mixin):
 
     def _generate_ending(self):
         return self.ENDING_TMPL
+
+
+def extract_description(case_name):
+    pass
 
 
 ##############################################################################
