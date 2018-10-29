@@ -92,6 +92,7 @@ Version in 0.7.1
 
 import datetime
 import io
+import os
 import sys
 import time
 import unittest
@@ -765,9 +766,11 @@ class HTMLTestRunner(Template_mixin):
             # ue = e.decode('utf-8')
             ue = e
 
+        # description = ''
+        description = extract_description(doc)
         script = self.REPORT_TEST_OUTPUT_TMPL % dict(
             id=tid,
-            output=saxutils.escape(str(uo) + str(ue)),  # python2:output = saxutils.escape(uo+ue)
+            output=saxutils.escape(str(description) + str(uo) + str(ue)),  # python2:output = saxutils.escape(uo+ue)
         )
 
         row = tmpl % dict(
@@ -786,8 +789,32 @@ class HTMLTestRunner(Template_mixin):
         return self.ENDING_TMPL
 
 
+##############################################################################
+# Some temporary small functions
+##############################################################################
+def file_location(filename):
+    dir_name = os.getcwd()
+    for root, dirs_labels, file_names in os.walk(dir_name):
+        for case_name in file_names:
+            if case_name == filename:
+                current_path = os.path.join(root, case_name)
+                return current_path
+
+
 def extract_description(case_name):
-    pass
+    case_path = file_location(case_name)
+    flag = 0
+    description = ''
+    with open(case_path, 'r') as case_handle:
+        for one_line in case_handle:
+            if '#Pre' in one_line:
+                flag = 1
+            elif '#Desc' in one_line:
+                flag = 0
+
+            if flag == 1 or ('#Desc' in one_line):
+                description = description + one_line
+    return description
 
 
 ##############################################################################
