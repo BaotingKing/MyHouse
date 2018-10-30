@@ -21,13 +21,10 @@ def processDB(check_list,
               dbname="GateRawData",
               tabname="Gate_gateinfo",
               charset="utf8"):
+    print('--------------------------------------------')
+    print('------------DB checkout begin---------------')
     try:
         check_result = False
-        print("-------0---------")
-        # print('check_list = %s' % check_list)
-        print("-------1---------")
-        # print('token_list = %s' % token_list)
-        print("-------2---------")
         db = pymysql.connect(host=host,
                              port=port,
                              user=username,
@@ -43,17 +40,14 @@ def processDB(check_list,
         cur.close()  # close cursor
         db.close()  # close connect
 
-        print('result_db = %s' % result_db)
-        print("-------3---------")
-        print('check_num = %s' % check_num)
-        print("-------4---------")
+        print('--------------------------------------------')
+        print('Case result is     : %s' % check_list)
+        print('DB query results is: %s' % result_db)
         for i in range(0, check_num):
-            print("hello,this is %d---------------------" % i)
             one_check = check_list[i]
             if checkDB(one_check, result_db, token_list):
                 check_result = True
 
-        print("-------6---------")
         return check_result
 
     except Exception:
@@ -63,9 +57,6 @@ def processDB(check_list,
 
 def checkDB(check, records, tokenValue):
     matching = True
-    print('this is debug0')
-    print("-------5---------")
-
     try:
         check_list = check.split(',')  # to find token
         value = ""
@@ -79,40 +70,20 @@ def checkDB(check, records, tokenValue):
         if value == "":
             print("checkResp Exception:")
             return False
-        print('this is debug1')
+
         token_value = tokenValue[int(value)]
         for arecord in records:
-            print('this is debug10')
             if arecord['Token'] == token_value:
-                print('this is debug11')
                 for acheck in check_list:
-                    print('this is debug12')
-                    print('=====================')
-                    # print('acheck is =%s' % acheck)
-                    # print('*******')
-                    # print('check_list is =%s' % check_list)
-                    print('=====================')
-                    print('this is debug13')
                     check_pair = re.split(':|/', acheck.strip())
-
-                    print('check_pair is =%s' % check_pair)
-                    print('=====================')
-                    print('this is debug14')
                     if check_pair[0] != 'Token' and check_pair[0] != 'token':
-                        print('this is debug15')
                         interface_info = interface.interface_db[check_pair[0]]
-                        print('this is debug16')
                         db_key = interface_info[check_pair[1]]
-                        print('this is debug17')
                         arecord_value = arecord[db_key].replace(' ', '')  # To fit the format
-                        print('=====================')
-                        print('check_pair[-1] is =%s' % check_pair[-1])
-                        print('arecord_value is =%s' % arecord_value)
-                        print('=====================')
 
                         if db_key == 'PlateResult':    # License plates have Chinese characters
                             plate_result_num = arecord_value.split('_')[-1]
-                            if plate_result_num not in check_pair[-1]:    # Less rigorous
+                            if plate_result_num.strip('_*') not in check_pair[-1]:    # Less rigorous and e.g: TJ_*HB743
                                 matching = False
                                 print('I am so sorry0:', db_key, check_pair[-1], plate_result_num)
                                 return matching
@@ -128,7 +99,7 @@ def checkDB(check, records, tokenValue):
                                 matching = False
                                 print('I am so sorry2:', db_key, check_pair[-1], arecord[db_key], arecord_value)
                                 return matching
-        print('this is debug2', matching)
+        print('DB check reslut: ', matching)
         return matching
     except:
         print('---------------I am here1---------------')
