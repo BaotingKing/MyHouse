@@ -58,4 +58,7 @@ def extract_description(case_name):
 case_name = 'F:\\myhouse\\MyHouse\\nnProject\\TestFramework\\test_case\\Osk2.1.1_Timer_test_log\\Osk_2.1.1_Timer_case\\button\\button1.tc'
 a = extract_description('button1.tc')
 pth = file_location('button1.tc')
-print('hahahhahahha:', a)
+a = '_*HB743'
+b = a.strip('*_')
+print('hahahhahahha:', a, b)
+

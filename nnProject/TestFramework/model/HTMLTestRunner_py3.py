@@ -428,7 +428,6 @@ a.popup_link:hover {
 </colgroup>
 <tr id='header_row'>
     <td>Test Group/Test case</td>
-    <td>Casedescription</td>
     <td>Count</td>
     <td>Pass</td>
     <td>Fail</td>
@@ -438,7 +437,6 @@ a.popup_link:hover {
 %(test_list)s
 <tr id='total_row'>
     <td>Total</td>
-    <td>%(count)s</td>
     <td>%(count)s</td>
     <td>%(Pass)s</td>
     <td>%(fail)s</td>

@@ -226,20 +226,21 @@ def processCase(wholetime, req_list, check_list, check_point, case_name):
         sleep_index += 1
         check_index += 1
 
-
-
-
-    print("-------00000000000---------")
+    print("*********************************************")
     print('case_name = %s' % case_name)
-    print('success = %s' % success)
-    print("-------11111111111---------")
-    if ('failed' not in case_name) and ('Failed' not in case_name):   # 对于fail的用例，不需要检查数据库
-        if not processDB(check_list=check_list, check_num=len(check_point), token_list=g_tokenlist):
-            success = False
+    print('Identify module to OSK: case test results is %s' % success)
+    print("*********************************************")
 
-    print("-------2222222222---------")
-    print('success = %s' % success)
-    print("-------2222222222---------")
+    if True:
+        if ('failed' not in case_name) and ('Failed' not in case_name):
+            if not processDB(check_list=check_list, check_num=len(check_point), token_list=g_tokenlist):
+                success = False
+
+        print("*********************************************")
+        print('case_name = %s' % case_name)
+        print('OSK to DB: case test results is %s' % success)
+        print("*********************************************")
+
     return success
 
 
@@ -281,16 +282,12 @@ def runCase(filename, host='127.0.0.1', port=3309):
         # # Use test case to process it and check
         if processCase(T, req_list, check_list, check_point, filename):
             print("\n[Finished]: Test Case: ", filename, ": SUCCESS\n")
-            result_temp0 = True
+            final_result = True
         else:
             print("\n[Finished]: Test Case: ", filename, ": FAILED\n")
-            result_temp0 = False
+            final_result = False
 
-        print("-------2222222222---------")
-        print('result_temp0 = %s' % result_temp0)
-        print("-------3333333333---------")
-
-        return result_temp0
+        return final_result
     except:
         print("Error: Can't parse test case")
         einfo = sys.exc_info()
