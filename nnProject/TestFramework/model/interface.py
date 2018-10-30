@@ -157,6 +157,7 @@ interface_db = {
     },
     'LorryInfo': {
         'car_plate': 'PlateResult',
+        'fullimg_path': 'PlateImpath',
     },
     'AdditionalInfo': {
         'dangerous_goods': 'DangerousGoods1',

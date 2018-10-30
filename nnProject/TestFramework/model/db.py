@@ -87,7 +87,7 @@ def checkDB(check, records, tokenValue):
                                 matching = False
                                 print('I am so sorry0:', db_key, check_pair[-1], plate_result_num)
                                 return matching
-                        elif db_key == 'SideImpath1' or db_key == 'SideImpath2':   # path's string has '\'
+                        elif db_key == 'SideImpath1' or db_key == 'SideImpath2' or db_key == 'PlateImpath':   # path's string has '\'
                             image_infoes = check_pair[-1].split(' ')    # only checkout import image info
                             for frag in image_infoes:
                                 if frag not in arecord_value:
