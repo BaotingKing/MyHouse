@@ -15,10 +15,7 @@ import traceback
 import json
 import time
 import os
-import logging
-import sshtunnel as ssh
 from model.db import processDB
-import copy
 from model.sendfile import curpath, sendrequest, getresponse, UTC_timestamp
 g_req = None
 g_getone = None

@@ -5,9 +5,8 @@
 import os
 import sys
 import unittest
-import logging
 import test_case.test_events
-from model.HTMLTestRunner_py3 import HTMLTestRunner
+from view.HTMLTestRunner_adv import HTMLTestRunner
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()
