@@ -7,9 +7,7 @@
 ###################################################################
 cfg_name='pip.conf'
 
-src="[global]\n
-trusted-host = mirrors.aliyun.com\n
-index-url = http://mirrors.aliyun.com/pypi/simple
+src="[global]\ntrusted-host = mirrors.aliyun.com\nindex-url = http://mirrors.aliyun.com/pypi/simple
 "
 
 mirr="mirrors.aliyun.com"
@@ -32,7 +30,14 @@ fi
 
 
 cd $dir_path
+
+sudo apt-get install libxml2-dev libxslt1-dev python-dev
+sudo apt-get install zlib1g-dev
+sudo apt-get install zlib1g-dev
+sudo pip install lxml
+
 sudo apt install python3-pip
-pip3 install -r requirements.txt
 
-
+sudo pip3 install lxml
+sudo pip3 install --upgrade setuptools
+sudo pip3 install -r requirements.txt
