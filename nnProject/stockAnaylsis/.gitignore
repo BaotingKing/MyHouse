@@ -1,0 +1,8 @@
+# 此为注释 – 将被GitLab忽略
+
+*.pyc
+*.html
+*.xml
+*.iml
+*.log
+*.exe
