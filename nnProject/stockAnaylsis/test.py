@@ -96,9 +96,22 @@ if __name__ == '__main__':
     #     print(inputs)
     # print("=========\n", type(inputs))
     # print(inputs[1], len(inputs[1]),inputsss)
-    serx = pd.DataFrame({"time": [23, 60, 77, 56, 99, 12, 58, 88], "year": [2, 0, 7, 5, 9, 1, 8, 8]})
-    sery = pd.Series([1, 0, 1, 1, 0, 0, 1])
-    temp = serx.sort_index(axis=0, ascending=False).copy()
-    serx.iloc[0] = 666
-    print(serx.sort_index(axis=0, ascending=False))
-    print("=====\n:", temp)
+    # serx = pd.DataFrame({"time": [23, 60, 77, 56, 99, 12, 58, 88], "year": [2, 0, 7, 5, 9, 1, 8, 8]})
+    # sery = pd.Series([1, 0, 1, 1, 0, 0, 1])
+    # temp = serx.sort_index(axis=0, ascending=False).copy()
+    # serx.iloc[0] = 666
+    # print(serx.sort_index(axis=0, ascending=False))
+    # print("=====\n:", temp)
+
+    info = [((3, 4), 2), ((3, 4), 4), ((3, 4), 6), ((9, 8), 8), ((9, 8), 8), ((9, 8), 18), ((9, 8), 28)]
+    for i in range(len(info)):
+        if i < 3:
+            continue
+        print('ok')
+        # print(info[i-3:i])
+        print(info[i])
+        X =[]
+        for x, y in info[i-3:i]:
+            X.extend(x)
+        X = np.array(X)
+        print(type(X), X)
