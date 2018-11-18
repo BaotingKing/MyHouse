@@ -104,18 +104,7 @@ class StockNetwork(object):
         nabla_b = [np.zeros(b.shape) for b in self.biases]
         nabla_w = [np.zeros(w.shape) for w in self.weights]
 
-        for n in range(len(mini_batch)):
-            if n < cfg.g_fitting_size:
-                continue
-            elif len(mini_batch) < cfg.g_fitting_size:
-                break
-
-            X = []
-            for x, y_ in mini_batch[n - cfg.g_fitting_size:n]:
-                X.extend(x)
-
-            x, y_ = mini_batch[n]
-
+        for X, y_ in mini_batch:
             delta_nabla_b, delta_nabla_w = self.backward(np.array(X), y_)
             nabla_b = [nb + dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw + dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
@@ -130,23 +119,18 @@ class StockNetwork(object):
         n_train = len(training_data)
         for j in range(epochs):
             mini_batches = []
-            # random.shuffle(training_data)
-            # mini_batches = [
-            #     training_data[k:k+mini_batch_size]
-            #     for k in range(0, n_train, mini_batch_size)
-            # ]
+
             for k in range(0, n_train, mini_batch_size):
-                if k == 0:
-                    mini_batches.append(training_data[k:k + mini_batch_size])
-                else:
-                    mini_batches.append(training_data[k - 3:k + mini_batch_size])
+                mini_batches.append(training_data[k:k + mini_batch_size])
 
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, learn_rate=learn_rate)
 
             if test_data:
-                print("Epoch {0}: {1} / {2}".
-                      format(j, self.evaluate(test_data), len(test_data)))
+                if j == (epochs - 1):
+                    print('++++++++++++++++++++++++\n this is learn_rate: ', learn_rate)
+                    print("Epoch {0}: {1} / {2}".
+                          format(j, self.evaluate(test_data), len(test_data)))
             else:
                 print("Epoch {0} complete".format(j))
                 # print('The biases is\n{0}\n{1}\n:'.format(len(self.biases), self.biases))
@@ -162,25 +146,20 @@ class StockNetwork(object):
         g_min_close = cfg.get_value('g_min_close')
         cnt = 0
         denominator = g_max_close - g_min_close
-        for n in range(len(test_data)):
-            if n < cfg.g_fitting_size:
-                continue
-            elif len(test_data) < cfg.g_fitting_size:
-                print('The amount of data is too small, must big than{0}'.format(cfg.g_fitting_size))
-                break
 
-            X = []
-            for x, y_ in test_data[n - cfg.g_fitting_size:n]:
-                X.extend(x)
-
-            _, y_ = test_data[n]
+        flag = 0
+        for X, y_ in test_data:
             y = self.forward(X, flag=0)
 
             y = y * denominator + g_min_close
             y_ = y_ * denominator + g_min_close
 
+            # if flag == 0:
+            #     print(X, y, y_)
+            #     flag = 1
             if abs(y - y_) <= 1e-1:
                 cnt += 1
+                # print('Predict the outcome and Real results: {0}  {1}'.format(y, y_))
 
         return cnt
         # return sum(int(x == y_) for (x, y_) in test_results)

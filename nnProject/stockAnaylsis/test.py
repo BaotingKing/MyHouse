@@ -9,9 +9,6 @@ import pandas as pd
 # import tensorflow as tf
 # from sklearn.datasets import *
 
-def sigmoid(z):
-    return 1.0/(1.0+np.exp(-z))
-
 print('000000')
 
 if __name__ == '__main__':
@@ -103,15 +100,27 @@ if __name__ == '__main__':
     # print(serx.sort_index(axis=0, ascending=False))
     # print("=====\n:", temp)
 
-    info = [((3, 4), 2), ((3, 4), 4), ((3, 4), 6), ((9, 8), 8), ((9, 8), 8), ((9, 8), 18), ((9, 8), 28)]
-    for i in range(len(info)):
-        if i < 3:
-            continue
-        print('ok')
-        # print(info[i-3:i])
-        print(info[i])
-        X =[]
-        for x, y in info[i-3:i]:
-            X.extend(x)
-        X = np.array(X)
-        print(type(X), X)
+    # info = [((3, 4), 2), ((3, 4), 4), ((3, 4), 6), ((9, 8), 8), ((9, 8), 8), ((9, 8), 18), ((9, 8), 28)]
+    # for i in range(len(info)):
+    #     if i < 3:
+    #         continue
+    #     print('ok')
+    #     # print(info[i-3:i])
+    #     print(info[i])
+    #     X =[]
+    #     for x, y in info[i-3:i]:
+    #         X.extend(x)
+    #     X = np.array(X)
+    #     print(type(X), X)
+    # inputs = []
+    # for idx in range(3, len(serx)):
+    #     element = []
+    #     for record in serx[idx - 3:idx].values:
+    #         element.extend(record)
+    #     print(element)
+    #     inputs.append(np.reshape(element, (len(element), 1)))
+    # # print(serx)
+    # print('==============')
+    # print(inputs)
+    for learn in range(0, 100, 2):
+        print(learn*0.001)

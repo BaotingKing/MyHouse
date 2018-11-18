@@ -1,26 +1,22 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @author: ZK
-# Time: 2018/11/4
-import random
+# @author: wwl-ZK
+# Time: 2018/11/14
+
 import numpy as np
 import pandas as pd
 import tushare as ts
 import stock_network as snn
 import config as cfg
 from sklearn.model_selection import train_test_split
-
-# 获取数据
-stock_code = ['000333', '600519', '601398', '999999']
-s_start = '2013-09-18'
-s_end = '2018-09-18'
+from network import *
 
 
-def vectorized_result(j, classes):
-    """离散数据进行one-hot"""
-    e = np.zeros((classes, 1))
-    e[j] = 1.0
-    return e
+def normalize_data(data_source):
+    min_data = data_source.min()
+    max_data = data_source.max()
+    norm_data_source = (data_source[:] - min_data)/(max_data - min_data)
+    return norm_data_source
 
 
 def get_format_data(X, y, is_test):
@@ -42,15 +38,6 @@ def get_format_data(X, y, is_test):
     data = list(zip(inputs, results))
     # data = zip(inputs, results)
     return data
-
-
-def normalize_data(data_source):
-    min_data = data_source.min()
-    max_data = data_source.max()
-    # min_data = 0
-    # max_data = 1
-    norm_data_source = (data_source[:] - min_data)/(max_data - min_data)
-    return norm_data_source
 
 
 if __name__ == '__main__':
@@ -90,22 +77,13 @@ if __name__ == '__main__':
 
     print("[Debug0]", type(training_data), len(training_data), type(test_data), len(test_data))
     BP_size = [n_dim*3, 14, 1]
-    for learn in [16]:
-        net = snn.StockNetwork(BP_size)
-        net.SGD(training_data=training_data,
-                epochs=1000,
-                mini_batch_size=12,
-                learn_rate=learn*0.01,
-                test_data=test_data)    # test_data None
 
-    print(type(net))
+    # net = snn.StockNetwork(BP_size)
+    net = Network(BP_size)
+    net.SGD(training_data=training_data,
+            epochs=1000,
+            mini_batch_size=12,
+            eta=0.1,
+            test_data=test_data)  # test_data None
 
-
-
-
-
-
-
-
-
-
+    print('It is OK!', type(net))

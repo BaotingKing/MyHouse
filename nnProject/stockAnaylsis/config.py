@@ -5,6 +5,8 @@
 
 g_fitting_size = 3
 
+RECEPTIVE = 3
+
 g_max_close = 0
 g_min_close = 0
 
