@@ -74,7 +74,7 @@ if __name__ == '__main__':
     # print("x is = {}, y is = {}".format(X, y))
 
 
-    serx = pd.DataFrame({"time":[23, 60, 77, 56, 99, 12, 58, 88],"year":[2, 0, 7, 5, 9, 1, 8, 8]})
+    serx = pd.DataFrame({"time":[23, 60, 77, 56, 99, 12, 58, 88],"year":[2, 0, 7, 5, 9, 1, 8, 8]}, index=['a','b','c','d','e','f','g','h'])
     # serx = pd.Series([23, 60, 56, 99, 12, 58, 88])
     # sery = pd.Series([1,0,1,1,0,0,1])
     # data = zip(serx, sery)
@@ -122,5 +122,48 @@ if __name__ == '__main__':
     # # print(serx)
     # print('==============')
     # print(inputs)
-    for learn in range(0, 100, 2):
-        print(learn*0.001)
+    # for learn in range(0, 100, 2):
+    #     print(learn*0.001)
+
+    # ser = pd.Series([23, 60, 77, 56, 99, 12, 58, 88],index=['a','b','c','d','e','f','g','h'])
+    # a = ser.index
+    # sery = pd.DataFrame({"time": [23, 60, 77, 56, 99, 12, 58, 88], "year": [2, 0, 7, 5, 9, 1, 8, 8]},
+    #                     index=ser.index)
+    # print(sery)
+    #
+    # te = 2 * np.random.randint(-1, 1) + 1
+    # print('++++++++++')
+    # for i in range(6):
+    #     te = 2 * np.random.randint(-1, 1) + 1
+    #     print(te)
+    # # pd.to_csv()
+    # a = 99999
+    # test = [23, 60, 77, a, 56, 99, 12]
+    # print(test[1:-1])
+    hiden_combination = [
+        [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+        [[2, 1], [2, 2], [3, 1], [3, 2], [3, 3], [4, 1], [4, 2], [4, 4], [5, 1], [5, 2], [5, 5], [6, 1], [6, 3], [6, 6],
+         [10, 1], [10, 2], [10, 5], [10, 8], [10, 10], [11, 1], [11, 2], [11, 5], [11, 8], [11, 10], [11, 11],
+         [12, 1], [12, 2], [12, 5], [12, 10], [12, 12], [13, 1], [13, 2], [13, 15], [13, 10], [13, 12], [13, 13],
+         [14, 1], [14, 2], [14, 5], [14, 10], [14, 13], [14, 14], [15, 1], [15, 2], [15, 5], [15, 10], [15, 14],
+         [15, 15]],
+        [[2, 1, 1], [2, 2, 1], [2, 2, 2], [3, 1, 1], [3, 2, 1], [3, 3, 1], [3, 2, 2], [3, 3, 2], [3, 3, 3],
+         [5, 1, 1], [5, 2, 2], [5, 3, 3], [5, 4, 4], [5, 5, 5], [10, 1, 1], [10, 5, 5], [10, 8, 8], [10, 10, 1],
+         [10, 10, 10],
+         [11, 1, 1], [11, 5, 5], [11, 11, 1], [11, 11, 11],
+         [14, 1, 1], [14, 5, 5], [14, 10, 10], [14, 14, 1], [14, 14, 10], [14, 14, 14]]
+    ]
+    layer_num = [1, 2, 3]
+
+    for layer_idx in layer_num:
+        for hi in hiden_combination[layer_idx - 1]:
+            BP_size = [15, 1]
+            BP_size.insert(1, hi)
+            BP_sizes = []
+            for x in BP_size:
+                if isinstance(x, int):
+                    BP_sizes.append(x)
+                else:
+                    BP_sizes.extend(x)
+
+            print('hello,this is layer_idx={0},hiden={1},out={2}'.format(layer_idx, hi, BP_sizes))
