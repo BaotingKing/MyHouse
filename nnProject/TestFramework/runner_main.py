@@ -6,7 +6,7 @@ import os
 import sys
 import unittest
 import test_case.test_events
-from view.HTMLTestRunner_adv import HTMLTestRunner
+from view.html_show_runner import HTMLTestRunner
 
 if __name__ == '__main__':
     suite = unittest.TestSuite()

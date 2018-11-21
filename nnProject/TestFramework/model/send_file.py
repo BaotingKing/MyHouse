@@ -1,8 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf8 -*- 
 
-from os import path
-from pathlib import Path
 import sys
 import fileinput
 import time
@@ -10,83 +8,84 @@ import json
 import http.client
 import datetime
 import traceback
+from os import path
+from pathlib import Path
 
-serverip = "192.168.101.234"
-serverport = 18100
-servertimeout = 15
-storeurl = "/GateInfo/StoreGateInfo"
+SERVER_IP = "192.168.100.234"
+SERVER_PORT = 18100
+SERVER_TIME_OUT = 15
+STORE_URL = "/GateInfo/StoreGateInfo"
 # use test script's dir path as current path
-curpath = Path(path.dirname(path.abspath(__file__)))
-parentnode = 'AdditionalInfo'
+CUR_PATH = Path(path.dirname(path.abspath(__file__)))
+PARENT_NODE = 'AdditionalInfo'
 # take the time send costs into account 
-waitadjust = 200
+WAIT_ADJUST = 200
 UTC_timestamp = lambda: round(time.time() * 1000)
 # time between multiply sending
-timegap = 10
-
+TIME_GAP = 10
 
 
 # --------------  FUNCTIONS  ------------------
-def sendfile(filename):
+def send_file(filename):
     if not path.isabs(filename):
-        filename = str(curpath / filename)
+        filename = str(CUR_PATH / filename)
     if not path.exists(filename):
         print("[STEP]: Not Exist!", filename)
     print("[STEP]: Loading file", filename)
     token = str(int(str(UTC_timestamp())) - 100) + "012"
-    lineindex = 0
+    line_index = 0
     bMultiplyRequest = False
-    wholestr = ""
-    for aline in fileinput.input(files=(filename)):
+    whole_str = ""
+    for aline in fileinput.input(files=filename):
         if aline.strip() == "":
             continue
         # test first line if there are multi '}'
-        if lineindex==0 and not bMultiplyRequest and aline.count('}') > 1:
-            lineindex += 1
+        if line_index == 0 and not bMultiplyRequest and aline.count('}') > 1:
+            line_index += 1
             bMultiplyRequest = True
         if bMultiplyRequest:
-            print("Line", lineindex, "is:", aline)
-            lineindex += 1
+            print("Line", line_index, "is:", aline)
+            line_index += 1
             if aline.find('WellGateAct') != -1:
-                print(getresponse(aline))
+                print(get_response(aline))
             else:
                 data = json.loads(aline)
-                print(sendrequest_withtoken(data, token))
+                print(send_request_with_token(data, token))
         else:
-            wholestr += aline
+            whole_str += aline
 
     if not bMultiplyRequest:
-        #print("[STEP]: Send whole file as a single request:", wholestr)
-        if wholestr.find('WellGateAct') != -1:
-            print(getresponse(wholestr))
+        #print("[STEP]: Send whole file as a single request:", whole_str)
+        if whole_str.find('WellGateAct') != -1:
+            print(get_response(whole_str))
         else:
-            data = json.loads(wholestr)
-            print(sendrequest_withtoken(data, token))
+            data = json.loads(whole_str)
+            print(send_request_with_token(data, token))
     print("[STEP]: File send finish for", filename)
 
 
-def sendrequest_withtoken(struct, token):
-    if parentnode in struct and "token" in struct[parentnode] and "timestamp" in struct[parentnode]:
-        oldtimestamp = struct[parentnode]["timestamp"]
-        struct[parentnode]["token"] = token
-        struct[parentnode]["timestamp"] = str(UTC_timestamp())
+def send_request_with_token(struct, token):
+    if PARENT_NODE in struct and "token" in struct[PARENT_NODE] and "timestamp" in struct[PARENT_NODE]:
+        oldtimestamp = struct[PARENT_NODE]["timestamp"]
+        struct[PARENT_NODE]["token"] = token
+        struct[PARENT_NODE]["timestamp"] = str(UTC_timestamp())
     data = json.dumps(struct, indent=4, sort_keys=True)
-    sendrequest(data)
+    send_request(data)
 
 
-def sendrequest(json_text):
-    sendjson(json_text)
+def send_request(json_text):
+    send_json(json_text)
 
 
-def getresponse(json_text):
-    return sendjson(json_text, "/GateInfo/GetOne")
+def get_response(json_text):
+    return send_json(json_text, "/GateInfo/GetOne")
 
 
-def sendjson(json_text, url=storeurl):
+def send_json(json_text, url=STORE_URL):
     headers = {"Content-type": "application/json", "Accept": "text/plain"}
     try:
         print('------------------------------------------', datetime.datetime.now(), sep='\n')
-        httpClient = http.client.HTTPConnection(serverip, serverport, timeout=servertimeout)
+        httpClient = http.client.HTTPConnection(SERVER_IP, SERVER_PORT, timeout=SERVER_TIME_OUT)
         httpClient.request("POST", url, json_text, headers)
         response = httpClient.getresponse()
         result = response.read()
@@ -103,20 +102,19 @@ def sendjson(json_text, url=storeurl):
         return result
 
 
-
 # ===============   MAIN   =================
 if __name__ == '__main__':
-    print("[STEP]: Will send request to server:", serverip, ":", serverport)
+    print("[STEP]: Will send request to server:", SERVER_IP, ":", SERVER_PORT)
     isFirst = True
     if len(sys.argv) > 1:
         for afile in sys.argv[1:]:
             if not isFirst:
-                print("\n[WAITING]: Going to wait", timegap, "seconds before sending next file...\n\n")
-                time.sleep(timegap)
-            sendfile(afile.split('/')[-1])
+                print("\n[WAITING]: Going to wait", TIME_GAP, "seconds before sending next file...\n\n")
+                time.sleep(TIME_GAP)
+            send_file(afile.split('/')[-1])
             isFirst = False
     else:
-        sendfile('first.req')
+        send_file('first.req')
 
 
 

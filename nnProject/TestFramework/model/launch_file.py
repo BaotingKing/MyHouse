@@ -4,33 +4,33 @@
 # Time: 2018/8/10
 import os
 import json
-import tools
-from report.Logger import logger_running
+from controller import tools
+from model.logger import logger_running
+
+
 # 读取校验配置
-class Launchfile:
+class LaunchFile:
     def __init__(self):
-        self.cfgcontent = {}
+        self.cfg_content = {}
 
-
-    def load_launchfile(self, file_path):
+    def load_launch_file(self, file_path):
         try:
             file_handle = open(file_path)
             file_content = file_handle.read()
-            self.cfgcontent = json.loads(file_content)
+            self.cfg_content = json.loads(file_content)
             file_handle.close()
         except Exception:
             print('no or error launch.cfg')
         # finally:
         #     file_handle.close()
 
-        self.checkoutCfg()
-        return self.cfgcontent
+        self.checkout_cfg()
+        return self.cfg_content
 
-
-    def checkoutCfg(self):    # checkout launch.cfg
+    def checkout_cfg(self):    # checkout launch.cfg
         name_list = []
         module_list = []
-        for key, value in self.cfgcontent.items():
+        for key, value in self.cfg_content.items():
             name_list.append(value["module_name"])
             module_list.append(key)
 
@@ -39,12 +39,11 @@ class Launchfile:
             print('%s module is checking.....' % target_mdl)
             logger_running.info(target_mdl + ' module is checking.....')
             idx = name_list.index(target_mdl)
-            target_module = self.cfgcontent[module_list[idx]]
+            target_module = self.cfg_content[module_list[idx]]
             file_name = target_module["run_param"]["file_name"]
             if not os.path.isfile(file_name):
                 print('     Error item configuration: %s' % file_name)
                 logger_running.warn('     Error item configuration: ' + file_name)
-
 
         target_mdl = "video_processing"
         if target_mdl in name_list:
@@ -54,7 +53,6 @@ class Launchfile:
             for idx in idxes:
                 pass
 
-
         target_mdl = "image_processing"
         if target_mdl in name_list:
             print('%s module is checking.....' % target_mdl)
@@ -62,7 +60,6 @@ class Launchfile:
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             for idx in idxes:
                 pass
-
 
         target_mdl = "osk2_master_shell"
         if target_mdl in name_list:
@@ -73,14 +70,13 @@ class Launchfile:
             for idx in idxes:
                 pass
 
-
         target_mdl = "object_roi"
         if target_mdl in name_list:
             logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             for idx in idxes:
-                target_module = self.cfgcontent[module_list[idx]]
+                target_module = self.cfg_content[module_list[idx]]
                 topic_set = []
                 x_topic = "/WellOcean/" + target_module["run_param"]["target"] + "_subimage/channel_"
                 for idx_para in range(target_module["run_param"]["cam_name"].__len__()):
@@ -96,7 +92,6 @@ class Launchfile:
                     if topic_check not in topic_set:
                         print('     Error item configuration: %s' % "output_topic")
 
-
         target_mdl = "roi_recog"
         if target_mdl in name_list:
             logger_running.info(target_mdl + ' module is checking.....')
@@ -104,10 +99,10 @@ class Launchfile:
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "object_roi"]
             for idx in idxes:     # checkout "output_topic"
-                trans_set = set(self.cfgcontent[module_list[idx]]["run_param"]["input_topic"])
+                trans_set = set(self.cfg_content[module_list[idx]]["run_param"]["input_topic"])
                 flag = 0
                 for idx_cmp in idxes_cmp:
-                    tmp_cmp = self.cfgcontent[module_list[idx_cmp]]["run_param"]["output_topic"]
+                    tmp_cmp = self.cfg_content[module_list[idx_cmp]]["run_param"]["output_topic"]
                     topic_cmp = tools.unfold_list(tmp_cmp)
                     if trans_set.issubset(topic_cmp):
                         flag = 1   # this is ok
@@ -120,7 +115,7 @@ class Launchfile:
                     flag = 0
 
             for idx in idxes:  # checkout "other run_param params"
-                target_module = self.cfgcontent[module_list[idx]]
+                target_module = self.cfg_content[module_list[idx]]
                 detect_type = target_module["run_param"]["detect_type"]
                 if detect_type == "char":    # I am he_he
                     detect_type = "plate"
@@ -142,10 +137,6 @@ class Launchfile:
                     if tail_word != detect_type:
                         print('     Error item configuration: detect_type %s' % tail_word)
 
-
-
-
-
         target_mdl = "roi_trigger"
         if target_mdl in name_list:
             logger_running.info(target_mdl + ' module is checking.....')
@@ -155,7 +146,6 @@ class Launchfile:
             for idx in idxes:
                 pass
 
-
         target_mdl = "result_transfer"
         if target_mdl in name_list:
             logger_running.info(target_mdl + ' module is checking.....')
@@ -163,11 +153,11 @@ class Launchfile:
             idxes = [i for i in range(len(name_list)) if name_list[i] == target_mdl]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "roi_recog"]
             for idx in idxes:
-                target_module = self.cfgcontent[module_list[idx]]
+                target_module = self.cfg_content[module_list[idx]]
                 for idx_cmp in idxes_cmp:
                     target_infor = []
                     cmp_infor = []
-                    cmp_module = self.cfgcontent[module_list[idx_cmp]]
+                    cmp_module = self.cfg_content[module_list[idx_cmp]]
                     output_topic = cmp_module['run_param']['output_topic']
 
                     if type(output_topic) == str:  # this is he_he, avoid the unknown problem
@@ -184,11 +174,9 @@ class Launchfile:
                     else:     # cfg has illegality write
                         target_infor.append(str(types_topic))
 
-
                     if target_infor != cmp_infor:
                         print()
                         print('     Error item configuration: %s' % x_topic)
-
 
         target_mdl = "result_send"
         if target_mdl in name_list:
@@ -196,38 +184,34 @@ class Launchfile:
             print('%s module is checking.....' % target_mdl)
             idx = name_list.index("result_send")
             idx_cmp = name_list.index("roi_trigger")
-            target_module = self.cfgcontent[module_list[idx]]
-            cmp_module = self.cfgcontent[module_list[idx_cmp]]
+            target_module = self.cfg_content[module_list[idx]]
+            cmp_module = self.cfg_content[module_list[idx_cmp]]
             # for idx_topic in ["trigger_topic", "container_trigger_topic", "plate_trigger_topic", "plate_roi_topic"]:
             for idx_topic in ["trigger_topic", "container_trigger_topic", "plate_trigger_topic"]:
-                cmp_topic = tools.check_item_ref_resultsend(idx_topic)
+                cmp_topic = tools.check_relationship_trans(idx_topic)
                 target_infor = target_module["run_param"][idx_topic]
                 cmp_infor = cmp_module["run_param"][cmp_topic]
                 tools.check_adaptive(target_infor, cmp_infor, idx_topic)
 
             for idx_topic in ["result_topic"]:
                 idx_cmp = name_list.index("result_transfer")
-                cmp_module = self.cfgcontent[module_list[idx_cmp]]
-                cmp_topic = tools.check_item_ref_resultsend(idx_topic)
+                cmp_module = self.cfg_content[module_list[idx_cmp]]
+                cmp_topic = tools.check_relationship_trans(idx_topic)
                 target_infor = target_module["run_param"][idx_topic]
                 cmp_infor = cmp_module["run_param"][cmp_topic]
                 tools.check_adaptive(target_infor, cmp_infor, idx_topic)
-
-
-
-
 
         target_mdl = "ui"
         if target_mdl in name_list:
             logger_running.info(target_mdl + ' module is checking.....')
             print('%s module is checking.....' % target_mdl)
             idx = name_list.index(target_mdl)
-            target_module = self.cfgcontent[module_list[idx]]
+            target_module = self.cfg_content[module_list[idx]]
             idxes_cmp = [i for i in range(len(name_list)) if name_list[i] == "object_roi"]
             flag = 0
             cmp_container = []
             for idx_cmp in idxes_cmp:
-                cmp = self.cfgcontent[module_list[idx_cmp]]["run_param"]["output_topic"]
+                cmp = self.cfg_content[module_list[idx_cmp]]["run_param"]["output_topic"]
                 cmp_container.append(cmp)
             cmp_infor = tools.unfold_list(cmp_container)
             target_infor = tools.unfold_list(target_module["run_param"]["roi_topic"])
@@ -240,20 +224,19 @@ class Launchfile:
 
             for idx_topic in ["trigger_topic"]:
                 idx_cmp = name_list.index("roi_trigger")
-                cmp_module = self.cfgcontent[module_list[idx_cmp]]
-                cmp_topic = tools.check_item_ref_resultsend(idx_topic)
+                cmp_module = self.cfg_content[module_list[idx_cmp]]
+                cmp_topic = tools.check_relationship_trans(idx_topic)
                 target_infor = target_module["run_param"][idx_topic]
                 cmp_infor = cmp_module["run_param"][cmp_topic]
                 tools.check_adaptive(target_infor, cmp_infor, idx_topic)
 
             for idx_topic in ["result_topic"]:
                 idx_cmp = name_list.index("result_transfer")
-                cmp_module = self.cfgcontent[module_list[idx_cmp]]
-                cmp_topic = tools.check_item_ref_resultsend(idx_topic)
+                cmp_module = self.cfg_content[module_list[idx_cmp]]
+                cmp_topic = tools.check_relationship_trans(idx_topic)
                 target_infor = target_module["run_param"][idx_topic]
                 cmp_infor = cmp_module["run_param"][cmp_topic]
                 tools.check_adaptive(target_infor, cmp_infor, idx_topic)
-
 
         target_mdl = "object_catorgery"
         if target_mdl in name_list:

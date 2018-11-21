@@ -10,9 +10,11 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.application import MIMEApplication
 import smtplib
 # SMTP server
+
 mail_host = "smtp.exmail.qq.com"  # setup servers
 mail_user = "baoting.zhang@westwell-lab.com"  # user mail
 mail_pass = "Zhang@2018"   # password
+
 
 def _format_addr(s):
     name, addr = parseaddr(s)
@@ -51,8 +53,8 @@ def send_mail(f, to_addr):
 
 if __name__ == '__main__':
     attachment_path = "G:\\Doc\\README.md"
-    tomail = "baoting.zhang@westwell-lab.com"
-    # tomail = "zhangbaoting_china@126.com"
-    print tomail
-    send_mail(f=attachment_path, to_addr=tomail)
-    print "it's ok, this is test for sendmail"
+    to_mail = "baoting.zhang@westwell-lab.com"
+    # to_mail = "zhangbaoting_china@126.com"
+    print(to_mail)
+    send_mail(f=attachment_path, to_addr=to_mail)
+    print("it's ok, this is test for sendmail")

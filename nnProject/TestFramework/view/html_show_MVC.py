@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-# @author: http://tungwaiyip.info/software/HTMLTestRunner.html
-# Time: 2018/8/7
+# @author: wwl-zk
+# Time: 2018/11/20
 
 """
 A TestRunner for use with the Python unit testing framework. It
@@ -38,7 +38,7 @@ HTMLTestRunner is a counterpart to unittest's TextTestRunner. E.g.
 
 
 ------------------------------------------------------------------------
-Copyright (c) 2004-2007, Wai Yip Tung
+Copyright (c) 2018-2028, W
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
@@ -70,6 +70,8 @@ SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 # URL: http://tungwaiyip.info/software/HTMLTestRunner.html
 """
 Change History
+Version 0.8.3
+* Add use case description output(new).
 
 Version 0.8.2
 * Show output inline instead of popup window (Viorel Lupu).
@@ -775,7 +777,7 @@ class HTMLTestRunner(Template_mixin):
             tid=tid,
             Class=(n == 0 and 'hiddenRow' or 'none'),
             style=n == 2 and 'errorCase' or (n == 1 and 'failCase' or 'none'),
-            desc=desc,
+            desc=desc + '\n' + str(description),
             script=script,
             status=self.STATUS[n],
         )
@@ -807,10 +809,10 @@ def extract_description(case_name):
         for one_line in case_handle:
             if '#Pre' in one_line:
                 flag = 1
-            elif '#Desc' in one_line:
+            elif flag == 1 and ("'''" in one_line):
                 flag = 0
 
-            if flag == 1 or ('#Desc' in one_line):
+            if flag == 1:
                 description = description + one_line
     return description
 

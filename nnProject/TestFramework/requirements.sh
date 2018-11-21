@@ -21,7 +21,7 @@ echo "$cfg_name is not exist and it will be created"
 touch $cfg_name
 fi
 
-grep ${mirr} ${cfg_name} > /dev/null
+grep "mirrors" ${cfg_name} > /dev/null
 if [ $? -eq 0 ]; then 
     echo "software source is ok!"
 else

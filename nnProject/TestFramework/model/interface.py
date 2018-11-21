@@ -5,7 +5,8 @@
 import string
 import random
 
-class innerInterface(object):
+
+class InnerInterface(object):
     def __init__(self, category):
         self.content = {}
         self.category = category
@@ -52,6 +53,7 @@ def random_content(type_values):
 
     return con_value
 
+
 def final_result_gen():
     output = ""
     letters = string.uppercase
@@ -64,6 +66,7 @@ def final_result_gen():
     temp = ''.join([random.choice(letters) for _ in range(4)])
     output = output + temp + ' ' + random.choice(["True", "False"])
     return output
+
 
 def random_str_gen(type_flag="dig-lt", str_len=2):
     output = ""
@@ -169,7 +172,7 @@ interface_db = {
 }
 
 if __name__ == '__main__':
-    content_http = innerInterface("Gate")
+    content_http = InnerInterface("Gate")
     content_http.set_random_content()
     print(content_http.content)
     print("==================")
