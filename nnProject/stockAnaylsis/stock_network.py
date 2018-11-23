@@ -140,7 +140,10 @@ class StockNetwork(object):
 
                 if j == 0:
                     fianl_temp = fianl_result.copy()
+                    good_temp = fianl_result.copy()
                     accuracy_temp = accuracy_num
+
+                good_temp = self.acc_analyze(fianl_result, good_temp)
 
                 if accuracy_num > accuracy_temp:
                     fianl_temp = fianl_result.copy()
@@ -150,7 +153,11 @@ class StockNetwork(object):
 
                 if j == (epochs - 1):
                     last_result = fianl_result.drop(fianl_result.columns[0:3], axis=1)
-                    result = pd.concat([fianl_temp, last_result], axis=1)
+                    good_result = good_temp.drop(good_temp.columns[0:3], axis=1)
+                    cln = good_result.columns[0]
+                    epo_idx = cln.split('_')[-1]
+                    good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(tt)]
+                    result = pd.concat([fianl_temp, last_result, good_temp], axis=1)
 
             else:
                 print("Epoch {0} complete".format(j))
@@ -198,6 +205,22 @@ class StockNetwork(object):
         return cnt, fianl_result
 
     def acc_analyze(self, new_result, old_result):
+        new = abs((new_result.iloc[:, 0] - new_result.iloc[:, 1])/new_result.iloc[:, 0])
+        old = abs((old_result.iloc[:, 0] - old_result.iloc[:, 3])/old_result.iloc[:, 0])
+
+        distribution = (new - old)/old
+
+        coefficent = distribution.sum()
+        if coefficent < 0:
+            result_old = old_result.loc[:, old_result.columns[0:3]]
+            result_new = new_result.drop(new_result.columns[0:3], axis=1)
+            result = pd.concat([result_old, result_new], axis=1)
+        else:
+            result = old_result
+
+        return result
+
+    def good_analyze(self, new_result, old_result):
         new = abs((new_result.iloc[:, 0] - new_result.iloc[:, 1])/new_result.iloc[:, 0])
         old = abs((old_result.iloc[:, 0] - old_result.iloc[:, 3])/old_result.iloc[:, 0])
 

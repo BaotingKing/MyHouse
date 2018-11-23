@@ -193,8 +193,12 @@ if __name__ == '__main__':
     result_new = new_result.drop(new_result.columns[0:2], axis=1)
     result = pd.concat([result_old, result_new], axis=1)
     print(type(c), '\n', a.columns[-1:-2:-1], a, '\n', result, '\n', result_new)
-
-    tu = '2.345%'
-    tu = float(tu.split('%'))
-    aa = tu.strip('% ')
-    print(aa)
+    #
+    # tu = '2.345%'
+    # tu = float(tu.split('%'))
+    # aa = tu.strip('% ')
+    # print(aa)
+    aa = "per_b_{0}/{1}"
+    tt = aa.split('_')[-1]
+    a = ['overall_opt_{0}'.format(tt), 'overall_opt_per_{0}'.format(tt)]
+    print(a, result_new.columns[0])
