@@ -143,7 +143,7 @@ class StockNetwork(object):
                     good_temp = fianl_result.copy()
                     accuracy_temp = accuracy_num
 
-                good_temp = self.acc_analyze(fianl_result, good_temp)
+                good_temp = self.good_analyze(fianl_result, good_temp)
 
                 if accuracy_num > accuracy_temp:
                     fianl_temp = fianl_result.copy()
@@ -154,10 +154,15 @@ class StockNetwork(object):
                 if j == (epochs - 1):
                     last_result = fianl_result.drop(fianl_result.columns[0:3], axis=1)
                     good_result = good_temp.drop(good_temp.columns[0:3], axis=1)
+
+                    cln = last_result.columns[0]
+                    epo_idx = cln.split('_')[-1]
+                    last_result.columns = ['last_{0}'.format(epo_idx), 'last_per_{0}'.format(epo_idx)]
+
                     cln = good_result.columns[0]
                     epo_idx = cln.split('_')[-1]
                     good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(epo_idx)]
-                    result = pd.concat([fianl_temp, last_result, good_temp], axis=1)
+                    result = pd.concat([fianl_temp, last_result, good_result], axis=1)
 
             else:
                 print("Epoch {0} complete".format(j))
@@ -224,7 +229,7 @@ class StockNetwork(object):
         new = abs((new_result.iloc[:, 0] - new_result.iloc[:, 1])/new_result.iloc[:, 0])
         old = abs((old_result.iloc[:, 0] - old_result.iloc[:, 3])/old_result.iloc[:, 0])
 
-        distribution = (new - old)/old
+        distribution = (new - old)
 
         coefficent = distribution.sum()
         if coefficent < 0:
