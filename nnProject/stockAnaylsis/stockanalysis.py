@@ -123,7 +123,7 @@ if __name__ == '__main__':
          [15, 15, 15, 15, 1], [15, 15, 15, 15, 15]],
     ]
 
-    for hiden_layer_idx in [1, 2, 3, 4, 5]:   # [1, 2, 3, 4, 5]
+    for hiden_layer_idx in [1, 2, 3, 4, 5]:   # [1, 2, 3, 4, 5]   # Tag is :2018.11.23
         for hi in hiden_combination[hiden_layer_idx - 1]:
             BP_size = [n_dim * cfg.RECEPTIVE, 1]
             BP_size.insert(1, hi)
