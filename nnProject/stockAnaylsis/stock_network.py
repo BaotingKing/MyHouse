@@ -156,7 +156,7 @@ class StockNetwork(object):
                     good_result = good_temp.drop(good_temp.columns[0:3], axis=1)
                     cln = good_result.columns[0]
                     epo_idx = cln.split('_')[-1]
-                    good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(tt)]
+                    good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(epo_idx)]
                     result = pd.concat([fianl_temp, last_result, good_temp], axis=1)
 
             else:
