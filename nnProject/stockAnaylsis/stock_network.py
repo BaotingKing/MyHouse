@@ -185,10 +185,10 @@ class StockNetwork(object):
             percentage_error.append(err)
 
         hidden_layer_num, node_num, epoch = cfg.get_cfg(True, True, True)
-        column_num_begin = "layer_{0}-node_num_{1}_begin-epoch_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
-        column_num_opt = "layer_{0}-node_num_{1}_opt-epoch_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
-        percentage_error_name_begin = "per_error_begin_{0}/{1}".format(iter_idx, epoch)
-        percentage_error_name_opt = "per_error_opt_{0}/{1}".format(iter_idx, epoch)
+        column_num_begin = "l_{0}-N_{1}_b_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
+        column_num_opt = "l_{0}-N_{1}_opt_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
+        percentage_error_name_begin = "per_b_{0}/{1}".format(iter_idx, epoch)
+        percentage_error_name_opt = "per_opt_{0}/{1}".format(iter_idx, epoch)
         fianl_result = pd.DataFrame({'ture_value': ture_value,
                                      column_num_begin: pred_value,
                                      percentage_error_name_begin: percentage_error,
