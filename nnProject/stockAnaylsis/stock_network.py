@@ -3,11 +3,10 @@
 # @author: ZK
 # Time: 2018/11/7
 
-import csv
 import numpy as np
 import pandas as pd
 import config as cfg
-import random
+import matplotlib.pyplot as plt
 
 
 def sigmoid(z):
@@ -135,18 +134,45 @@ class StockNetwork(object):
                 self.update_mini_batch(mini_batch, learn_rate=learn_rate)
 
             if test_data:
-                accuracy_num, fianl_result = self.evaluate(test_data)
+                accuracy_num, fianl_result = self.evaluate(test_data, j)
                 print("Epoch {0}: {1} / {2}".
                       format(j, accuracy_num, len(test_data)))
+
+                if j == 0:
+                    fianl_temp = fianl_result.copy()
+                    good_temp = fianl_result.copy()
+                    accuracy_temp = accuracy_num
+
+                good_temp = self.good_analyze(fianl_result, good_temp)
+
+                if accuracy_num > accuracy_temp:
+                    fianl_temp = fianl_result.copy()
+                    accuracy_temp = accuracy_num
+                elif accuracy_num == accuracy_temp:
+                    fianl_temp = self.acc_analyze(fianl_result, fianl_temp)
+
+                if j == (epochs - 1):
+                    last_result = fianl_result.drop(fianl_result.columns[0:3], axis=1)
+                    good_result = good_temp.drop(good_temp.columns[0:3], axis=1)
+
+                    cln = last_result.columns[0]
+                    epo_idx = cln.split('_')[-1]
+                    last_result.columns = ['last_{0}'.format(epo_idx), 'last_per_{0}'.format(epo_idx)]
+
+                    cln = good_result.columns[0]
+                    epo_idx = cln.split('_')[-1]
+                    good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(epo_idx)]
+                    result = pd.concat([fianl_temp, last_result, good_result], axis=1)
+
             else:
                 print("Epoch {0} complete".format(j))
 
         if test_data:
             df_param = pd.DataFrame({'biases': self.biases, 'weights': self.weights})
             df_param.to_csv('./data/parameters.csv')
-            fianl_result.to_csv('fianl_result.csv', mode='a')
+            result.to_csv('fianl_result.csv', mode='a')
 
-    def evaluate(self, test_data):
+    def evaluate(self, test_data, iter_idx):
         """返回预测正确的个数"""
         g_max_close = cfg.get_value('g_max_close')
         g_min_close = cfg.get_value('g_min_close')
@@ -171,16 +197,46 @@ class StockNetwork(object):
             percentage_error.append(err)
 
         hidden_layer_num, node_num, epoch = cfg.get_cfg(True, True, True)
-        column_num = "layer_{0}-node_num_{1}-epoch_{2}".format(hidden_layer_num, node_num, epoch)
-        fianl_result = pd.DataFrame({'ture_value': ture_value, column_num: pred_value, 'percentage_error': percentage_error}, index=cfg.get_idx())
-
+        column_num_begin = "l_{0}-N_{1}_b_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
+        column_num_opt = "l_{0}-N_{1}_opt_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
+        percentage_error_name_begin = "per_b_{0}/{1}".format(iter_idx, epoch)
+        percentage_error_name_opt = "per_opt_{0}/{1}".format(iter_idx, epoch)
+        fianl_result = pd.DataFrame({'ture_value': ture_value,
+                                     column_num_begin: pred_value,
+                                     percentage_error_name_begin: percentage_error,
+                                     column_num_opt: pred_value,
+                                     percentage_error_name_opt: percentage_error},
+                                    index=cfg.get_idx())
         return cnt, fianl_result
 
+    def acc_analyze(self, new_result, old_result):
+        new = abs((new_result.iloc[:, 0] - new_result.iloc[:, 1])/new_result.iloc[:, 0])
+        old = abs((old_result.iloc[:, 0] - old_result.iloc[:, 3])/old_result.iloc[:, 0])
 
+        distribution = (new - old)/old
 
+        coefficent = distribution.sum()
+        if coefficent < 0:
+            result_old = old_result.loc[:, old_result.columns[0:3]]
+            result_new = new_result.drop(new_result.columns[0:3], axis=1)
+            result = pd.concat([result_old, result_new], axis=1)
+        else:
+            result = old_result
 
+        return result
 
+    def good_analyze(self, new_result, old_result):
+        new = abs((new_result.iloc[:, 0] - new_result.iloc[:, 1])/new_result.iloc[:, 0])
+        old = abs((old_result.iloc[:, 0] - old_result.iloc[:, 3])/old_result.iloc[:, 0])
 
+        distribution = (new - old)
 
+        coefficent = distribution.sum()
+        if coefficent < 0:
+            result_old = old_result.loc[:, old_result.columns[0:3]]
+            result_new = new_result.drop(new_result.columns[0:3], axis=1)
+            result = pd.concat([result_old, result_new], axis=1)
+        else:
+            result = old_result
 
-
+        return result

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 # @author: ZK
 # Time: 2018/11/4
-import random
+
 import os
 import shutil
 import numpy as np
@@ -92,12 +92,11 @@ if __name__ == '__main__':
     test_data = get_format_data(test_x, test_y, True)
     print("[Log_information]", type(training_data), len(training_data), type(test_data), len(test_data))
     """final result file operation"""
-    # if os.path.exists('./data/parameters.csv'):
-    #     shutil.copyfile('./data/parameters.csv', './data/parameters.csv.bak')
-    #     os.remove('./data/parameters.csv')
-    #     if not os.path.exists('./data/parameters.csv'):
-    #         print('The file has been saved and delete')
-
+    if os.path.exists('fianl_result.csv'):
+        shutil.copyfile('fianl_result.csv', 'fianl_result.csv.bak')
+        os.remove('fianl_result.csv')
+        if not os.path.exists('fianl_result.csv'):
+            print('fianl_result.csv has been saved and delete')
 
     hiden_combination = [
         [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
@@ -124,7 +123,7 @@ if __name__ == '__main__':
          [15, 15, 15, 15, 1], [15, 15, 15, 15, 15]],
     ]
 
-    for hiden_layer_idx in [4, 5]:
+    for hiden_layer_idx in [1, 2, 3, 4, 5]:   # [1, 2, 3, 4, 5]   # Tag is :2018.11.23
         for hi in hiden_combination[hiden_layer_idx - 1]:
             BP_size = [n_dim * cfg.RECEPTIVE, 1]
             BP_size.insert(1, hi)
@@ -136,24 +135,17 @@ if __name__ == '__main__':
                     BP_sizes.extend(x)
 
             for learn in [16]:
-                a = len(BP_sizes)
-                cfg.set_cfg(lay_num=len(BP_sizes) - 2, node_num=BP_sizes[1:-1], epoch=50)
-                print('hello,this is hiden_layer_num={0},hiden={1},out={2}'.format(hiden_layer_idx, hi, BP_sizes))
-                net = snn.StockNetwork(BP_sizes)
-                net.SGD(training_data=training_data,
-                        epochs=500,
-                        mini_batch_size=12,
-                        learn_rate=learn*0.01,
-                        test_data=test_data)    # test_data None
+                for epoch in [200, 500, 1000]:
+                    a = len(BP_sizes)
+                    cfg.set_cfg(lay_num=len(BP_sizes) - 2, node_num=BP_sizes[1:-1], epoch=epoch)
+                    print('hello,this is hiden_layer_num={0},hiden={1},out={2}'.format(hiden_layer_idx, hi, BP_sizes))
+                    net = snn.StockNetwork(BP_sizes)
+                    net.SGD(training_data=training_data,
+                            epochs=epoch,
+                            mini_batch_size=12,
+                            learn_rate=learn*0.01,
+                            test_data=test_data)    # test_data None
 
-                print('[Processing]: The config information is:.....')
-
-
-
-
-
-
-
-
+                    print('[Processing]: The config information is:.....')
 
 
