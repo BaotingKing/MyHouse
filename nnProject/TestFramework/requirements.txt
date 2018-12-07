@@ -1,2 +1,4 @@
+django==1.11.2
+sqlalchemy
 requests
 PyMySQL
