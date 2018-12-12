@@ -4,6 +4,7 @@
 # Time: 2018/11/4
 
 import os
+import math
 import shutil
 import numpy as np
 import pandas as pd
@@ -13,7 +14,7 @@ import config as cfg
 from sklearn.model_selection import train_test_split
 
 # 获取数据
-stock_code = ['000333', '600519', '601398', '999999']
+stock_code = ['600031', '601398', '000333', '600519', '999999']
 s_start = '2013-09-18'
 s_end = '2018-09-18'
 
@@ -57,9 +58,18 @@ def normalize_data(data_source):
     return norm_data_source
 
 
+def log_data(data_source):
+    deno = data_source[0]
+    log_data_source = data_source.copy()
+    for idx in range(len(data_source)):
+        log_data_source[idx] = math.log(data_source[idx]/deno)
+        deno = data_source[idx]
+    return log_data_source
+
+
 if __name__ == '__main__':
     large_cap_data = ts.get_index()
-    stock_original_data = ts.get_hist_data('601398', start='2016-06-01', end='2018-06-26')
+    stock_original_data = ts.get_hist_data('600031', start='2016-06-01', end='2018-06-26')
     print("[Debug]This is original data: \n", stock_original_data.head(), type(stock_original_data))
 
     stock_data = stock_original_data.copy()
