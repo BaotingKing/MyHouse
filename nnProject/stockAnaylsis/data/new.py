@@ -3,13 +3,10 @@
 # @author: wwl-ZK
 # Time: 2018/11/14
 
-import numpy as np
 import pandas as pd
 import tushare as ts
-import stock_network as snn
-import config as cfg
 from sklearn.model_selection import train_test_split
-from network import *
+from data.network import *
 
 
 def normalize_data(data_source):

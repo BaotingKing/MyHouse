@@ -5,7 +5,7 @@
 
 # -*- coding: utf-8 -*-
 
-from network import *
+from data.network import *
 
 def vectorized_result(j,nclass):
     """离散数据进行one-hot"""
