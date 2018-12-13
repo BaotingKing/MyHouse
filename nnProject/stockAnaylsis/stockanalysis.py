@@ -75,6 +75,8 @@ if __name__ == '__main__':
     large_cap_data = ts.get_index()
     # stock_original_data = ts.get_hist_data('601398', start='2016-06-01', end='2018-06-26')
     stock_original_data = pd.read_csv('./data/601398stock_normal_data.csv')
+    stock_original_data.index = stock_original_data['date']
+
     print("[Debug]This is original data: \n", stock_original_data.head(), type(stock_original_data))
 
     stock_data = stock_original_data.copy()
