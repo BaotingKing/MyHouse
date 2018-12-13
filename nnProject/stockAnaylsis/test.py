@@ -2,6 +2,7 @@
 # -*- coding: utf-8 -*-
 # @author: wwl-ZK
 # Time: 2018/11/4
+import math
 import numpy as np
 import pandas as pd
 # import tushare as ts
@@ -171,34 +172,15 @@ if __name__ == '__main__':
     sery = pd.DataFrame({"time": [23, 60, 77, 56, 99, 12, 58, 88], "year": [2, 0, 7, 5, 9, 1, 8, 8],
                          "month": [2, 0, 7, 5, 9, 1, 8, 8], "second": [2, 0, 7, 5, 9, 1, 8, 8]},
                         index=ser.index)
-    # print(sery)
-    print(sery.iloc[:, -1])
-    print('=====================')
-    a = sery.copy()
-    b = sery.copy()
-    # print(a.columns)
-    print('=====================')
-    c = a.drop(a.columns[-1:-3:-1], axis=1)
-    # d = a.loc[:, a.columns[-1:-2:-1]]
-    d = a.drop(a.columns[0:1], axis=1)
-    clm = a.columns[-1:-2:-1]
-    num = a.loc[:, clm]
-    # c.insert(0, 'year', num)
-    e = pd.concat([c, d], axis=1)
-    # f = pd.merge([c, d])
+    print(sery.index, type(sery.index))
+    print((sery.index == 'a'))
+    li = sery.index
+    aaa = np.where(li == 'd')
+    # aaa = (sery.index == 'a')
+    idx = aaa[0][0]
+    b = sery.iloc[3]['time']
+    print(math.e**6, math.e*math.e*math.e*math.e*math.e*math.e)
 
-    old_result = a
-    new_result = a
-    result_old = old_result.loc[:, old_result.columns[0:2]]
-    result_new = new_result.drop(new_result.columns[0:2], axis=1)
-    result = pd.concat([result_old, result_new], axis=1)
-    print(type(c), '\n', a.columns[-1:-2:-1], a, '\n', result, '\n', result_new)
-    #
-    # tu = '2.345%'
-    # tu = float(tu.split('%'))
-    # aa = tu.strip('% ')
-    # print(aa)
-    aa = "per_b_{0}/{1}"
-    tt = aa.split('_')[-1]
-    a = ['overall_opt_{0}'.format(tt), 'overall_opt_per_{0}'.format(tt)]
-    print(a, result_new.columns[0])
+    a = math.log(5.67000/5.63000)
+    b = (math.e ** a) * 5.63000
+    print(a, b)

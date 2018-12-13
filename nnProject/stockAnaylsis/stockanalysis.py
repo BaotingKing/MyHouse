@@ -9,6 +9,7 @@ import shutil
 import numpy as np
 import pandas as pd
 import tushare as ts
+import matplotlib.pyplot as plt
 import stock_network as snn
 import config as cfg
 from sklearn.model_selection import train_test_split
@@ -59,17 +60,21 @@ def normalize_data(data_source):
 
 
 def log_data(data_source):
-    deno = data_source[0]
+    denom = data_source[0]
     log_data_source = data_source.copy()
     for idx in range(len(data_source)):
-        log_data_source[idx] = math.log(data_source[idx]/deno)
-        deno = data_source[idx]
+        if denom != 0:
+            log_data_source[idx] = math.log(data_source[idx]/denom)
+        else:
+            log_data_source[idx] = None
+        denom = data_source[idx]
     return log_data_source
 
 
 if __name__ == '__main__':
     large_cap_data = ts.get_index()
-    stock_original_data = ts.get_hist_data('600031', start='2016-06-01', end='2018-06-26')
+    # stock_original_data = ts.get_hist_data('601398', start='2016-06-01', end='2018-06-26')
+    stock_original_data = pd.read_csv('./data/601398stock_normal_data.csv')
     print("[Debug]This is original data: \n", stock_original_data.head(), type(stock_original_data))
 
     stock_data = stock_original_data.copy()
@@ -79,16 +84,21 @@ if __name__ == '__main__':
     # print("[Debug]", stock_data.columns)
     print('====================')
     stock_normal_data = stock_data.sort_index(axis=0, ascending=True).copy()
+    # stock_normal_temp = stock_normal_data.copy()
 
     max_close = stock_data['close'].max()   # 用于后期还原close price
     min_close = stock_data['close'].min()
-    cfg.set_value(max_close=max_close, min_close=min_close)
-    stock_data.to_csv('stock_normal_data.csv')
-    for column in stock_data.columns:   # 数据归一化处理
-        if column != "weekday":
-            stock_normal_data[column] = normalize_data(stock_data[column])
 
-    # stock_normal_X = stock_normal_data.drop('close', axis=1)
+    stock_data.to_csv('stock_normal_data.csv')
+    for column in ('open', 'high', 'low', 'close', 'volume'):   # 数据归一化处理  stock_data.columns
+        if column != "weekday":
+            stock_normal_data[column] = log_data(stock_normal_data[column])
+
+    # x = np.arange(len(stock_normal_data))
+    # y = stock_normal_temp['close']
+    # plt.plot(x, y)
+    # plt.show()
+
     stock_normal_X = stock_normal_data[['open', 'high', 'low', 'close', 'volume']]  # 'weekday'
     stock_normal_y = stock_normal_data['close']
 
@@ -97,6 +107,10 @@ if __name__ == '__main__':
                                                         test_size=0.035,
                                                         random_state=0,
                                                         shuffle=False)
+    cfg.set_value(max_close=max_close,
+                  min_close=min_close,
+                  stock_original_data=stock_data.sort_index(axis=0, ascending=True),
+                  test_idx=test_y[cfg.RECEPTIVE:].index)
     n_dim = train_x.shape[1]
     training_data = get_format_data(train_x, train_y, False)
     test_data = get_format_data(test_x, test_y, True)

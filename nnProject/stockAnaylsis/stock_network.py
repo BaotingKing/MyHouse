@@ -3,6 +3,7 @@
 # @author: ZK
 # Time: 2018/11/7
 
+import math
 import numpy as np
 import pandas as pd
 import config as cfg
@@ -37,6 +38,16 @@ def activation_diff(z, mode='sigmoid'):
 def parameters_init():
     pass
 
+
+def restore_data(y_, y, time_data):
+    g_stock_original_data = cfg.get_value('g_stock_original_data')
+    time_idx = g_stock_original_data.index
+    indx = np.where(time_idx == time_data)[0][0]
+    if indx != 0:
+        denom = g_stock_original_data.iloc[indx - 1]['close']
+        y_ = (math.e ** y_) * denom
+        y = (math.e ** y) * denom
+    return y_, y
 
 class StockNetwork(object):
     def __init__(self, sizes=0, param_from_csv=False):
@@ -176,17 +187,22 @@ class StockNetwork(object):
         """返回预测正确的个数"""
         g_max_close = cfg.get_value('g_max_close')
         g_min_close = cfg.get_value('g_min_close')
+        g_test_idx = cfg.get_value('g_test_idx')
         denominator = g_max_close - g_min_close
 
         cnt = 0
+        idx_cnt = 0
         ture_value = []
         pred_value = []
         percentage_error = []
         for X, y_ in test_data:
             y = self.forward(X, flag=0)
 
-            y = y * denominator + g_min_close
-            y_ = y_ * denominator + g_min_close
+            # y = y * denominator + g_min_close
+            # y_ = y_ * denominator + g_min_close
+            time_data = str(g_test_idx[idx_cnt])
+            y_, y = restore_data(y_, y, str(g_test_idx[idx_cnt]))
+            idx_cnt += 1
 
             if abs(y - y_) <= 1e-1:
                 cnt += 1
