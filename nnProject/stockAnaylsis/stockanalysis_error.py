@@ -5,6 +5,7 @@
 
 import os
 import shutil
+import math
 import numpy as np
 import pandas as pd
 import tushare as ts
@@ -77,18 +78,25 @@ if __name__ == '__main__':
     # stock_original_data = ts.get_hist_data('601398', start='2016-06-01', end='2018-06-26')
     stock_normal_data = pd.read_excel('./data/2018-12-28_600519fianl_result.xlsx')
     stock_normal_data.index = stock_normal_data['date']
+
+    max_close = stock_normal_data['error'].max()  # 用于后期还原close price
+    min_close = stock_normal_data['error'].min()
+
+    for column in ['error']:  # 数据归一化处理  stock_data.columns
+        if column != "weekday":
+            stock_normal_data[column] = normalize_data(stock_normal_data[column])
+
     stock_predict_err = stock_normal_data['error']
     stock_predict_X = stock_predict_err.copy()
     stock_predict_y = stock_predict_err.copy()
-
     train_x, test_x, train_y, test_y = train_test_split(stock_predict_X,
                                                         stock_predict_y,
-                                                        test_size=0.035,
+                                                        test_size=0.038,
                                                         random_state=0,
                                                         shuffle=False)
-    cfg.set_value(max_close=0,
-                  min_close=0,
-                  stock_original_data=stock_normal_data.sort_index(axis=0, ascending=True),
+    cfg.set_value(max_close=max_close,
+                  min_close=min_close,
+                  stock_original_data=stock_predict_err.sort_index(axis=0, ascending=True),
                   test_idx=test_y[cfg.RECEPTIVE:].index)
     if isinstance(stock_predict_err, pd.DataFrame):
         n_dim = stock_predict_err.columns.size
