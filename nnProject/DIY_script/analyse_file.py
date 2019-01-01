@@ -6,6 +6,7 @@ import re
 import os
 import sys
 
+import config
 
 def core_fun(img_names, image_type='examine'):
     """统计文件夹中图片数量"""
@@ -57,7 +58,9 @@ def statistic(dir_merge):
     img_list = []
     for root, dirs_labels, file_names in os.walk(dir_merge):  # Iterate label files
         for case_name in file_names:
-            if case_name[-3:] == "jpg":
+            timestamp = case_name.split()[0][0:13]
+            if (case_name[-3:] == "jpg" and int(timestamp) > config.start_time
+                    and int(timestamp) < config.stop_time):
                 img_list.append(case_name)
         # print(img_list)
         core_fun(img_list)
