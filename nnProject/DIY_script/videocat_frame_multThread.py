@@ -2,16 +2,15 @@
 # -*- coding: utf-8 -*-
 # @author: wwl-ZK
 # Time: 2019/2/20
-
 import os
 import time
 import cv2
 import json
 import mmap
 import redis
+import threading
 import numpy as np
 from datetime import datetime
-SHARE_FILE = '/cv/master1'
 
 
 def get_share_file_map(cam_file_name, write_resolution='1080'):
@@ -33,43 +32,41 @@ def get_share_file_map(cam_file_name, write_resolution='1080'):
     return shmmap
 
 
-def video_clips(video_source, save_path, start_time):
+def video_clips(video_source, save_path, share_path):
     """
     函数功能：视频截取
     :param video_source: 源视频
     :param save_path: 根据视频名来保存对应截取视频的路径
-    :param start_time: 源视频的UTC时间的时间戳
+    :param share_path: 触发wellocean的共享路径
     :return:
     """
-    print '*********************0'
-    video_info = capture_video_trigger(video_source, start_time)
-    print '*********************100'
+    video_info = capture_video_trigger(video_source, share_path)
     video_save(video_source, save_path, video_info)
-    print '*********************200'
 
 
 def capture_video_trigger(video_source,
-                          start_timestamp,
+                          share_path,
                           data_server='127.0.0.1'):
     video_list = []
     trigger_lock = False
     frame_cnt = 0
     frame_begin = 0
     frame_end = 0
-    print '*********************1:redis begin'
+    frame_redundancy_front = 60
+    frame_redundancy_back = 20
+    # print '*********************1:redis begin'
     redis_msg_transfer = redis.StrictRedis(host=data_server,
                                            port=6379, db=0)
     trigger_topic = "/WellOcean/roi_trigger/channel_3"
     output_topic = "/WellOcean/final_result/channel_3"
-    share_map = get_share_file_map(SHARE_FILE)
+    share_map = get_share_file_map(share_path)
     capture = cv2.VideoCapture(video_source)
     FPS = capture.get(5)
     res, frame = capture.read()
-    print '*********************redis_msg_transfer:', redis_msg_transfer.keys()
-    print '*********************2:redis end'
-    print '**********************video_source is: ', video_source
-    cnt = 0
-    while res and cnt < 3:
+    # print '*********************redis_msg_transfer:', redis_msg_transfer.keys()
+    # print '*********************2:redis end'
+    print 'video_source is: ', video_source
+    while res:
         '''trigger wellocean'''
         frame_cnt += 1
         image_str = frame.tostring()
@@ -80,15 +77,15 @@ def capture_video_trigger(video_source,
         car_exist = redis_msg_transfer.get(trigger_topic)
         # print '===============car_exist: ', car_exist
         if car_exist == '2' and not trigger_lock:
-            print '****************************************************Begin'
-            print '******* Frame begin: ', frame_cnt
+            # print '****************************************************Begin'
+            # print '******* Frame begin: ', frame_cnt
             trigger_lock = True
-            frame_begin = frame_cnt
+            frame_begin = frame_cnt + frame_redundancy_front
             video_start_ms = int(time.time() * 1000)
         elif car_exist == '0' and trigger_lock:
             # print '*********************12'
             trigger_lock = False
-            frame_end = frame_cnt
+            frame_end = frame_cnt + frame_redundancy_back
             redis_info_pub = redis_msg_transfer.pubsub()
             redis_info = redis_info_pub.subscribe(output_topic)
             if redis_info is None:
@@ -97,20 +94,16 @@ def capture_video_trigger(video_source,
                 data = json.loads(redis_info)
                 video_result = data['final_result0']  # Fetch a result as the name of the video file
 
-            print '******* Frame end   : ', frame_cnt
+            # print '******* Frame end   : ', frame_cnt
             video_dict = dict(video_start_frame=frame_begin,
                               video_end_frame=frame_end,
                               video_name=video_result)
-            print '*********************\n', video_dict
+            # print '*********************\n', video_dict
             # if (video_end_ms - video_start_ms)/1000 < 20:
             #     print 'this maybe have problem'
             #     continue
             # print '*********************13================'
-            cnt += 1
             video_list.append(video_dict)
-            # video_save(video_source, save_path, [video_dict])
-            # print '*********************14================'
-
         # cv2.imshow('VideoCat', frame)
         # cv2.waitKey(1)
         cv2.waitKey(24)
@@ -122,10 +115,9 @@ def capture_video_trigger(video_source,
 def video_save(original_video, save_path, video_info=None):
     """根据视频提取信息截取保存视频"""
     for video_dict in video_info:
-        print '*********************20'
-        print '+++++++++++: ', video_dict['video_name'] + '.avi'
+        # print '+++++++++++: ', video_dict['video_name'] + '.avi'
         save_file = os.path.join(save_path, video_dict['video_name'] + '.avi')
-        print '+++++++++++save_file is: ', save_file
+        # print '+++++++++++save_file is: ', save_file
         capture = cv2.VideoCapture(original_video)
         if not capture.isOpened():
             print 'Open read file fail'
@@ -159,6 +151,7 @@ def video_save(original_video, save_path, video_info=None):
 
 if __name__ == '__main__':
     cur_path = os.getcwd()
+    share_file = ['/cv/master1', '/cv/master2', '/cv/master3']    # 根据launch file的实际配置和测试机能力设置这里
     save_path = os.path.join(cur_path, 'Img_result')
     if not os.path.exists(save_path):
         os.mkdir(save_path)
@@ -171,13 +164,25 @@ if __name__ == '__main__':
             if video_name[-4:] == ".avi":
                 video_path = str(os.path.join(root, video_name))
                 original_videos.append(video_path)
-    begin = time.time()
+    threadings = []
+    cnt = 0
+    print '**************************************************************'
+    begin = datetime.now()
+    print 'The start time of videocat is: {0}'.format(begin)
+    print 'Share file list: ', share_file
     for org_video in original_videos:
-        init_timestamp = int(time.time() * 1000)
         save_path_video = os.path.join(save_path, os.path.split(org_video)[-1][:-4])
         if not os.path.exists(save_path_video):
             os.mkdir(save_path_video)
 
-        video_clips(org_video, save_path_video, init_timestamp)
+        temp_thread = threading.Thread(target=video_clips, args=(org_video, save_path, share_file[cnt]))
+        cnt += 1
+        threadings.append(temp_thread)
+        temp_thread.start()
 
-    print 'this is ok, total time: {0}s'.format(time.time() - begin)
+        if cnt % len(share_file) == 0:
+            cnt = 0
+            for one_thread in threadings:
+                one_thread.join()
+
+    print 'This is ok, total time: {0}'.format(time.time() - begin)
