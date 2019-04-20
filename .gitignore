@@ -1,0 +1,7 @@
+# 此为注释 – 将被GitLab忽略
+
+*.pyc
+*.xml
+*.iml
+*.log
+*.idea
