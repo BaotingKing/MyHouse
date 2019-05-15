@@ -1,3 +1,0 @@
-平台环境：Ubuntu14.04
-
-一、Ubuntu系统下安装搭建Robot Framework
