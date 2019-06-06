@@ -4,10 +4,27 @@
 # Time: 2019/06/06
 # Func: continuously captures images for camera calibration
 import cv2
+import os
 import numpy as np
 
 
-def calibrate_proc(board):
+def save_load_param(pattern, result_cm=None, result_dc=None):
+    if pattern == 'load':
+        if os.path.isfile('cameraMatrix.npy'):
+            cm = np.load('cameraMatrix.npy')
+        else:
+            cm = None
+        if os.path.isfile('distCoeffs.npy'):
+            dc = np.load('distCoeffs.npy')
+        else:
+            dc = None
+        return cm, dc
+    elif pattern == 'save':
+        np.save('cameraMatrix.npy', result_cm)
+        np.save('distCoeffs.npy', result_dc)
+
+
+def calibrate_proc(board, flag=False):
     """The camera continuously captures images for camera calibration"""
     capture_num = 3  # Number of capture needed
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
@@ -16,8 +33,8 @@ def calibrate_proc(board):
 
     objp = np.zeros((x_cor * y_cor, 3), np.float32)
     objp[:, :2] = np.mgrid[0:x_cor, 0:y_cor].T.reshape(-1, 2)
-    # objp[:, 0] = objp[:, 0] * 10
-    # objp[:, 1] = objp[:, 1] * 10
+    # objp[:, 0] = objp[:, 0] * square_size[0]
+    # objp[:, 1] = objp[:, 1] * square_size[1]
     obj_points = []  # 3d points in real world space
     img_points = []  # 2d points in image plane.
 
@@ -40,7 +57,7 @@ def calibrate_proc(board):
                 cv2.drawChessboardCorners(frame, (x_cor, y_cor), corners, ret)
 
                 count += 1
-                if count > capture_num:
+                if count >= capture_num:
                     print('Finished capture images and Camera calibrate....')
                     break
             else:
@@ -58,6 +75,7 @@ def calibrate_proc(board):
                                                                       cameraMatrix=None,
                                                                       distCoeffs=None)
     print('Camera parameter information:\ncameraMatrix:\n{0} \n distCoeffs:\n{1}'.format(cameraMatrix, distCoeffs))
+    save_load_param(pattern='save', result_cm=cameraMatrix, result_dc=distCoeffs)
 
     mean_error = 0
     for i in range(len(obj_points)):
