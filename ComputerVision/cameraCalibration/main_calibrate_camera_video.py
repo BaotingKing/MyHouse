@@ -6,9 +6,10 @@
 import cv2
 import os
 import numpy as np
+import time
 
 
-def save_load_param(pattern, result_cm=None, result_dc=None):
+def save_load_param(pattern, img_size=None, result_cm=None, result_dc=None):
     if pattern == 'load':
         if os.path.isfile('cameraMatrix.npy'):
             cm = np.load('cameraMatrix.npy')
@@ -22,11 +23,17 @@ def save_load_param(pattern, result_cm=None, result_dc=None):
     elif pattern == 'save':
         np.save('cameraMatrix.npy', result_cm)
         np.save('distCoeffs.npy', result_dc)
+        with open('result_parm.txt', 'a+') as f_handle:
+            print('================================================', file=f_handle)
+            print('The Camera images size is:', img_size, file=f_handle)
+            print(time.strftime("%Y-%m-%d %H:%M:%S", time.localtime()), file=f_handle)
+            print('Camera parameter information:\ncameraMatrix:\n{0} \n distCoeffs:\n{1}'.format(result_cm, result_dc), file=f_handle)
+
 
 
 def calibrate_proc(board, flag=False):
     """The camera continuously captures images for camera calibration"""
-    capture_num = 3  # Number of capture needed
+    capture_num = 10  # Number of capture needed
     criteria = (cv2.TERM_CRITERIA_EPS + cv2.TERM_CRITERIA_MAX_ITER, 30, 0.001)
     x_cor = board[0]
     y_cor = board[1]
@@ -38,7 +45,7 @@ def calibrate_proc(board, flag=False):
     obj_points = []  # 3d points in real world space
     img_points = []  # 2d points in image plane.
 
-    cap = cv2.VideoCapture(1)
+    cap = cv2.VideoCapture(0)
     count = 0  # Record the number of successful checkerboard images detected
     while True:
         ret, frame = cap.read()
@@ -63,7 +70,7 @@ def calibrate_proc(board, flag=False):
             else:
                 print('Continue.....')
 
-        cv2.imshow('Here', frame)
+        cv2.imshow('Camera calibrate', frame)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
@@ -74,8 +81,10 @@ def calibrate_proc(board, flag=False):
                                                                       imageSize=img_gray.shape[::-1],
                                                                       cameraMatrix=None,
                                                                       distCoeffs=None)
+    print('================================================')
+    print('The Camera images size is:', img_gray.shape[::-1])
     print('Camera parameter information:\ncameraMatrix:\n{0} \n distCoeffs:\n{1}'.format(cameraMatrix, distCoeffs))
-    save_load_param(pattern='save', result_cm=cameraMatrix, result_dc=distCoeffs)
+    save_load_param(pattern='save', img_size=img_gray.shape, result_cm=cameraMatrix, result_dc=distCoeffs)
 
     mean_error = 0
     for i in range(len(obj_points)):
