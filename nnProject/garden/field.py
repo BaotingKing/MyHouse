@@ -17,9 +17,10 @@ def vectorized_result(j, classes):
 
 
 def get_format_data(X, y, is_test):
-    n_dim = X.shape[1]
+    n_dim = 5 + 2     # red is 5, blue is 2
     inputs = []
-    for record in X.values:
+    for record in X:
+        flower = record['red'] + record['blue']
         inputs.append(np.reshape(record, (n_dim, 1)))
 
     if not is_test:
@@ -45,19 +46,35 @@ if __name__ == '__main__':
 
     seed_normal_data = original_seed_data.copy()
 
-    seed_normal_X = seed_normal_data[:-1]     # 最后一个是要预测的待定值
-    seed_normal_y = seed_normal_data[1:]
+    seed_normal_X_pd = seed_normal_data[:-1]     # 最后一个是要预测的待定值
+    seed_normal_y_pd = seed_normal_data[1:]
+
+    seed_normal_X = []
+    seed_normal_y = []
+    for row in seed_normal_X_pd.iterrows():
+        seed_normal_X.append(row)
+    for row in seed_normal_y_pd.iterrows():
+        seed_normal_y.append(row)
 
     print(len(seed_normal_data), len(seed_normal_X), len(seed_normal_y))
-    train_x, test_x, train_y, test_y = train_test_split(seed_normal_X,
-                                                        seed_normal_y,
-                                                        test_size=0.2,
-                                                        random_state=0)
+
+    # train_x, test_x, train_y, test_y = train_test_split(seed_normal_X,
+    #                                                     seed_normal_y,
+    #                                                     test_size=0.2,
+    #                                                     random_state=0)
+    train_test_boundary = int(len(seed_normal_X)*0.85)
+    train_x = seed_normal_X[0:train_test_boundary]
+    train_y = seed_normal_X[0:train_test_boundary]
+
+    test_x = seed_normal_X[train_test_boundary:]
+    test_y = seed_normal_X[train_test_boundary:]
+
+    print(len(train_x), len(train_y), len(test_x), len(test_y))
     training_data = get_format_data(train_x, train_y, False)
     test_data = get_format_data(test_x, test_y, True)
 
     print("[Debug]", len(seed_normal_data), len(seed_normal_X), len(seed_normal_y))
-    print("[Debug]", type(training_data), len(training_data), type(test_data), len(test_data))
+    # print("[Debug]", type(training_data), len(training_data), type(test_data), len(test_data))
     # BP_size = [n_dim, n_dim * 256, n_dim * 16, n_dim * 3, out_dim]
     # net = snn.StockNetwork(BP_size)
     # net.SGD(training_data=training_data,
