@@ -92,7 +92,10 @@ class StockNetwork(object):
         y, zs, activations = self.forward(x)
 
         # backward propagation=====>>>>Chain derivative process
-        delta = (y - y_) * activation_diff(zs[-1])    # y表示预测结果，y_表示真实结果
+        prediction_red = y[0:5]
+        prediction_blue = y[5:]
+        delta_y = sum(y - np.reshape(y_, (len(y_), 1)))
+        delta = delta_y * activation_diff(zs[-1])    # y表示预测结果，y_表示真实结果
 
         nabla_biase[-1] = delta
         nabla_weight[-1] = np.dot(delta, activations[-2].transpose())
@@ -111,7 +114,14 @@ class StockNetwork(object):
         nabla_w = [np.zeros(w.shape) for w in self.weights]
 
         for X, y_ in mini_batch:
-            delta_nabla_b, delta_nabla_w = self.backward(np.array(X), y_)
+            seed_X = []
+            for record in X:
+                seed_X.extend(record['Red'])   # record's member is str
+                seed_X.extend(record['Blue'])
+            see_y = []
+            see_y.extend(y_['Red'])
+            see_y.extend(y_['Blue'])
+            delta_nabla_b, delta_nabla_w = self.backward(np.reshape(seed_X, (len(seed_X), 1)), see_y)
             nabla_b = [nb + dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw + dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
             self.weights = [w - (learn_rate / len(mini_batch)) * nw
@@ -125,43 +135,44 @@ class StockNetwork(object):
         n_train = len(training_data)
         for j in range(epochs):
             mini_batches = []
-
+            print('-----------:000')
             for k in range(0, n_train, mini_batch_size):
                 mini_batches.append(training_data[k:k + mini_batch_size])
 
             for mini_batch in mini_batches:
                 self.update_mini_batch(mini_batch, learn_rate=learn_rate)
+            print('--------epochs is :', j)
 
             if test_data:
-                accuracy_num, fianl_result = self.evaluate(test_data, j)
+                accuracy_num = self.evaluate(test_data, j)
                 print("Epoch {0}: {1} / {2}".
                       format(j, accuracy_num, len(test_data)))
 
-                if j == 0:
-                    fianl_temp = fianl_result.copy()
-                    good_temp = fianl_result.copy()
-                    accuracy_temp = accuracy_num
-
-                good_temp = self.good_analyze(fianl_result, good_temp)
-
-                if accuracy_num > accuracy_temp:
-                    fianl_temp = fianl_result.copy()
-                    accuracy_temp = accuracy_num
-                elif accuracy_num == accuracy_temp:
-                    fianl_temp = self.acc_analyze(fianl_result, fianl_temp)
-
-                if j == (epochs - 1):
-                    last_result = fianl_result.drop(fianl_result.columns[0:3], axis=1)
-                    good_result = good_temp.drop(good_temp.columns[0:3], axis=1)
-
-                    cln = last_result.columns[0]
-                    epo_idx = cln.split('_')[-1]
-                    last_result.columns = ['last_{0}'.format(epo_idx), 'last_per_{0}'.format(epo_idx)]
-
-                    cln = good_result.columns[0]
-                    epo_idx = cln.split('_')[-1]
-                    good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(epo_idx)]
-                    result = pd.concat([fianl_temp, last_result, good_result], axis=1)
+                # if j == 0:
+                #     fianl_temp = fianl_result.copy()
+                #     good_temp = fianl_result.copy()
+                #     accuracy_temp = accuracy_num
+                #
+                # good_temp = self.good_analyze(fianl_result, good_temp)
+                #
+                # if accuracy_num > accuracy_temp:
+                #     fianl_temp = fianl_result.copy()
+                #     accuracy_temp = accuracy_num
+                # elif accuracy_num == accuracy_temp:
+                #     fianl_temp = self.acc_analyze(fianl_result, fianl_temp)
+                #
+                # if j == (epochs - 1):
+                #     last_result = fianl_result.drop(fianl_result.columns[0:3], axis=1)
+                #     good_result = good_temp.drop(good_temp.columns[0:3], axis=1)
+                #
+                #     cln = last_result.columns[0]
+                #     epo_idx = cln.split('_')[-1]
+                #     last_result.columns = ['last_{0}'.format(epo_idx), 'last_per_{0}'.format(epo_idx)]
+                #
+                #     cln = good_result.columns[0]
+                #     epo_idx = cln.split('_')[-1]
+                #     good_result.columns = ['overall_opt_{0}'.format(epo_idx), 'overall_opt_per_{0}'.format(epo_idx)]
+                #     result = pd.concat([fianl_temp, last_result, good_result], axis=1)
 
             else:
                 print("Epoch {0} complete".format(j))
@@ -169,44 +180,36 @@ class StockNetwork(object):
         if test_data:
             df_param = pd.DataFrame({'biases': self.biases, 'weights': self.weights})
             df_param.to_csv('./data/parameters.csv')
-            result.to_csv('fianl_result.csv', mode='a')
 
     def evaluate(self, test_data, iter_idx):
         """返回预测正确的个数"""
-        g_max_close = cfg.get_value('g_max_close')
-        g_min_close = cfg.get_value('g_min_close')
-        denominator = g_max_close - g_min_close
-
         cnt = 0
         ture_value = []
         pred_value = []
         percentage_error = []
         for X, y_ in test_data:
-            y = self.forward(X, flag=0)
+            seed_X = []
+            for record in X:
+                seed_X.extend(record['Red'])  # record's member is str
+                seed_X.extend(record['Blue'])
 
-            y = y * denominator + g_min_close
-            y_ = y_ * denominator + g_min_close
-
-            if abs(y - y_) <= 1e-1:
+            y = self.forward(np.reshape(seed_X, (len(seed_X), 1)), flag=0)
+            see_y = []
+            see_y.extend(y_['Red'])
+            see_y.extend(y_['Blue'])
+            delta_y = sum(y - np.reshape(see_y, (len(see_y), 1)))
+            if abs(delta_y) <= 1e-1:
                 cnt += 1
                 # print('Predict the outcome and Real results: {0}  {1}'.format(y, y_))
-            ture_value.append(y_)
-            pred_value.extend(y[0])
-            err = "%.2f%%" % (abs(y_ - y[0])*100/y_)
-            percentage_error.append(err)
-
-        hidden_layer_num, node_num, epoch = cfg.get_cfg(True, True, True)
-        column_num_begin = "l_{0}-N_{1}_b_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
-        column_num_opt = "l_{0}-N_{1}_opt_{2}/{3}".format(hidden_layer_num, node_num, iter_idx, epoch)
-        percentage_error_name_begin = "per_b_{0}/{1}".format(iter_idx, epoch)
-        percentage_error_name_opt = "per_opt_{0}/{1}".format(iter_idx, epoch)
-        fianl_result = pd.DataFrame({'ture_value': ture_value,
-                                     column_num_begin: pred_value,
-                                     percentage_error_name_begin: percentage_error,
-                                     column_num_opt: pred_value,
-                                     percentage_error_name_opt: percentage_error},
-                                    index=cfg.get_idx())
-        return cnt, fianl_result
+            # ture_value.append(y_)
+            # pred_value.extend(y[0])
+            # err = "%.2f%%" % (abs(y_ - y[0])*100/y_)
+            # percentage_error.append(err)
+        print('***************************')
+        print('The truth fruit:', y_)
+        print('The predict fruit:', y * 35)
+        print('***************************')
+        return cnt
 
     def acc_analyze(self, new_result, old_result):
         new = abs((new_result.iloc[:, 0] - new_result.iloc[:, 1])/new_result.iloc[:, 0])

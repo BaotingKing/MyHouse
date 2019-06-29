@@ -17,43 +17,60 @@ def vectorized_result(j, classes):
 
 
 def get_format_data(X, y, is_test):
+    STEP_CFG = 3
     n_dim = 5 + 2     # red is 5, blue is 2
     inputs = []
-    for record in X:
-        flower = dict(Issue=record['Issue'], Red=record['Red'], Blue=record['Blue'])
-        # inputs.append(np.reshape(record, (n_dim, 1)))
-        inputs.append(flower)
+    for idx in range(len(X)):
+        if (idx + STEP_CFG) > len(X):
+            break
+        else:
+            cell = []
+            for i in range(STEP_CFG):
+                record = X[idx + i]
+                flower = dict(Issue=record['Issue'], Red=record['Red'], Blue=record['Blue'])
+                cell.append(flower)
+            # inputs.append(np.reshape(record, (n_dim, 1)))
+            inputs.append(cell)
+
     results = []
     if not is_test:
-        for record in y:
+        for record in y[STEP_CFG:]:
             flower = dict(Issue=record['Issue'], Red=record['Red'], Blue=record['Blue'])
             results.append(flower)
     else:
-        for record in y:
+        for record in y[STEP_CFG:]:
             flower = dict(Issue=record['Issue'], Red=record['Red'], Blue=record['Blue'])
             results.append(flower)
 
-    data = list(zip(inputs, results))
-    # data = zip(inputs, results)
+    data = list(zip(inputs, results))     # data = zip(inputs, results)
     return data
 
 
 def normalize_data(data_source):
-    min_data = data_source.min()
-    max_data = data_source.max()
-    norm_data_source = (data_source[:] - min_data) / (max_data - min_data)
-    return norm_data_source
+    data_normal_source = pd.DataFrame(columns=['Index', 'Issue', 'Red', 'Blue'])
+    for index, row in data_source.iterrows():
+        red = [i / 35 for i in eval(row['Red'])]
+        blue = [i / 35 for i in eval(row['Blue'])]
+        new = pd.DataFrame(columns=['Index', 'Issue', 'Red', 'Blue'])
+        new.loc[index] = {'Index': index,
+                          'Issue': row['Issue'],
+                          'Red': red,
+                          'Blue': blue}
+        data_normal_source = pd.concat([data_normal_source, new], sort=False)
+    return data_normal_source
 
 
 if __name__ == '__main__':
-    n_dim = (5 + 2) * 2
+    n_dim = (5 + 2) * 3
     out_dim = 5 + 2
+    earth = 35 + 12
     original_seed_data = pd.read_csv('new_seed.csv')
 
-    seed_normal_data = original_seed_data.copy()
+    seed_data = original_seed_data.copy()
+    seed_normal_data = normalize_data(seed_data)
 
     seed_normal_X_pd = seed_normal_data[:-1]     # 最后一个是要预测的待定值
-    seed_normal_y_pd = seed_normal_data[1:]
+    seed_normal_y_pd = seed_normal_data[:]
 
     seed_normal_X = []
     seed_normal_y = []
@@ -81,12 +98,12 @@ if __name__ == '__main__':
 
     print("[Debug]", len(seed_normal_data), len(seed_normal_X), len(seed_normal_y))
     print("[Debug]", type(training_data), len(training_data), type(test_data), len(test_data))
-    BP_size = [n_dim, n_dim * 256, n_dim * 16, n_dim * 3, out_dim]
+    BP_size = [n_dim, n_dim * 256, earth * 16, earth * 3, out_dim]
     net = snn.StockNetwork(BP_size)
-    # net.SGD(training_data=training_data,
-    #         epochs=5,
-    #         mini_batch_size=10,
-    #         learn_rate=0.1,
-    #         test_data=None)  # test_data None
+    net.SGD(training_data=training_data,
+            epochs=5,
+            mini_batch_size=10,
+            learn_rate=0.1,
+            test_data=test_data)  # test_data None
 
     print(type(net))
