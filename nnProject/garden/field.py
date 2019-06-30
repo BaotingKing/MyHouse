@@ -47,16 +47,19 @@ def get_format_data(X, y, is_test):
 
 
 def normalize_data(data_source):
-    data_normal_source = pd.DataFrame(columns=['Index', 'Issue', 'Red', 'Blue'])
-    for index, row in data_source.iterrows():
-        red = [i / 35 for i in eval(row['Red'])]
-        blue = [i / 35 for i in eval(row['Blue'])]
-        new = pd.DataFrame(columns=['Index', 'Issue', 'Red', 'Blue'])
-        new.loc[index] = {'Index': index,
-                          'Issue': row['Issue'],
-                          'Red': red,
-                          'Blue': blue}
-        data_normal_source = pd.concat([data_normal_source, new], sort=False)
+    """data needed normalize"""
+    print('Normalize has put behind')
+    data_normal_source = data_source
+    # data_normal_source = pd.DataFrame(columns=['Index', 'Issue', 'Red', 'Blue'])
+    # for index, row in data_source.iterrows():
+    #     red = [i / 35 for i in eval(row['Red'])]
+    #     blue = [i / 35 for i in eval(row['Blue'])]
+    #     new = pd.DataFrame(columns=['Index', 'Issue', 'Red', 'Blue'])
+    #     new.loc[index] = {'Index': index,
+    #                       'Issue': row['Issue'],
+    #                       'Red': red,
+    #                       'Blue': blue}
+    #     data_normal_source = pd.concat([data_normal_source, new], sort=False)
     return data_normal_source
 
 
@@ -101,7 +104,7 @@ if __name__ == '__main__':
     BP_size = [n_dim, n_dim * 256, earth * 16, earth * 3, out_dim]
     net = snn.StockNetwork(BP_size)
     net.SGD(training_data=training_data,
-            epochs=5,
+            epochs=2,
             mini_batch_size=10,
             learn_rate=0.1,
             test_data=test_data)  # test_data None

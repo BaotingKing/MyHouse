@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 import config as cfg
 
+NORMAL_PARAM = 35
 
 def sigmoid(z):
     return 1.0/(1.0+np.exp(-z))
@@ -88,13 +89,16 @@ class StockNetwork(object):
         nabla_biase = [np.zeros(b.shape) for b in self.biases]
         nabla_weight = [np.zeros(w.shape) for w in self.weights]
 
+        # normalized x and y_
+        x = x / NORMAL_PARAM
+        y_ = y_ / NORMAL_PARAM
         # forward propagation
         y, zs, activations = self.forward(x)
 
         # backward propagation=====>>>>Chain derivative process
         prediction_red = y[0:5]
         prediction_blue = y[5:]
-        delta_y = sum(y - np.reshape(y_, (len(y_), 1)))
+        delta_y = sum(abs(y - y_))
         delta = delta_y * activation_diff(zs[-1])    # y表示预测结果，y_表示真实结果
 
         nabla_biase[-1] = delta
@@ -116,12 +120,14 @@ class StockNetwork(object):
         for X, y_ in mini_batch:
             seed_X = []
             for record in X:
-                seed_X.extend(record['Red'])   # record's member is str
-                seed_X.extend(record['Blue'])
+                seed_X.extend(eval(record['Red']))   # record's member is str
+                seed_X.extend(eval(record['Blue']))
             see_y = []
-            see_y.extend(y_['Red'])
-            see_y.extend(y_['Blue'])
-            delta_nabla_b, delta_nabla_w = self.backward(np.reshape(seed_X, (len(seed_X), 1)), see_y)
+            see_y.extend(eval(y_['Red']))
+            see_y.extend(eval(y_['Blue']))
+            seed_X = np.reshape(seed_X, (len(seed_X), 1))
+            see_y = np.reshape(see_y, (len(see_y), 1))
+            delta_nabla_b, delta_nabla_w = self.backward(seed_X, see_y)
             nabla_b = [nb + dnb for nb, dnb in zip(nabla_b, delta_nabla_b)]
             nabla_w = [nw + dnw for nw, dnw in zip(nabla_w, delta_nabla_w)]
             self.weights = [w - (learn_rate / len(mini_batch)) * nw
@@ -190,14 +196,16 @@ class StockNetwork(object):
         for X, y_ in test_data:
             seed_X = []
             for record in X:
-                seed_X.extend(record['Red'])  # record's member is str
-                seed_X.extend(record['Blue'])
+                seed_X.extend(eval(record['Red']))  # record's member is str
+                seed_X.extend(eval(record['Blue']))
 
-            y = self.forward(np.reshape(seed_X, (len(seed_X), 1)), flag=0)
+            seed_X = np.reshape(seed_X, (len(seed_X), 1)) / NORMAL_PARAM
+            y = self.forward(seed_X, flag=0)
             see_y = []
-            see_y.extend(y_['Red'])
-            see_y.extend(y_['Blue'])
-            delta_y = sum(y - np.reshape(see_y, (len(see_y), 1)))
+            see_y.extend(eval(y_['Red']))
+            see_y.extend(eval(y_['Blue']))
+            see_y = np.reshape(see_y, (len(see_y), 1)) / NORMAL_PARAM
+            delta_y = sum(abs(y - see_y))
             if abs(delta_y) <= 1e-1:
                 cnt += 1
                 # print('Predict the outcome and Real results: {0}  {1}'.format(y, y_))
@@ -207,7 +215,7 @@ class StockNetwork(object):
             # percentage_error.append(err)
         print('***************************')
         print('The truth fruit:', y_)
-        print('The predict fruit:', y * 35)
+        print('The predict fruit:', y * NORMAL_PARAM)
         print('***************************')
         return cnt
 
