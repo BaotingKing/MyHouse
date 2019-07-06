@@ -38,6 +38,45 @@ def parameters_init():
     pass
 
 
+def find_extreme(result):
+    """basic on the location to find result"""
+    red = []
+    blue = []
+    pre_y = []
+    if len(result) != (35 + 12):
+        return pre_y
+    else:
+        result_red = result[:35]
+        result_blue = result[35:]
+        result_red = result_red.tolist()
+        result_blue = result_blue.tolist()
+
+        for i in range(5):
+            idx = result_red.index(max(result_red))
+            red.append(idx + 1)
+            result_red[idx] = [0]             # list nested list
+        red.sort()
+        pre_y.extend(red)
+
+        for i in range(2):
+            idx = result_blue.index(max(result_blue))
+            blue.append(idx + 1)
+            result_blue[idx] = [0]
+        blue.sort()
+        pre_y.extend(blue)
+
+        return pre_y
+
+
+def delta_result(y, y_):
+    alpha = 2/5
+    beta = 1
+    temp1 = set(y_[:5]).difference(y[:5])
+    temp2 = set(y_[5:]).difference(y[5:])
+    delta = alpha * len(set(y_[:5]).difference(y[:5])) + beta * len(set(y_[5:]).difference(y[5:]))
+    return delta
+
+
 class StockNetwork(object):
     def __init__(self, sizes=0, param_from_csv=False):
         """参数sizes表示每一层神经元的个数，如[2,3,1],表示第一层有2个神经元，
@@ -79,6 +118,8 @@ class StockNetwork(object):
 
         y = activations[-1]
 
+        y = find_extreme(y)
+
         if flag == 1:
             return y, zs, activations
         else:
@@ -91,14 +132,17 @@ class StockNetwork(object):
 
         # normalized x and y_
         x = x / NORMAL_PARAM
-        y_ = y_ / NORMAL_PARAM
+        # y_ = y_ / NORMAL_PARAM
         # forward propagation
         y, zs, activations = self.forward(x)
 
         # backward propagation=====>>>>Chain derivative process
-        prediction_red = y[0:5]
-        prediction_blue = y[5:]
-        delta_y = sum(abs(y - y_))
+        # prediction_red = y[0:5]
+        # prediction_blue = y[5:]
+        list_temp = y_.tolist()
+        y_ = [i for k in list_temp for i in k]
+        # delta_y = sum(abs(y - y_))
+        delta_y = delta_result(y, y_)
         delta = delta_y * activation_diff(zs[-1])    # y表示预测结果，y_表示真实结果
 
         nabla_biase[-1] = delta
@@ -204,8 +248,12 @@ class StockNetwork(object):
             see_y = []
             see_y.extend(eval(y_['Red']))
             see_y.extend(eval(y_['Blue']))
-            see_y = np.reshape(see_y, (len(see_y), 1)) / NORMAL_PARAM
-            delta_y = sum(abs(y - see_y))
+            see_y = np.reshape(see_y, (len(see_y), 1))
+            list_temp = see_y.tolist()
+            y_ = [i for k in list_temp for i in k]
+            # delta_y = sum(abs(y - y_))
+            delta_y = delta_result(y, y_)
+
             if abs(delta_y) <= 1e-1:
                 cnt += 1
                 # print('Predict the outcome and Real results: {0}  {1}'.format(y, y_))
@@ -215,7 +263,7 @@ class StockNetwork(object):
             # percentage_error.append(err)
         print('***************************')
         print('The truth fruit:', y_)
-        print('The predict fruit:', y * NORMAL_PARAM)
+        print('The predict fruit:', y)
         print('***************************')
         return cnt
 

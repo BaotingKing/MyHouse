@@ -101,7 +101,7 @@ if __name__ == '__main__':
 
     print("[Debug]", len(seed_normal_data), len(seed_normal_X), len(seed_normal_y))
     print("[Debug]", type(training_data), len(training_data), type(test_data), len(test_data))
-    BP_size = [n_dim, n_dim * 256, earth * 16, earth * 3, out_dim]
+    BP_size = [n_dim, n_dim * 256, earth * 16, earth * 3, 35+12]
     net = snn.StockNetwork(BP_size)
     net.SGD(training_data=training_data,
             epochs=2,
