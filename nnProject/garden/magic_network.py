@@ -51,19 +51,34 @@ def find_extreme(result):
         result_red = result_red.tolist()
         result_blue = result_blue.tolist()
 
-        for i in range(5):
-            idx = result_red.index(max(result_red))
-            red.append(idx + 1)
-            result_red[idx] = [0]             # list nested list
-        red.sort()
-        pre_y.extend(red)
+        if True:
+            for i in range(5):
+                idx = result_red.index(min(result_red))
+                red.append(idx + 1)
+                result_red[idx] = [666]             # list nested list
+            red.sort()
+            pre_y.extend(red)
 
-        for i in range(2):
-            idx = result_blue.index(max(result_blue))
-            blue.append(idx + 1)
-            result_blue[idx] = [0]
-        blue.sort()
-        pre_y.extend(blue)
+            for i in range(2):
+                idx = result_blue.index(min(result_blue))
+                blue.append(idx + 1)
+                result_blue[idx] = [666]
+            blue.sort()
+            pre_y.extend(blue)
+        else:
+            for i in range(5):
+                idx = result_red.index(max(result_red))
+                red.append(idx + 1)
+                result_red[idx] = [0]  # list nested list
+            red.sort()
+            pre_y.extend(red)
+
+            for i in range(2):
+                idx = result_blue.index(max(result_blue))
+                blue.append(idx + 1)
+                result_blue[idx] = [0]
+            blue.sort()
+            pre_y.extend(blue)
 
         return pre_y
 

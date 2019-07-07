@@ -104,9 +104,9 @@ if __name__ == '__main__':
     BP_size = [n_dim, n_dim * 256, earth * 16, earth * 3, 35+12]
     net = snn.StockNetwork(BP_size)
     net.SGD(training_data=training_data,
-            epochs=2,
-            mini_batch_size=10,
-            learn_rate=0.1,
+            epochs=100,
+            mini_batch_size=60,
+            learn_rate=0.05,
             test_data=test_data)  # test_data None
 
     print(type(net))
