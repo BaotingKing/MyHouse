@@ -80,6 +80,6 @@ def validate_lite_model(lite_path, input_size=(28, 28), image_path='./Img/'):
 
 if __name__ == '__main__':
     print('This is main_lite_interpreter test....')
-    model_lite_path = "./save/converted_model.tflite"
+    model_lite_path = "./save/temp_converted_model.tflite"
     validate_lite_model(model_lite_path, input_size=(590, 1640))
     print('It is Ok!')
