@@ -189,7 +189,7 @@ def ver_sun():
     ROOT_DIR = os.path.abspath('')  # Root directory of the project
     DEFAULT_SAVE_DIR = os.path.join(ROOT_DIR, "cityscapes")
     label_path = os.path.join(DEFAULT_SAVE_DIR, "train")
-    with open("label.json", 'r') as f:
+    with open("test_label.json", 'r') as f:
         infile = json.load(f)
     cnt = 0
     for img_info in infile['annotations']:
@@ -197,7 +197,9 @@ def ver_sun():
         print(cnt, img_info['img_name'])
         img_path = img_info['path']
         img = cv2.imread(img_path)
-        cv2.imshow('000', img)
+        img_org = img.copy()
+        cv2.namedWindow("Result", cv2.WINDOW_NORMAL)
+        cv2.resizeWindow("Result", 1024, 512)
         objects = img_info['object']
         for obj in objects:
             points = []
@@ -210,11 +212,11 @@ def ver_sun():
             cv2.rectangle(img, (bbox[0], bbox[1]), (bbox[0] + bbox[2], bbox[1] + bbox[3]), rng, 3)
             cv2.putText(img, obj['class'], (bbox[0], bbox[1]), cv2.FONT_HERSHEY_PLAIN, 2.0, rng, 2, 1)
             cv2.polylines(img, [pts], True, rng, 2)
-
-        cv2.imshow('111', img)
+        imgs = np.hstack([img_org, img])
+        cv2.imshow('Result', imgs)
         cv2.waitKey(0)
 
 
 if __name__ == '__main__':
-    tran_proc()
+    # tran_proc()
     ver_sun()
