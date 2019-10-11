@@ -192,7 +192,7 @@ def ver_sun():
                 points.append([segmentation[i * 2], segmentation[i * 2 + 1]])
             pts = np.array(points, np.int32)
             cv2.rectangle(img, (bbox[0], bbox[1]), (bbox[0] + bbox[2], bbox[1] + bbox[3]), rng, 3)
-            cv2.putText(img, obj['class'], (bbox[0], bbox[1]), cv2.FONT_HERSHEY_PLAIN, 2.0, rng, 2, 1)
+            cv2.putText(img, obj['class'], (bbox[0], bbox[1] + 20), cv2.FONT_HERSHEY_PLAIN, 2.0, rng, 2, 1)
             cv2.polylines(img, [pts], True, rng, 2)
 
             mask, class_ids = utils_visual.load_mask(obj, img_info['height'], img_info['width'])
