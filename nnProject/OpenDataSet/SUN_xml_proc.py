@@ -8,20 +8,13 @@ from xml.dom.minidom import Document
 import xml.etree.ElementTree as ET
 import os
 import re
+import sys
 import time
 import cv2
 import numpy as np
 import random
-
-
-def search_file(rootdir, target_file):
-    target_file_path = None
-    for parent, dirnames, filenames in os.walk(rootdir):
-        if target_file in filenames:
-            target_file_path = os.path.join(parent, target_file)
-            break
-    return target_file_path
-
+from pycocotools import mask as maskUtils
+import utils_visual
 
 KEY_CLASS = ['grass']
 class_need = ['wall', 'sky', 'trees', 'person', 'grass', 'ground', 'river water']    # The name is original label name
@@ -46,17 +39,6 @@ img_list_path = "G:\\Dataset\\SUN\\test.txt"
 objs_anno_path = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\Annotations\\"
 objs_segm_path = "G:\\Dataset\\SUN\\SUN2012\\SUN2012\\Annotations\\"
 DATASET_PATH = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\JPEGImages\\"
-
-
-def randomcolor():
-    colorArr = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F']
-    rgb = []
-    for i in range(3):
-        color = ""
-        for j in range(2):
-            color += colorArr[random.randint(0, 14)]
-        rgb.append(int(color, 16))
-    return tuple(rgb)
 
 
 def extract_xml(obj_anno, type='Anno'):
@@ -137,8 +119,8 @@ def tran_proc():        # 直接从segmentation标签集提取有用信息
         for one_record in file_handle:
             cnt += 1
             xml_name = str(one_record).strip() + '.xml'
-            obj_anno_path = search_file(objs_anno_path, xml_name)  # 存放image信息和bbox等信息
-            obj_segm_path = search_file(objs_segm_path, xml_name)  # 存放polygon信息
+            obj_anno_path = utils_visual.search_file(objs_anno_path, xml_name)  # 存放image信息和bbox等信息
+            obj_segm_path = utils_visual.search_file(objs_segm_path, xml_name)  # 存放polygon信息
             if os.path.isfile(obj_anno_path) and os.path.isfile(obj_segm_path):
                 print(cnt, one_record)
                 anno_list, img_info = extract_xml(obj_anno_path)
@@ -176,7 +158,7 @@ def tran_proc():        # 直接从segmentation标签集提取有用信息
                         }
                         whole_label_list.append(img_info_dict)
         whole_label_dict = {"annotations": whole_label_list}
-    with open("test_label.json", 'w') as out_file:
+    with open("log/test_label.json", 'w') as out_file:
         json.dump(whole_label_dict, out_file, ensure_ascii=False, indent=2)
 
     end = time.clock()
@@ -189,7 +171,7 @@ def ver_sun():
     ROOT_DIR = os.path.abspath('')  # Root directory of the project
     DEFAULT_SAVE_DIR = os.path.join(ROOT_DIR, "cityscapes")
     label_path = os.path.join(DEFAULT_SAVE_DIR, "train")
-    with open("test_label.json", 'r') as f:
+    with open("log/test_label.json", 'r') as f:
         infile = json.load(f)
     cnt = 0
     for img_info in infile['annotations']:
@@ -203,7 +185,7 @@ def ver_sun():
         objects = img_info['object']
         for obj in objects:
             points = []
-            rng = randomcolor()
+            rng = utils_visual.randomcolor()
             segmentation = obj['segmentation'][0]
             bbox = obj['bbox']
             for i in range(int(len(segmentation) / 2)):
@@ -212,9 +194,12 @@ def ver_sun():
             cv2.rectangle(img, (bbox[0], bbox[1]), (bbox[0] + bbox[2], bbox[1] + bbox[3]), rng, 3)
             cv2.putText(img, obj['class'], (bbox[0], bbox[1]), cv2.FONT_HERSHEY_PLAIN, 2.0, rng, 2, 1)
             cv2.polylines(img, [pts], True, rng, 2)
-        imgs = np.hstack([img_org, img])
+
+            mask, class_ids = utils_visual.load_mask(obj, img_info['height'], img_info['width'])
+            masked_image = utils_visual.apply_mask(img, mask[:, :, 0], rng)
+        imgs = np.hstack([img_org, masked_image])
         cv2.imshow('Result', imgs)
-        cv2.waitKey(0)
+        cv2.waitKey(1000)
 
 
 if __name__ == '__main__':
