@@ -35,11 +35,6 @@ std_class_ID = {'wall': 0,
                 'river': 6
                 }
 
-img_list_path = "G:\\Dataset\\SUN\\test.txt"
-objs_anno_path = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\Annotations\\"
-objs_segm_path = "G:\\Dataset\\SUN\\SUN2012\\SUN2012\\Annotations\\"
-DATASET_PATH = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\JPEGImages\\"
-
 
 def extract_xml(obj_anno, type='Anno'):
     if True:
@@ -72,7 +67,7 @@ def extract_xml(obj_anno, type='Anno'):
         img_name = str(root.find('filename').text).strip()
         img_info_set = {
             "img_name": img_name,
-            "path": search_file(DATASET_PATH, img_name),
+            "path": utils_visual.search_file(DATASET_PATH, img_name),
             "classes_set": contain_classes,
             "width": int(info.find('width').text),
             "height": int(info.find('height').text),
@@ -109,7 +104,7 @@ def check_bbox_segm(bbox, segm):
         return False
 
 
-def tran_proc():        # 直接从segmentation标签集提取有用信息
+def tran_proc(img_list_path):        # 直接从segmentation标签集提取有用信息
     cnt = 0
     cnt_n = 0
     cnt_m = 0
@@ -158,7 +153,13 @@ def tran_proc():        # 直接从segmentation标签集提取有用信息
                         }
                         whole_label_list.append(img_info_dict)
         whole_label_dict = {"annotations": whole_label_list}
-    with open("log/test_label.json", 'w') as out_file:
+    if "train" in img_list_path:
+        save_file = "./log/train_label.json"
+    elif "test" in img_list_path:
+        save_file = "./log/test_label.json"
+    else:
+        save_file = "./log/haha.json"
+    with open(save_file, 'w') as out_file:
         json.dump(whole_label_dict, out_file, ensure_ascii=False, indent=2)
 
     end = time.clock()
@@ -167,11 +168,8 @@ def tran_proc():        # 直接从segmentation标签集提取有用信息
     print("Total time is: ", total)
 
 
-def ver_sun():
-    ROOT_DIR = os.path.abspath('')  # Root directory of the project
-    DEFAULT_SAVE_DIR = os.path.join(ROOT_DIR, "cityscapes")
-    label_path = os.path.join(DEFAULT_SAVE_DIR, "train")
-    with open("log/test_label.json", 'r') as f:
+def ver_sun(json_list_path):
+    with open(list_path, 'r') as f:
         infile = json.load(f)
     cnt = 0
     for img_info in infile['annotations']:
@@ -199,9 +197,18 @@ def ver_sun():
             masked_image = utils_visual.apply_mask(img, mask[:, :, 0], rng)
         imgs = np.hstack([img_org, masked_image])
         cv2.imshow('Result', imgs)
-        cv2.waitKey(1000)
+        cv2.waitKey(0)
 
 
 if __name__ == '__main__':
-    # tran_proc()
-    ver_sun()
+    objs_anno_path = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\Annotations\\"
+    objs_segm_path = "G:\\Dataset\\SUN\\SUN2012\\SUN2012\\Annotations\\"
+    DATASET_PATH = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\JPEGImages\\"
+    if True:
+        list_path = "G:\\Dataset\\SUN\\train.txt"
+        tran_proc(list_path)
+        list_path = "G:\\Dataset\\SUN\\test.txt"
+        tran_proc(list_path)
+    else:
+        ver_sun("./log/train_label.json")
+
