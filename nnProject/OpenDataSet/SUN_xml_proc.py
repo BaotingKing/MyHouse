@@ -16,11 +16,13 @@ import random
 from pycocotools import mask as maskUtils
 import utils_visual
 
-KEY_CLASS = ['grass']
-class_need = ['wall', 'sky', 'trees', 'person', 'grass', 'ground', 'river water']    # The name is original label name
+KEY_CLASS = ['tree', 'grass']
+# class_need = ['wall', 'sky', 'tree', 'person', 'grass', 'ground', 'river water']  # The name is original label name
+class_need = ['tree', 'person', 'grass', 'ground']  # The name is original label name
 std_class_ind = {'wall': 'wall',
                  'sky': 'sky',
-                 'trees': 'trees',
+                 'tree': 'tree',
+                 'trees': 'tree',
                  'person': 'person',
                  'grass': 'grass',
                  'ground': 'ground',
@@ -28,7 +30,7 @@ std_class_ind = {'wall': 'wall',
                  }
 std_class_ID = {'wall': 0,
                 'sky': 1,
-                'trees': 2,
+                'tree': 2,
                 'person': 3,
                 'grass': 4,
                 'ground': 5,
@@ -104,7 +106,7 @@ def check_bbox_segm(bbox, segm):
         return False
 
 
-def tran_proc(img_list_path):        # 直接从segmentation标签集提取有用信息
+def tran_proc(img_list_path):  # 直接从segmentation标签集提取有用信息
     cnt = 0
     cnt_n = 0
     cnt_m = 0
@@ -124,8 +126,11 @@ def tran_proc(img_list_path):        # 直接从segmentation标签集提取有�
                     cnt_n += 1
                     obj_info = []
                     for idx in range(len(segm_list)):
-                        if segm_list[idx]['class'] in class_need:
-                            std_class_name = std_class_ind[segm_list[idx]['class']]
+                        if segm_list[idx]['class'] in class_need or 'tree' in segm_list[idx]['class']:  # tree/trees
+                            if 'tree' not in segm_list[idx]['class']:
+                                std_class_name = std_class_ind[segm_list[idx]['class']]
+                            else:
+                                std_class_name = std_class_ind['tree']
                             segm_info = segm_list[idx]['segmentation']
                             bbox = [
                                 min(segm_info[::2]),
@@ -158,7 +163,7 @@ def tran_proc(img_list_path):        # 直接从segmentation标签集提取有�
     elif "test" in img_list_path:
         save_file = "./log/test_label.json"
     else:
-        save_file = "./log/haha.json"
+        save_file = "./log/val.json"
     with open(save_file, 'w') as out_file:
         json.dump(whole_label_dict, out_file, ensure_ascii=False, indent=2)
 
@@ -205,10 +210,11 @@ if __name__ == '__main__':
     objs_segm_path = "G:\\Dataset\\SUN\\SUN2012\\SUN2012\\Annotations\\"
     DATASET_PATH = "G:\\Dataset\\SUN\\SUN2012pascalformat\\SUN2012pascalformat\\JPEGImages\\"
     if True:
+        # list_path = "G:\\Dataset\\SUN\\val.txt"
+        # tran_proc(list_path)
         list_path = "G:\\Dataset\\SUN\\train.txt"
-        tran_proc(list_path)
+        # tran_proc(list_path)
         list_path = "G:\\Dataset\\SUN\\test.txt"
         tran_proc(list_path)
     else:
         ver_sun("./log/train_label.json")
-
